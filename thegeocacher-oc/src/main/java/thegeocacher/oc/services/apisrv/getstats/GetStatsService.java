@@ -2,6 +2,9 @@ package thegeocacher.oc.services.apisrv.getstats;
 
 import java.io.IOException;
 
+import thegeocacher.oc.services.AuthenticationLevel;
+import thegeocacher.oc.services.OcService;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 /**
  * http://www.opencaching.de/okapi/services/apisrv/getstats
  */
-public class GetStatsService {
+public class GetStatsService extends OcService {
 
 	String okapiBaseUrl = "http://www.opencaching.de/okapi/";
 	String methodName = "services/apisrv/getstats";
@@ -32,5 +35,15 @@ public class GetStatsService {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	@Override
+	protected AuthenticationLevel getAuthenticationLevel() {
+		return AuthenticationLevel.Level0;
+	}
+
+	@Override
+	protected String getMethodName() {
+		return "services/apisrv/stats";
 	}
 }
