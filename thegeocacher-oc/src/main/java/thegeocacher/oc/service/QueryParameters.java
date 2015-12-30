@@ -1,4 +1,4 @@
-package thegeocacher.oc.services;
+package thegeocacher.oc.service;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package thegeocacher.oc.services;
+package thegeocacher.oc.service;
 
 public enum AuthenticationLevel
 {

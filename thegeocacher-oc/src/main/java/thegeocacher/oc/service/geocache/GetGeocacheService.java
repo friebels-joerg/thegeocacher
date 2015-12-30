@@ -1,7 +1,7 @@
-package thegeocacher.oc.services.caches.geocache;
+package thegeocacher.oc.service.geocache;
 
-import thegeocacher.oc.services.AuthenticationLevel;
-import thegeocacher.oc.services.OcService;
+import thegeocacher.oc.service.AuthenticationLevel;
+import thegeocacher.oc.service.OcService;
 
 public class GetGeocacheService extends OcService
 {

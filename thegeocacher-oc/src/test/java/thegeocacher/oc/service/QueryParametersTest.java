@@ -1,7 +1,9 @@
-package thegeocacher.oc.services;
+package thegeocacher.oc.service;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import thegeocacher.oc.service.QueryParameters;
 
 public class QueryParametersTest
 {

@@ -1,6 +1,6 @@
-package thegeocacher.oc.services.caches.geocache;
+package thegeocacher.oc.service.geocache;
 
-import thegeocacher.oc.services.QueryParameters;
+import thegeocacher.oc.service.QueryParameters;
 
 public class GetGeocacheServiceParameters extends QueryParameters
 {

@@ -1,23 +1,30 @@
-package thegeocacher.oc.services.apisrv.installation;
+package thegeocacher.oc.service.installations;
 
 import java.io.IOException;
+import java.util.List;
 
-import thegeocacher.oc.services.AuthenticationLevel;
-import thegeocacher.oc.services.OcService;
+import thegeocacher.oc.service.AuthenticationLevel;
+import thegeocacher.oc.service.OcService;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class GetInstallationService extends OcService
+public class GetInstallationsService extends OcService
 {
 
-	public Installation convertJsonStringToPojo(String aString)
+	public Installations convertJsonStringToPojo(String aString)
 	{
 		ObjectMapper mapper = new ObjectMapper();
 		try
 		{
-			return mapper.readValue(aString, Installation.class);
+			List<Installation> installations = mapper.readValue(aString, new TypeReference<List<Installation>>()
+			{
+				//
+			});
+
+			return new Installations(installations);
 		}
 		catch (JsonParseException e)
 		{
@@ -42,6 +49,6 @@ public class GetInstallationService extends OcService
 	@Override
 	protected String getMethodName()
 	{
-		return "services/apisrv/installation";
+		return "services/apisrv/installations";
 	}
 }

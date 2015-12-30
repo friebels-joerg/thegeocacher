@@ -1,8 +1,10 @@
-package thegeocacher.oc.services.apisrv.installations;
+package thegeocacher.oc.service.installations;
 
 import org.junit.Test;
 
-import thegeocacher.oc.services.apisrv.installation.Installation;
+import thegeocacher.oc.service.installations.GetInstallationsService;
+import thegeocacher.oc.service.installations.Installation;
+import thegeocacher.oc.service.installations.Installations;
 import static org.junit.Assert.*;
 
 public class GetInstallationsServiceTest
@@ -26,9 +28,9 @@ public class GetInstallationsServiceTest
 
 		for (Installation installation : result)
 		{
-			assertNotNull(installation.getOkapi_base_url());
-			assertNotNull(installation.getSite_name());
-			assertNotNull(installation.getSite_url());
+			assertNotNull(installation.okapiBaseUrl);
+			assertNotNull(installation.siteName);
+			assertNotNull(installation.siteUrl);
 		}
 	}
 }

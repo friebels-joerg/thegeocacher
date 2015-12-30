@@ -1,7 +1,11 @@
-package thegeocacher.oc.services;
+package thegeocacher.oc.service;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import thegeocacher.oc.service.AuthenticationLevel;
+import thegeocacher.oc.service.OcService;
+import thegeocacher.oc.service.QueryParameters;
 
 public class OcServiceTest
 {
