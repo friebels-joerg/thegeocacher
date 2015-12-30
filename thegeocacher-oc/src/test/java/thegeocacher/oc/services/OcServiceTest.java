@@ -6,17 +6,43 @@ import org.junit.Test;
 public class OcServiceTest
 {
 	@Test
-	public void testGetUrl()
+	public void testGetUrlWithLevel0()
 	{
 		QueryParameters someQueryParameters = new QueryParameters();
-		someQueryParameters.put("cache_code", "OC0ED1");
-		OcService serviceUnderTest = new OcServiceImpl();
-		String expResult = "http://www.opencaching.de/okapi/services/caches/geocache?consumer_key=f8k87aHFAVaCn5K9gAeM&cache_code=OC0ED1";
+		someQueryParameters.put("parameter0", "value0");
+		OcService serviceUnderTest = new OcServiceLevel0Impl();
+		String expectedResult = "http://www.opencaching.de/okapi/level0?parameter0=value0";
 		String result = serviceUnderTest.getUrl(someQueryParameters);
-		Assert.assertEquals(expResult, result);
+		Assert.assertEquals(expectedResult, result);
 	}
 
-	public class OcServiceImpl extends OcService
+	@Test
+	public void testGetUrlWithLevel1()
+	{
+		QueryParameters someQueryParameters = new QueryParameters();
+		someQueryParameters.put("parameter1", "value1");
+		OcService serviceUnderTest = new OcServiceLevel1Impl();
+		String expectedResult = "http://www.opencaching.de/okapi/level1?consumer_key=f8k87aHFAVaCn5K9gAeM&parameter1=value1";
+		String result = serviceUnderTest.getUrl(someQueryParameters);
+		Assert.assertEquals(expectedResult, result);
+	}
+
+	public class OcServiceLevel0Impl extends OcService
+	{
+		@Override
+		public AuthenticationLevel getAuthenticationLevel()
+		{
+			return AuthenticationLevel.Level0;
+		}
+
+		@Override
+		public String getMethodName()
+		{
+			return "level0";
+		}
+	}
+
+	public class OcServiceLevel1Impl extends OcService
 	{
 		@Override
 		public AuthenticationLevel getAuthenticationLevel()
@@ -27,8 +53,7 @@ public class OcServiceTest
 		@Override
 		public String getMethodName()
 		{
-			return "services/caches/geocache";
+			return "level1";
 		}
 	}
-
 }
