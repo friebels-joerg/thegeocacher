@@ -4,39 +4,50 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class QueryParameters {
+public class QueryParameters
+{
 
 	protected Map<String, String> parameters = new HashMap<String, String>();
 
-	public QueryParameters() {
+	public QueryParameters()
+	{
 		super();
 	}
 
-	public QueryParameters(QueryParameters aSomeQueryParameters) {
+	public QueryParameters(QueryParameters aSomeQueryParameters)
+	{
 		this();
 		parameters.putAll(aSomeQueryParameters.parameters);
 	}
 
-	protected void put(String aKey, String aValue) {
+	protected void put(String aKey, String aValue)
+	{
 		parameters.put(aKey, aValue);
 	}
 
-	public String get(String aKey) {
+	public String get(String aKey)
+	{
 		return parameters.get(aKey);
 	}
 
 	@Override
-	public String toString() {
-		if (parameters.isEmpty()) {
+	public String toString()
+	{
+		if (parameters.isEmpty())
+		{
 			return "";
 		}
 		String result = "";
 		boolean first = true;
-		for (Entry<String, String> entry : parameters.entrySet()) {
-			if (first) {
+		for (Entry<String, String> entry : parameters.entrySet())
+		{
+			if (first)
+			{
 				result += "?";
 				first = false;
-			} else {
+			}
+			else
+			{
 				result += "&";
 			}
 			result += entry.getKey();

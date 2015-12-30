@@ -6,20 +6,24 @@ import java.util.List;
 
 import thegeocacher.oc.services.apisrv.installation.Installation;
 
-public class Installations implements Iterable<Installation> {
+public class Installations implements Iterable<Installation>
+{
 
 	private List<Installation> installations = new ArrayList<Installation>();
 
-	public Installations(List<Installation> aInstallations) {
+	public Installations(List<Installation> aInstallations)
+	{
 		super();
 		installations.addAll(aInstallations);
 	}
 
-	public Iterator<Installation> iterator() {
+	public Iterator<Installation> iterator()
+	{
 		return installations.iterator();
 	}
 
-	public int size() {
+	public int size()
+	{
 		return installations.size();
 	}
 }

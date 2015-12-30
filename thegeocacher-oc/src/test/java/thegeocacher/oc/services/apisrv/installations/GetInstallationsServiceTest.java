@@ -5,10 +5,12 @@ import org.junit.Test;
 import thegeocacher.oc.services.apisrv.installation.Installation;
 import static org.junit.Assert.*;
 
-public class GetInstallationsServiceTest {
+public class GetInstallationsServiceTest
+{
 
 	@Test
-	public void test() {
+	public void test()
+	{
 		GetInstallationsService serviceUnderTest = new GetInstallationsService();
 
 		Installations result = serviceUnderTest
@@ -22,7 +24,8 @@ public class GetInstallationsServiceTest {
 
 		assertEquals(5, result.size());
 
-		for (Installation installation : result) {
+		for (Installation installation : result)
+		{
 			assertNotNull(installation.getOkapi_base_url());
 			assertNotNull(installation.getSite_name());
 			assertNotNull(installation.getSite_url());

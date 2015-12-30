@@ -9,28 +9,39 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class GetInstallationService extends OcService {
+public class GetInstallationService extends OcService
+{
 
-	public Installation convertJsonStringToPojo(String aString) {
+	public Installation convertJsonStringToPojo(String aString)
+	{
 		ObjectMapper mapper = new ObjectMapper();
-		try {
+		try
+		{
 			return mapper.readValue(aString, Installation.class);
-		} catch (JsonParseException e) {
+		}
+		catch (JsonParseException e)
+		{
 			throw new RuntimeException(e);
-		} catch (JsonMappingException e) {
+		}
+		catch (JsonMappingException e)
+		{
 			throw new RuntimeException(e);
-		} catch (IOException e) {
+		}
+		catch (IOException e)
+		{
 			throw new RuntimeException(e);
 		}
 	}
 
 	@Override
-	protected AuthenticationLevel getAuthenticationLevel() {
+	protected AuthenticationLevel getAuthenticationLevel()
+	{
 		return AuthenticationLevel.Level0;
 	}
 
 	@Override
-	protected String getMethodName() {
+	protected String getMethodName()
+	{
 		return "services/apisrv/installation";
 	}
 }

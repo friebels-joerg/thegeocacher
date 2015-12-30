@@ -2,17 +2,14 @@ package thegeocacher.oc.services.apisrv.getstats;
 
 import org.junit.Test;
 
-import thegeocacher.oc.services.apisrv.getstats.Stats;
-import thegeocacher.oc.services.apisrv.getstats.GetStatsService;
 import static org.junit.Assert.*;
 
-/**
- *
- */
-public class GetStatsServiceTest {
+public class GetStatsServiceTest
+{
 
 	@Test
-	public void test() {
+	public void test()
+	{
 		GetStatsService serviceUnderTest = new GetStatsService();
 
 		Stats result = serviceUnderTest
