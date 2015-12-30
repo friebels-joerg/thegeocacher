@@ -14,10 +14,13 @@ public class QueryParameters
 		super();
 	}
 
-	public QueryParameters(QueryParameters aSomeQueryParameters)
+	public QueryParameters(QueryParameters someParameters)
 	{
 		this();
-		parameters.putAll(aSomeQueryParameters.parameters);
+		if (someParameters != null)
+		{
+			parameters.putAll(someParameters.parameters);
+		}
 	}
 
 	protected void put(String aKey, String aValue)

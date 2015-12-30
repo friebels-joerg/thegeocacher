@@ -2,16 +2,13 @@ package thegeocacher.oc.service.installations;
 
 import org.junit.Test;
 
-import thegeocacher.oc.service.installations.GetInstallationsService;
-import thegeocacher.oc.service.installations.Installation;
-import thegeocacher.oc.service.installations.Installations;
 import static org.junit.Assert.*;
 
 public class GetInstallationsServiceTest
 {
 
 	@Test
-	public void test()
+	public void testConvertJsonStringToPojo()
 	{
 		GetInstallationsService serviceUnderTest = new GetInstallationsService();
 
@@ -33,4 +30,14 @@ public class GetInstallationsServiceTest
 			assertNotNull(installation.siteUrl);
 		}
 	}
+
+	@Test
+	public void testGetContent()
+	{
+		GetInstallationsService serviceUnderTest = new GetInstallationsService();
+
+		String result = serviceUnderTest.getContent();
+		assertNotNull(result);
+	}
+
 }
