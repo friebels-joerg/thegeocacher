@@ -1,6 +1,8 @@
 package thegeocacher.oc.service.installations;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
 import org.apache.http.HttpHost;
@@ -31,19 +33,21 @@ public class GetInstallationsService extends OcService
 		CloseableHttpClient httpclient = null;
 		try
 		{
+			URI uri = new URI(getUrl(null));
+
 			CredentialsProvider credsProvider = new BasicCredentialsProvider();
 			credsProvider.setCredentials(new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT),
 					new UsernamePasswordCredentials("dt0a19", "E$r5t6z7"));
 
 			httpclient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
 
-			HttpHost target = new HttpHost("www.opencaching.de");
+			HttpHost target = new HttpHost(uri.getHost());
 
 			HttpHost proxy = new HttpHost("squid.intdus.retail-sc.com", 3128, "http");
 
 			RequestConfig config = RequestConfig.custom().setProxy(proxy).build();
 
-			HttpGet request = new HttpGet("/okapi/services/apisrv/installations");
+			HttpGet request = new HttpGet(uri.getPath());
 			request.setConfig(config);
 
 			System.out.println("Executing request " + request.getRequestLine() + " to " + target + " via " + proxy);
@@ -62,7 +66,7 @@ public class GetInstallationsService extends OcService
 				response.close();
 			}
 		}
-		catch (IOException e)
+		catch (IOException | URISyntaxException e)
 		{
 			throw new RuntimeException(e);
 		}
