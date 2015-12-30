@@ -14,6 +14,7 @@ public class Installations implements Iterable<Installation>
 		installations.addAll(aInstallations);
 	}
 
+	@Override
 	public Iterator<Installation> iterator()
 	{
 		return installations.iterator();
