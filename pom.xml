@@ -10,6 +10,7 @@
 	<modules>
 		<module>thegeocacher-oc</module>
 		<module>thegeocacher-domain</module>
+	 <module>thegeocacher-common</module>
 	</modules>
 	<build>
 		<pluginManagement>
