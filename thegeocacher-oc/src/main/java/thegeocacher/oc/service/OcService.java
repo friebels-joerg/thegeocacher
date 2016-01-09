@@ -1,27 +1,42 @@
 package thegeocacher.oc.service;
 
+import thegeocacher.common.web.SimpleHttpRequestExecuter;
+
 abstract public class OcService
 {
-	static final String CONSUMER_KEY = "f8k87aHFAVaCn5K9gAeM";
-	static final String CONSUMER_SECRET = "ahURUXEUcUbhSmgPmPmMBmePgQNqfT2g2MXLBtxD";
+   OcSite ocSite = OcSite.DE;
 
-	abstract protected AuthenticationLevel getAuthenticationLevel();
+   abstract protected OcMethod getOcMethod();
 
-	abstract protected String getMethodName();
+   protected OcService()
+   {
+      super();
+   }
 
-	public OcService()
-	{
-		super();
-	}
+   protected OcService(OcSite anOcSite)
+   {
+      super();
+      ocSite = anOcSite;
+   }
 
-	public String getUrl(QueryParameters someQueryParameters)
-	{
-		QueryParameters queryParameters = new QueryParameters(someQueryParameters);
+   String getUrl(QueryParameters someParameters)
+   {
+      QueryParameters queryParameters = new QueryParameters(someParameters);
 
-		if (getAuthenticationLevel() == AuthenticationLevel.Level1)
-		{
-			queryParameters.put("consumer_key", CONSUMER_KEY);
-		}
-		return "http://www.opencaching.de/okapi/" + getMethodName() + queryParameters.toString();
-	}
+      if (getOcMethod().getAuthenticationLevel() == AuthenticationLevel.Level1)
+      {
+         queryParameters.put("consumer_key", OcProperties.getInstance().getConsumerKey());
+      }
+      return ocSite.getOkapiUrl() + getOcMethod().getMethodName() + queryParameters.toString();
+   }
+
+   protected String callOcService(QueryParameters someParameters)
+   {
+      String url = getUrl(someParameters);
+      System.out.println(url);
+      String response = new SimpleHttpRequestExecuter().getResponse(url);
+      System.out.println(response);
+      return response;
+   }
+
 }

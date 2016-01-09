@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.List;
-import thegeocacher.oc.service.AuthenticationLevel;
+import thegeocacher.oc.service.OcMethod;
 import thegeocacher.oc.service.OcService;
 
 public class GetInstallationsService extends OcService
@@ -40,14 +40,9 @@ public class GetInstallationsService extends OcService
    }
 
    @Override
-   protected AuthenticationLevel getAuthenticationLevel()
+   protected OcMethod getOcMethod()
    {
-      return AuthenticationLevel.Level0;
+      return OcMethod.Installations;
    }
 
-   @Override
-   protected String getMethodName()
-   {
-      return "services/apisrv/installations";
-   }
 }

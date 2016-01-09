@@ -1,5 +1,6 @@
-package thegeocacher.oc.service;
+package thegeocacher.oc.service.geocache.status;
 
+import thegeocacher.oc.service.geocache.status.OcGetGeocacheStatusService;
 import org.junit.Test;
 import thegeocacher.domain.attribute.GeocacheCode;
 import thegeocacher.domain.attribute.GeocacheStatus;
@@ -8,10 +9,10 @@ import thegeocacher.domain.attribute.GeocacheStatus;
  *
  * @author joerg
  */
-public class OcServicesTest
+public class OcGetGeocacheStatusServiceTest
 {
 
-   public OcServicesTest()
+   public OcGetGeocacheStatusServiceTest()
    {
    }
 
@@ -23,7 +24,7 @@ public class OcServicesTest
    {
       System.out.println("getGeocacheStatus");
       GeocacheCode aGeocacheCode = new GeocacheCode("OC1234");
-      OcServices instance = new OcServices();
+      OcGetGeocacheStatusService instance = new OcGetGeocacheStatusService();
       GeocacheStatus result = instance.getGeocacheStatus(aGeocacheCode);
    }
 
