@@ -1,8 +1,6 @@
 package thegeocacher.common.web;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.http.HttpHost;
@@ -35,7 +33,7 @@ public class SimpleHttpRequestExecuter
       }
    }
 
-   public String getResponseViaProxy(String anUrl)
+   String getResponseViaProxy(String anUrl)
    {
       CloseableHttpClient httpclient = null;
       try
@@ -53,15 +51,13 @@ public class SimpleHttpRequestExecuter
                WebProperties.getInstance().getProxyScheme());
 
          config = RequestConfig.custom().setProxy(proxy).build();
-         URI uri = new URI(anUrl);
 
-         HttpGet request = new HttpGet(uri.getPath());
+         HttpGet request = new HttpGet(anUrl);
          request.setConfig(config);
 
-         HttpHost target = new HttpHost(uri.getHost());
-         CloseableHttpResponse response = httpclient.execute(target, request);
+         CloseableHttpResponse response = httpclient.execute(request);
          return EntityUtils.toString(response.getEntity());
-      } catch (URISyntaxException | IOException ex)
+      } catch (IOException ex)
       {
          Logger.getLogger(SimpleHttpRequestExecuter.class.getName()).log(Level.SEVERE, null, ex);
          throw new RuntimeException(ex);
@@ -81,23 +77,17 @@ public class SimpleHttpRequestExecuter
       }
    }
 
-   public String getResponseWithoutProxy(String anUrl)
+   String getResponseWithoutProxy(String anUrl)
    {
       try
       {
          CloseableHttpClient httpclient = HttpClients.createDefault();
-         URI uri = new URI(anUrl);
-
-         HttpGet request = new HttpGet(uri.getPath());
-
-         HttpHost target = new HttpHost(uri.getHost());
-         CloseableHttpResponse response = httpclient.execute(target, request);
+         HttpGet request = new HttpGet(anUrl);
+         CloseableHttpResponse response = httpclient.execute(request);
          return EntityUtils.toString(response.getEntity());
-      } catch (URISyntaxException ex)
-      {
-         throw new RuntimeException(ex);
       } catch (IOException ex)
       {
+         Logger.getLogger(SimpleHttpRequestExecuter.class.getName()).log(Level.SEVERE, null, ex);
          throw new RuntimeException(ex);
       }
 

@@ -6,16 +6,14 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.List;
-import thegeocacher.common.web.SimpleHttpRequestExecuter;
 import thegeocacher.oc.service.AuthenticationLevel;
 import thegeocacher.oc.service.OcService;
 
 public class GetInstallationsService extends OcService
 {
-
    String getContent()
    {
-      return new SimpleHttpRequestExecuter().getResponse(getUrl(null));
+      return null;// new SimpleHttpRequestExecuter().getResponse(getUrl(null));
    }
 
    public Installations convertJsonStringToPojo(String aString)
