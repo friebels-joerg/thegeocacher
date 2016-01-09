@@ -22,4 +22,10 @@ public class TimestampAttribute implements Serializable
    {
       return value;
    }
+
+   @Override
+   public String toString()
+   {
+      return getClass().getSimpleName() + ": " + getValue();
+   }
 }

@@ -1,5 +1,6 @@
 package thegeocacher.domain;
 
+import thegeocacher.domain.attribute.GeocacheAvailability;
 import thegeocacher.domain.attribute.GeocacheCode;
 import thegeocacher.domain.attribute.UpdateTimestamp;
 
@@ -13,8 +14,44 @@ public class GeocacheStatus
 
    GeocacheCode code;
 
-   GeocacheStatus status;
+   GeocacheAvailability availability;
 
-   UpdateTimestamp last_modified;
+   UpdateTimestamp lastModified;
+
+   public GeocacheAvailability getAvailability()
+   {
+      return availability;
+   }
+
+   public void setAvailability(GeocacheAvailability aAvailability)
+   {
+      availability = aAvailability;
+   }
+
+   public GeocacheCode getCode()
+   {
+      return code;
+   }
+
+   public void setCode(GeocacheCode aCode)
+   {
+      code = aCode;
+   }
+
+   public UpdateTimestamp getLastModified()
+   {
+      return lastModified;
+   }
+
+   public void setLastModified(UpdateTimestamp aLastModified)
+   {
+      lastModified = aLastModified;
+   }
+
+   @Override
+   public String toString()
+   {
+      return "" + getCode() + " " + getAvailability() + " " + getLastModified();
+   }
 
 }

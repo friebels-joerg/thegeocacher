@@ -4,16 +4,23 @@ import java.io.Serializable;
 
 public class StringAttribute implements Serializable
 {
-	String value;
+   String value;
 
-	public StringAttribute(String value)
-	{
-		super();
-		this.value = value;
-	}
+   public StringAttribute(String value)
+   {
+      super();
+      this.value = value;
+   }
 
-	public String getValue()
-	{
-		return value;
-	}
+   public String getValue()
+   {
+      return value;
+   }
+
+   @Override
+   public String toString()
+   {
+      return getClass().getSimpleName() + ": " + getValue();
+   }
+
 }

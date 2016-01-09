@@ -1,9 +1,9 @@
 package thegeocacher.oc.service.geocache.status;
 
-import thegeocacher.oc.service.geocache.status.OcGetGeocacheStatusService;
+import org.junit.Assert;
 import org.junit.Test;
+import thegeocacher.domain.GeocacheStatus;
 import thegeocacher.domain.attribute.GeocacheCode;
-import thegeocacher.domain.attribute.GeocacheStatus;
 
 /**
  *
@@ -11,10 +11,6 @@ import thegeocacher.domain.attribute.GeocacheStatus;
  */
 public class OcGetGeocacheStatusServiceTest
 {
-
-   public OcGetGeocacheStatusServiceTest()
-   {
-   }
 
    /**
     * Test of getGeocacheStatus method, of class OcServices.
@@ -26,6 +22,10 @@ public class OcGetGeocacheStatusServiceTest
       GeocacheCode aGeocacheCode = new GeocacheCode("OC1234");
       OcGetGeocacheStatusService instance = new OcGetGeocacheStatusService();
       GeocacheStatus result = instance.getGeocacheStatus(aGeocacheCode);
+      Assert.assertNotNull(result.getCode());
+      Assert.assertNotNull(result.getAvailability());
+      Assert.assertNotNull(result.getLastModified());
+      System.out.println("result " + result);
    }
 
 }
