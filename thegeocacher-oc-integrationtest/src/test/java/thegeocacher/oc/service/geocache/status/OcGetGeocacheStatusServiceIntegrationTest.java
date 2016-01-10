@@ -9,7 +9,7 @@ import thegeocacher.domain.attribute.GeocacheCode;
  *
  * @author joerg
  */
-public class OcGetGeocacheStatusServiceTest
+public class OcGetGeocacheStatusServiceIntegrationTest
 {
 
    /**

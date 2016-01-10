@@ -1,5 +1,6 @@
 package thegeocacher.domain;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import thegeocacher.domain.attribute.GeocacheAvailability;
 import thegeocacher.domain.attribute.GeocacheCode;
 import thegeocacher.domain.attribute.UpdateTimestamp;
@@ -51,7 +52,6 @@ public class GeocacheStatus
    @Override
    public String toString()
    {
-      return "" + getCode() + " " + getAvailability() + " " + getLastModified();
+      return ToStringBuilder.reflectionToString(this);
    }
-
 }
