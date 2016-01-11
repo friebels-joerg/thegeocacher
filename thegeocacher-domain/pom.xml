@@ -12,18 +12,6 @@
 
 	<artifactId>thegeocacher-domain</artifactId>
 
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-                                <version>3.3</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -31,4 +19,16 @@
             <version>3.4</version>
         </dependency>
     </dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${android.java.version}</source>
+					<target>${android.java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
