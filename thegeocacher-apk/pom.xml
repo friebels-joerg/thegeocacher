@@ -2,7 +2,6 @@
 	xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -14,22 +13,17 @@
 	<artifactId>thegeocacher-apk</artifactId>
 	<packaging>apk</packaging>
 
-	<properties>
-		<android.version>4.1.1.4</android.version>
-		<android-support.version>r7</android-support.version>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
-			<version>${android.version}</version>
+			<version>4.1.1.4</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>support-v4</artifactId>
-			<version>${android-support.version}</version>
+			<version>r7</version>
 		</dependency>
 	</dependencies>
 
