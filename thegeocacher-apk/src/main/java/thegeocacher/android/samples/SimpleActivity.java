@@ -1,4 +1,4 @@
-package main.java.thegeocacher.android.samples;
+package thegeocacher.android.samples;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,10 +6,12 @@ import android.os.Bundle;
 /**
  * Created by dd on 14-7-20.
  */
-public class SimpleActivity extends Activity {
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.simple);
-    }
+public class SimpleActivity extends Activity
+{
+   @Override
+   public void onCreate(Bundle savedInstanceState)
+   {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.simple);
+   }
 }
