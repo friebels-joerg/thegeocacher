@@ -39,6 +39,7 @@
 				<configuration>
 					<sdk>
 						<platform>22</platform> <!-- Android 5.1 -->
+                                                <path>/usr/development/android-sdk-linux</path>
 					</sdk>
 					<undeployBeforeDeploy>true</undeployBeforeDeploy>
 					<manifest>
@@ -54,9 +55,6 @@
 					<source>${android.java.version}</source>
 					<target>${android.java.version}</target>
 				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>

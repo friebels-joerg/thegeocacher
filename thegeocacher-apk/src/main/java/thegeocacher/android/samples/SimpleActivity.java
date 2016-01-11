@@ -1,4 +1,4 @@
-package thegeocacher.android.samples;
+package main.java.thegeocacher.android.samples;
 
 import android.app.Activity;
 import android.os.Bundle;
