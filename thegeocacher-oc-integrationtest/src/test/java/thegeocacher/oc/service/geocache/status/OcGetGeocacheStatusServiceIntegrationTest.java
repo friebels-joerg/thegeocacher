@@ -19,7 +19,7 @@ public class OcGetGeocacheStatusServiceIntegrationTest
 	@Test
 	public void testGetGeocacheStatus()
 	{
-		if (!"DEN0529".equals(System.getenv("COMPUTERNAME"))) // just do it at
+		if (!"DEN0529_".equals(System.getenv("COMPUTERNAME"))) // just do it at
 																// home.....
 		{
 			System.out.println("getGeocacheStatus");
