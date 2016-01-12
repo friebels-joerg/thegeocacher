@@ -15,14 +15,13 @@ import static org.junit.Assert.*;
  */
 public class OcGetGeocacheStatusServiceTest
 {
-
 	@Test
-	public void testConvertJsonStringToPojo()
+	public void testGetJsonObject()
 	{
 		OcGetGeocacheStatusService serviceUnderTest = new OcGetGeocacheStatusService();
 		String jsonString = "{\"code\":\"OC1234\",\"status\":\"Available\",\"last_modified\":\"2011-06-13T20:03:32+02:00\"}";
 
-		OcGetGeocacheStatusResult result = serviceUnderTest.convertJsonStringToPojo(jsonString);
+		OcGetGeocacheStatusJsonResult result = serviceUnderTest.getJsonObject(jsonString);
 
 		assertEquals("OC1234", result.getCode());
 		assertEquals("Available", result.getStatus());
@@ -30,15 +29,15 @@ public class OcGetGeocacheStatusServiceTest
 	}
 
 	@Test
-	public void testConvertPojoToGeocacheStatus()
+	public void testGetGeocacheStatus()
 	{
 		OcGetGeocacheStatusService serviceUnderTest = new OcGetGeocacheStatusService();
-		OcGetGeocacheStatusResult pojo = new OcGetGeocacheStatusResult();
+		OcGetGeocacheStatusJsonResult pojo = new OcGetGeocacheStatusJsonResult();
 		pojo.code = "OC1234";
 		pojo.last_modified = new Date(111, 05, 13, 20, 03, 32);
 		pojo.status = "Available";
 
-		GeocacheStatus result = serviceUnderTest.convertPojoToGeocacheStatus(pojo);
+		GeocacheStatus result = serviceUnderTest.getGeocacheStatus(pojo);
 
 		assertEquals("OC1234", result.getCode().getValue());
 		assertEquals(GeocacheAvailability.available, result.getAvailability());

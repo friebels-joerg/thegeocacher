@@ -8,6 +8,7 @@ package thegeocacher.oc.service;
 public enum OcMethod
 {
    Geocache("services/caches/geocache", AuthenticationLevel.Level1),
+   SearchNearestGeocaches("services/caches/search/nearest", AuthenticationLevel.Level1),
    Installations("services/apisrv/installations", AuthenticationLevel.Level0);
 
    AuthenticationLevel authenticationLevel;

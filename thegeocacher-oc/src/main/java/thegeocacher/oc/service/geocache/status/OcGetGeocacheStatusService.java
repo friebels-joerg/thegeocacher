@@ -31,11 +31,9 @@ public class OcGetGeocacheStatusService extends OcService
 		parameters.setGeocacheCode(aGeocacheCode);
 
 		String jsonString = callOcService(parameters);
-		OcGetGeocacheStatusResult result = convertJsonStringToPojo(jsonString);
+		OcGetGeocacheStatusJsonResult jsonObject = getJsonObject(jsonString);
 
-		GeocacheStatus geocacheStatus = convertPojoToGeocacheStatus(result);
-
-		return geocacheStatus;
+		return getGeocacheStatus(jsonObject);
 	}
 
 	@Override
@@ -44,12 +42,12 @@ public class OcGetGeocacheStatusService extends OcService
 		return OcMethod.Geocache;
 	}
 
-	OcGetGeocacheStatusResult convertJsonStringToPojo(String aJsonString)
+	OcGetGeocacheStatusJsonResult getJsonObject(String aJsonString)
 	{
 		ObjectMapper mapper = new ObjectMapper();
 		try
 		{
-			OcGetGeocacheStatusResult result = mapper.readValue(aJsonString, OcGetGeocacheStatusResult.class);
+			OcGetGeocacheStatusJsonResult result = mapper.readValue(aJsonString, OcGetGeocacheStatusJsonResult.class);
 			return result;
 		}
 		catch (JsonParseException e)
@@ -66,12 +64,12 @@ public class OcGetGeocacheStatusService extends OcService
 		}
 	}
 
-	GeocacheStatus convertPojoToGeocacheStatus(OcGetGeocacheStatusResult result)
+	GeocacheStatus getGeocacheStatus(OcGetGeocacheStatusJsonResult aJsonObject)
 	{
 		GeocacheStatus geocacheStatus = new GeocacheStatus();
-		geocacheStatus.setAvailability(getAvailabality(result.getStatus()));
-		geocacheStatus.setCode(new GeocacheCode(result.getCode()));
-		geocacheStatus.setLastModified(new UpdateTimestamp(result.getLastModified()));
+		geocacheStatus.setAvailability(getAvailabality(aJsonObject.getStatus()));
+		geocacheStatus.setCode(new GeocacheCode(aJsonObject.getCode()));
+		geocacheStatus.setLastModified(new UpdateTimestamp(aJsonObject.getLastModified()));
 		return geocacheStatus;
 	}
 
