@@ -2,6 +2,11 @@ package thegeocacher.domain.attribute.base;
 
 import java.util.UUID;
 
+/**
+ *
+ * @author Jörg Friebel
+ * @since 12.01.2016
+ */
 public class UuidAttribute extends StringAttribute
 {
 	public UuidAttribute()
@@ -9,8 +14,8 @@ public class UuidAttribute extends StringAttribute
 		super(UUID.randomUUID().toString());
 	}
 
-	public UuidAttribute(String value)
+	public UuidAttribute(String aValue)
 	{
-		super(value);
+		super(aValue);
 	}
 }

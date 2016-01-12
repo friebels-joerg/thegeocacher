@@ -31,7 +31,7 @@ public class OcGetGeocacheStatusService extends OcService
 		parameters.setGeocacheCode(aGeocacheCode);
 
 		String jsonString = callOcService(parameters);
-		OcGetGeocacheStatusJsonResult jsonObject = getJsonObject(jsonString);
+		OcGeocacheStatus jsonObject = getJsonObject(jsonString);
 		return getResultObject(jsonObject);
 	}
 
@@ -41,12 +41,12 @@ public class OcGetGeocacheStatusService extends OcService
 		return OcMethod.CACHES_GEOCACHE;
 	}
 
-	OcGetGeocacheStatusJsonResult getJsonObject(String aJsonString)
+	OcGeocacheStatus getJsonObject(String aJsonString)
 	{
 		ObjectMapper mapper = new ObjectMapper();
 		try
 		{
-			OcGetGeocacheStatusJsonResult result = mapper.readValue(aJsonString, OcGetGeocacheStatusJsonResult.class);
+			OcGeocacheStatus result = mapper.readValue(aJsonString, OcGeocacheStatus.class);
 			return result;
 		}
 		catch (JsonParseException e)
@@ -63,7 +63,7 @@ public class OcGetGeocacheStatusService extends OcService
 		}
 	}
 
-	GeocacheStatus getResultObject(OcGetGeocacheStatusJsonResult aJsonObject)
+	GeocacheStatus getResultObject(OcGeocacheStatus aJsonObject)
 	{
 		GeocacheStatus geocacheStatus = new GeocacheStatus();
 		geocacheStatus.setAvailability(getAvailabality(aJsonObject.getStatus()));

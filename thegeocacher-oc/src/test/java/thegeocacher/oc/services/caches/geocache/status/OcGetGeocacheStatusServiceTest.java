@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import thegeocacher.domain.GeocacheStatus;
 import thegeocacher.domain.attribute.GeocacheAvailability;
-import thegeocacher.oc.services.caches.geocache.status.OcGetGeocacheStatusJsonResult;
+import thegeocacher.oc.services.caches.geocache.status.OcGeocacheStatus;
 import thegeocacher.oc.services.caches.geocache.status.OcGetGeocacheStatusParameters;
 import thegeocacher.oc.services.caches.geocache.status.OcGetGeocacheStatusService;
 import static org.junit.Assert.*;
@@ -24,7 +24,7 @@ public class OcGetGeocacheStatusServiceTest
 		OcGetGeocacheStatusService serviceUnderTest = new OcGetGeocacheStatusService();
 		String jsonString = "{\"code\":\"OC1234\",\"status\":\"Available\",\"last_modified\":\"2011-06-13T20:03:32+02:00\"}";
 
-		OcGetGeocacheStatusJsonResult result = serviceUnderTest.getJsonObject(jsonString);
+		OcGeocacheStatus result = serviceUnderTest.getJsonObject(jsonString);
 
 		assertEquals("OC1234", result.getCode());
 		assertEquals("Available", result.getStatus());
@@ -35,7 +35,7 @@ public class OcGetGeocacheStatusServiceTest
 	public void testGetGeocacheStatus()
 	{
 		OcGetGeocacheStatusService serviceUnderTest = new OcGetGeocacheStatusService();
-		OcGetGeocacheStatusJsonResult pojo = new OcGetGeocacheStatusJsonResult();
+		OcGeocacheStatus pojo = new OcGeocacheStatus();
 		pojo.code = "OC1234";
 		pojo.last_modified = new Date(111, 05, 13, 20, 03, 32);
 		pojo.status = "Available";

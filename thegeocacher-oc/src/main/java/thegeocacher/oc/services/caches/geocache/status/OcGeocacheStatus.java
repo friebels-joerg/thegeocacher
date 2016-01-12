@@ -3,7 +3,7 @@ package thegeocacher.oc.services.caches.geocache.status;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 
-public class OcGetGeocacheStatusJsonResult
+public class OcGeocacheStatus
 {
    @JsonProperty(value = "code")
    String code;

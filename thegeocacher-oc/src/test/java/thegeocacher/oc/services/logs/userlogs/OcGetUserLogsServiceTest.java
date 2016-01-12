@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import thegeocacher.domain.Logs;
+import thegeocacher.domain.UserLogs;
 import thegeocacher.domain.attribute.base.UuidAttribute;
 import static org.junit.Assert.*;
 
@@ -23,7 +23,7 @@ public class OcGetUserLogsServiceTest
 		String jsonString = "[{\"uuid\":\"f77aea6a-3270-11e4-a39c-525400e33611\",\"date\":\"2014-09-01T00:00:00+02:00\",\"cache_code\":\"OC11149\",\"type\":\"Found it\",\"comment\":\"<p>Der lag offen im Geb\\u00fcsch.<\\/p>\\n<p>Ich habe ihn jetzt neu versteckt, weiss aber nicht, ob die Stelle nicht verbrannt ist.<\\/p>\"},"
 				+ "{\"uuid\":\"c5f15454-3287-11e4-a39c-525400e33611\",\"date\":\"2014-09-01T00:00:00+02:00\",\"cache_code\":\"OC1102B\",\"type\":\"Found it\",\"comment\":\"<p>der war schnell gefunden.<\\/p>\\n<p>Musste nur etwas warten, bis die Muggel weg waren.<\\/p>\\n<p>\\u00a0<\\/p>\\n<p>Vielen Dank f\\u00fcr den Cache<\\/p>\"},"
 				+ "{\"uuid\":\"54bf5f96-29be-11e4-a39c-525400e33611\",\"date\":\"2014-08-21T00:00:00+02:00\",\"cache_code\":\"OC11026\",\"type\":\"Found it\",\"comment\":\"<p>Das war ein sehr sch\\u00f6ner Cache in einem sehr sch\\u00f6nen Park.<\\/p>\\n<p>Vielen Dank daf\\u00fcr.<\\/p>\\n<p>Die Gr\\u00f6sse ist f\\u00fcr mich eher ein Small.<\\/p>\"}]";
-		List<OcGetUserLogsJsonResult> result = serviceUnderTest.getJsonObject(jsonString);
+		List<OcUserLog> result = serviceUnderTest.getJsonObject(jsonString);
 
 	}
 
@@ -35,9 +35,9 @@ public class OcGetUserLogsServiceTest
 				+ "{\"uuid\":\"c5f15454-3287-11e4-a39c-525400e33611\",\"date\":\"2014-09-01T00:00:00+02:00\",\"cache_code\":\"OC1102B\",\"type\":\"Found it\",\"comment\":\"<p>der war schnell gefunden.<\\/p>\\n<p>Musste nur etwas warten, bis die Muggel weg waren.<\\/p>\\n<p>\\u00a0<\\/p>\\n<p>Vielen Dank f\\u00fcr den Cache<\\/p>\"},"
 				+ "{\"uuid\":\"54bf5f96-29be-11e4-a39c-525400e33611\",\"date\":\"2014-08-21T00:00:00+02:00\",\"cache_code\":\"OC11026\",\"type\":\"Found it\",\"comment\":\"<p>Das war ein sehr sch\\u00f6ner Cache in einem sehr sch\\u00f6nen Park.<\\/p>\\n<p>Vielen Dank daf\\u00fcr.<\\/p>\\n<p>Die Gr\\u00f6sse ist f\\u00fcr mich eher ein Small.<\\/p>\"}]";
 
-		List<OcGetUserLogsJsonResult> jsonObjects = serviceUnderTest.getJsonObject(jsonString);
+		List<OcUserLog> jsonObjects = serviceUnderTest.getJsonObject(jsonString);
 
-		Logs result = serviceUnderTest.getResultObject(jsonObjects);
+		UserLogs result = serviceUnderTest.getResultObject(jsonObjects);
 	}
 
 	@Test

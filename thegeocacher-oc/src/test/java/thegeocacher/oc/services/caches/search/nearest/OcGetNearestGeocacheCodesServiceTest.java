@@ -7,7 +7,7 @@ import thegeocacher.domain.Wgs84Coordinates;
 import thegeocacher.domain.attribute.DistanceInMeter;
 import thegeocacher.domain.attribute.Wgs84Latitude;
 import thegeocacher.domain.attribute.Wgs84Longitude;
-import thegeocacher.oc.services.caches.search.nearest.OcGetNearestGeocacheCodesJsonResult;
+import thegeocacher.oc.services.caches.search.nearest.OcGeocacheCodes;
 import thegeocacher.oc.services.caches.search.nearest.OcGetNearestGeocacheCodesParameters;
 import thegeocacher.oc.services.caches.search.nearest.OcGetNearestGeocacheCodesService;
 import static org.junit.Assert.*;
@@ -24,7 +24,7 @@ public class OcGetNearestGeocacheCodesServiceTest
 		OcGetNearestGeocacheCodesService serviceUnderTest = new OcGetNearestGeocacheCodesService();
 		String jsonString = "{\"results\":[\"OC1294E\",\"OC110EE\",\"OC217F\",\"OC120B1\",\"OC10C06\",\"OC9F2D\",\"OCC2CC\",\"OCF33C\",\"OC10245\",\"OC1125C\",\"OC10640\",\"OC3441\",\"OC11518\",\"OC11AAB\",\"OC12373\",\"OC127E9\",\"OC116EF\",\"OC127E6\",\"OC1102E\",\"OC127E7\",\"OC11031\",\"OC1102F\",\"OC111B1\"],\"more\":false}";
 
-		OcGetNearestGeocacheCodesJsonResult result = serviceUnderTest.getJsonObject(jsonString);
+		OcGeocacheCodes result = serviceUnderTest.getJsonObject(jsonString);
 
 		assertNotNull(result.iterator().next());
 		assertFalse(result.getMore());
@@ -36,7 +36,7 @@ public class OcGetNearestGeocacheCodesServiceTest
 		OcGetNearestGeocacheCodesService serviceUnderTest = new OcGetNearestGeocacheCodesService();
 		String jsonString = "{\"results\":[\"OC1294E\",\"OC110EE\",\"OC217F\",\"OC120B1\",\"OC10C06\",\"OC9F2D\",\"OCC2CC\",\"OCF33C\",\"OC10245\",\"OC1125C\",\"OC10640\",\"OC3441\",\"OC11518\",\"OC11AAB\",\"OC12373\",\"OC127E9\",\"OC116EF\",\"OC127E6\",\"OC1102E\",\"OC127E7\",\"OC11031\",\"OC1102F\",\"OC111B1\"],\"more\":false}";
 
-		OcGetNearestGeocacheCodesJsonResult jsonObject = serviceUnderTest.getJsonObject(jsonString);
+		OcGeocacheCodes jsonObject = serviceUnderTest.getJsonObject(jsonString);
 
 		GeocacheCodes result = serviceUnderTest.getResultObject(jsonObject);
 	}

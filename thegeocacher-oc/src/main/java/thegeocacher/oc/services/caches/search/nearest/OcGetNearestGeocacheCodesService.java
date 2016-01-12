@@ -41,7 +41,7 @@ public class OcGetNearestGeocacheCodesService extends OcService
 		parameters.setCenter(aCenter);
 
 		String jsonString = callOcService(parameters);
-		OcGetNearestGeocacheCodesJsonResult jsonObject = getJsonObject(jsonString);
+		OcGeocacheCodes jsonObject = getJsonObject(jsonString);
 		return getResultObject(jsonObject);
 	}
 
@@ -51,13 +51,13 @@ public class OcGetNearestGeocacheCodesService extends OcService
 		return OcMethod.CACHES_SEARCH_NEAREST;
 	}
 
-	OcGetNearestGeocacheCodesJsonResult getJsonObject(String aJsonString)
+	OcGeocacheCodes getJsonObject(String aJsonString)
 	{
 		ObjectMapper mapper = new ObjectMapper();
 		try
 		{
-			OcGetNearestGeocacheCodesJsonResult result = mapper.readValue(aJsonString,
-					OcGetNearestGeocacheCodesJsonResult.class);
+			OcGeocacheCodes result = mapper.readValue(aJsonString,
+					OcGeocacheCodes.class);
 			return result;
 		}
 		catch (JsonParseException e)
@@ -74,7 +74,7 @@ public class OcGetNearestGeocacheCodesService extends OcService
 		}
 	}
 
-	GeocacheCodes getResultObject(OcGetNearestGeocacheCodesJsonResult aJsonObject)
+	GeocacheCodes getResultObject(OcGeocacheCodes aJsonObject)
 	{
 		GeocacheCodes geocacheCodes = new GeocacheCodes();
 		for (String geocacheCode : aJsonObject)

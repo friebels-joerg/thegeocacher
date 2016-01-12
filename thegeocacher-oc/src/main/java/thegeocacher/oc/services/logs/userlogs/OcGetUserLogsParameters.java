@@ -15,4 +15,9 @@ public class OcGetUserLogsParameters extends QueryParameters
 	{
 		put("user_uuid", aUserUuid.getValue());
 	}
+
+	public void setOffset(int anOffset)
+	{
+		put("offset", "" + anOffset);
+	}
 }

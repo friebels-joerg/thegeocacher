@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class OcGetNearestGeocacheCodesJsonResult implements Iterable<String>
+public class OcGeocacheCodes implements Iterable<String>
 {
 	@JsonProperty("results")
 	private List<String> results = new ArrayList<String>();
