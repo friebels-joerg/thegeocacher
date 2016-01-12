@@ -12,10 +12,10 @@ import thegeocacher.domain.attribute.GeocacheCode;
  */
 public class GeocacheCodes
 {
-	private List<GeocacheCode> geocacheCodes = new ArrayList<GeocacheCode>();
+	private List<GeocacheCode> values = new ArrayList<GeocacheCode>();
 
 	public void add(GeocacheCode aCode)
 	{
-		geocacheCodes.add(aCode);
+		values.add(aCode);
 	}
 }

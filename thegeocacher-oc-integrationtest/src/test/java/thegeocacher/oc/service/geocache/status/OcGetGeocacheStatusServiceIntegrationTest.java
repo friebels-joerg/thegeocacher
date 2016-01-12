@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import thegeocacher.domain.GeocacheStatus;
 import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.oc.services.caches.geocache.status.OcGetGeocacheStatusService;
 
 /**
  *
