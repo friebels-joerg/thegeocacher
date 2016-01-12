@@ -34,7 +34,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class OcGetUserLogsService extends OcService
 {
-	int limit = 20;
+	private final static int LIMIT = 20;
 
 	public OcGetUserLogsService()
 	{
@@ -97,7 +97,7 @@ public class OcGetUserLogsService extends OcService
 			logs.add(getLog(log));
 		}
 
-		if (someJsonObject.size() == limit)
+		if (someJsonObject.size() == LIMIT)
 		{
 			logs.setMoreLogsAvailable(Boolean.TRUE);
 		}
