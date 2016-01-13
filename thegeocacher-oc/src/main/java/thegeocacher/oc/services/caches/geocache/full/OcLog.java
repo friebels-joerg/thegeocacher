@@ -1,5 +1,6 @@
 package thegeocacher.oc.services.caches.geocache.full;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,13 +9,13 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class OcLatestLog
+public class OcLog
 {
 
 	@JsonProperty("uuid")
 	public String uuid;
 	@JsonProperty("date")
-	public String date;
+	public Date date;
 	@JsonProperty("user")
 	public OcUser user;
 	@JsonProperty("type")

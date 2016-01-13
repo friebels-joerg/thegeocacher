@@ -1,6 +1,7 @@
 package thegeocacher.oc.services.caches.geocache.full;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,13 +51,13 @@ public class OcGeocacheFull
 	@JsonProperty("req_passwd")
 	public Boolean reqPasswd;
 	@JsonProperty("last_found")
-	public String lastFound;
+	public Date lastFound;
 	@JsonProperty("last_modified")
-	public String lastModified;
+	public Date lastModified;
 	@JsonProperty("date_created")
-	public String dateCreated;
+	public Date dateCreated;
 	@JsonProperty("date_hidden")
-	public String dateHidden;
+	public Date dateHidden;
 	@JsonProperty("owner")
 	public OcOwner owner;
 	@JsonProperty("is_found")
@@ -76,7 +77,7 @@ public class OcGeocacheFull
 	@JsonProperty("attr_acodes")
 	public List<String> attrAcodes = new ArrayList<String>();
 	@JsonProperty("latest_logs")
-	public List<OcLatestLog> latestLogs = new ArrayList<OcLatestLog>();
+	public List<OcLog> latestLogs = new ArrayList<OcLog>();
 	@JsonProperty("trackables")
 	public List<OcTrackable> trackables = new ArrayList<OcTrackable>();
 	@JsonProperty("trackables_count")
