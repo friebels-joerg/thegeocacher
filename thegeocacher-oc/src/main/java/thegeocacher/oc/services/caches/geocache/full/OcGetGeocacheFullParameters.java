@@ -2,12 +2,12 @@ package thegeocacher.oc.services.caches.geocache.full;
 
 import thegeocacher.oc.services.QueryParameters;
 
-public class GetGeocacheServiceParameters extends QueryParameters
+public class OcGetGeocacheFullParameters extends QueryParameters
 {
 
 	private static final String CACHE_CODE = "cache_code";
 
-	public GetGeocacheServiceParameters()
+	public OcGetGeocacheFullParameters()
 	{
 		super();
 	}
