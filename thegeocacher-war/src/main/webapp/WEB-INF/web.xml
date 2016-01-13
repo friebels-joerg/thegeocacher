@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<web-app
+	version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>GSPM</display-name>
+	<context-param>
+		<param-name>javax.faces.FACELETS_RESOURCE_RESOLVER</param-name>
+		<param-value>com.retail_sc.jsf.template.facelets.TemplateResolver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<!-- <servlet> <servlet-name>javax.ws.rs.core.Application</servlet-name> <load-on-startup>1</load-on-startup> </servlet> 
+		<servlet-mapping> <servlet-name>javax.ws.rs.core.Application</servlet-name> <url-pattern>/rest/*</url-pattern> </servlet-mapping> -->
+	<!-- <context-param> <param-name>resteasy.injector.factory</param-name> <param-value>org.jboss.resteasy.cdi.CdiInjectorFactory</param-value> 
+		</context-param> <servlet> <servlet-name>resteasy-servlet</servlet-name> <servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>resteasy-servlet</servlet-name> <url-pattern>/rest/*</url-pattern> </servlet-mapping> -->
+	<!-- Change to "Production" when you are ready to deploy -->
+
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+		<param-value>Production</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.apache.myfaces.USE_ENCRYPTION</param-name>
+		<param-value>false</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.apache.myfaces.extensions.validator.DEACTIVATE_JPA_BASED_VALIDATION</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<!-- JSF mapping -->
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- Map these files with JSF -->
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	<mime-mapping>
+		<extension>woff</extension>
+		<mime-type>application/font-woff</mime-type>
+	</mime-mapping>
+	<security-constraint>
+		<display-name>WEBALERT AUTH</display-name>
+		<web-resource-collection>
+			<web-resource-name>GSPMWelcomeEditor</web-resource-name>
+			<url-pattern>/faces/com/retail_sc/jsf/login/webalert.xhtml</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>RescourceAuthConstraint</description>
+			<role-name>GSPM_AUTHORIZED_ROLE</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<security-constraint>
+		<display-name>GENERAL AUTH</display-name>
+		<web-resource-collection>
+			<web-resource-name>General</web-resource-name>
+			<url-pattern>/faces/pages/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>RescourceAuthConstraint</description>
+			<role-name>GSPM_AUTHORIZED_ROLE</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>default</realm-name>
+		<form-login-config>
+			<form-login-page>/faces/com/retail_sc/jsf/login/login.xhtml</form-login-page>
+			<form-error-page>/faces/com/retail_sc/jsf/login/login.xhtml?error=true</form-error-page>
+		</form-login-config>
+	</login-config>
+	<security-role>
+		<description>User is allowed to access gspm</description>
+		<role-name>GSPM_AUTHORIZED_ROLE</role-name>
+	</security-role>
+	<!-- <listener> <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class> </listener> <context-param> 
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name> <param-value>server</param-value> </context-param> <context-param> 
+		<param-name>com.ibm.ws.jsf.LOAD_FACES_CONFIG_AT_STARTUP</param-name> <param-value>true</param-value> </context-param> <context-param> 
+		<param-name>com.sun.faces.expressionFactory</param-name> <param-value>com.sun.el.ExpressionFactoryImpl</param-value> </context-param> -->
+</web-app>
