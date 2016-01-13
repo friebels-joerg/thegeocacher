@@ -37,7 +37,6 @@
             <configuration>
                <sdk>
                   <platform>22</platform> <!-- Android 5.1 -->
-                  <path>/usr/development/android-sdk-linux</path>
                </sdk>
                <undeployBeforeDeploy>true</undeployBeforeDeploy>
                <manifest>
