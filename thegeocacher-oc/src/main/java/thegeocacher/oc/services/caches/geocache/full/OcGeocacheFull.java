@@ -16,8 +16,10 @@ public class OcGeocacheFull
 
 	@JsonProperty("code")
 	public String code;
-	@JsonProperty("name")
-	public String name;
+
+	@JsonProperty("names")
+	OcLanguageTexts names;
+
 	@JsonProperty("location")
 	public String location;
 	@JsonProperty("type")
@@ -64,12 +66,12 @@ public class OcGeocacheFull
 	public Boolean isFound;
 	@JsonProperty("is_not_found")
 	public Boolean isNotFound;
-	@JsonProperty("short_description")
-	public String shortDescription;
-	@JsonProperty("description")
-	public String description;
-	@JsonProperty("hint2")
-	public String hint2;
+	@JsonProperty("short_descriptions")
+	public OcLanguageTexts shortDescriptions;
+	@JsonProperty("descriptions")
+	public OcLanguageTexts descriptions;
+	@JsonProperty("hints2")
+	public OcLanguageTexts hints2;
 	@JsonProperty("images")
 	public List<OcImage> images = new ArrayList<OcImage>();
 	@JsonProperty("preview_image")

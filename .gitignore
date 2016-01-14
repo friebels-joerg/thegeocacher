@@ -1,5 +1,7 @@
 /.settings/
+/.classpath
 /.project
-/thegeocacher-common/target/
-/thegeocacher-fx/target/
-/thegeocacher-oc-integrationtest/target/
+/nb-configuration.xml
+/nbactions.xml
+/target/
+/bin/

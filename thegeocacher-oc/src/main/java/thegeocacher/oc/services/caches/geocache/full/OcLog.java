@@ -1,7 +1,8 @@
 package thegeocacher.oc.services.caches.geocache.full;
 
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -14,14 +15,23 @@ public class OcLog
 
 	@JsonProperty("uuid")
 	public String uuid;
+	@JsonProperty("cache_code")
+	public String cacheCode;
 	@JsonProperty("date")
-	public Date date;
+	public String date;
 	@JsonProperty("user")
 	public OcUser user;
 	@JsonProperty("type")
 	public String type;
+	@JsonProperty("was_recommended")
+	public Boolean wasRecommended;
 	@JsonProperty("comment")
 	public String comment;
+	@JsonProperty("images")
+	public List<OcImage> images = new ArrayList<OcImage>();
+	@JsonProperty("oc_team_entry")
+	public Boolean ocTeamEntry;
+
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
