@@ -11,7 +11,7 @@ import thegeocacher.common.util.ModuleProperties;
  * @author Jörg Friebel
  * @since 13.01.2016
  */
-@WebService(name = "VersionWebservice", serviceName = "VersionWebserviceEndpoint")
+@WebService
 @Stateless
 public class VersionWebservice
 {

@@ -22,7 +22,7 @@
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>thegeocacher-war</artifactId>
+			<artifactId>thegeocacher-web</artifactId>
 			<version>${project.version}</version>
 			<type>war</type>
 		</dependency>
@@ -38,7 +38,7 @@
 					<modules>
  						<webModule>
 							<groupId>${project.groupId}</groupId>
-							<artifactId>thegeocacher-war</artifactId>
+							<artifactId>thegeocacher-web</artifactId>
 							<contextRoot>/thegeocacher</contextRoot>
 						</webModule>
 						<ejbModule>
