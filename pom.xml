@@ -22,7 +22,7 @@
 
 		<module>thegeocacher-fx</module>
 
-		<module>thegeocacher-apk</module>
+		<module>thegeocacher-android</module>
 	</modules>
 
 	<prerequisites>
