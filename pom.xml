@@ -13,14 +13,16 @@
 	<modules>
 		<module>thegeocacher-domain</module>
 		<module>thegeocacher-common</module>
+
 		<module>thegeocacher-oc</module>
-		<module>thegeocacher-fx</module>
+
 		<module>thegeocacher-ejb</module>
-		<module>thegeocacher-war</module>
+		<module>thegeocacher-web</module>
 		<module>thegeocacher-ear</module>
 
+		<module>thegeocacher-fx</module>
+
 		<module>thegeocacher-apk</module>
-		<module>thegeocacher-oc-integrationtest</module>
 	</modules>
 
 	<prerequisites>
