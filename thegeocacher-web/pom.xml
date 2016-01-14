@@ -28,6 +28,12 @@
 
 		<!-- JSF -->
 		<dependency>
+			<groupId>org.richfaces</groupId>
+			<artifactId>richfaces</artifactId>
+			<version>4.5.12.Final</version>
+		</dependency>
+
+		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
