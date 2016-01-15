@@ -2,6 +2,7 @@ package thegeocacher.oc.services.caches.geocache.full;
 
 import org.junit.Test;
 
+import thegeocacher.domain.attribute.GeocacheCode;
 import static org.junit.Assert.*;
 
 /**
@@ -77,14 +78,14 @@ public class OcGetGeocacheFullServiceTest
 		OcGetGeocacheFullService serviceUnderTest = new OcGetGeocacheFullService();
 		OcGetGeocacheFullParameters parameters = new OcGetGeocacheFullParameters();
 
-		parameters.setCacheCode("OC1294E");
+		parameters.setCacheCode(new GeocacheCode("OC1294E"));
 		String result = serviceUnderTest.getUrl(parameters);
 
 		String expectedResult = "http://www.opencaching.de/okapi/services/caches/geocache?"
 				+ "consumer_key=f8k87aHFAVaCn5K9gAeM&"
-				+ "user_uuid=A266282E-3EA9-6FDC-9451-27BD5C67AC65&"
 				+ "log_fields=uuid%7Cdate%7Cuser%7Ctype%7Ccomment%7Coc_team_entry%7Cwas_recommended%7Ccache_code%7Cimages&"
 				+ "attribution_append=none&"
+				+ "user_uuid=A266282E-3EA9-6FDC-9451-27BD5C67AC65&"
 				+ "fields=code%7Cnames%7Clocation%7Ctype%7Cstatus%7Cowner%7Cgc_code%7Cis_found%7Cis_not_found%7Cfounds%7Cnotfounds%7Cwillattends%7Csize2%7Cdifficulty%7Cterrain%7Ctrip_time%7Ctrip_distance%7Crating%7Crating_votes%7Crecommendations%7Creq_passwd%7Cshort_description%7Cdescription%7Chint2%7Cimages%7Cpreview_image%7Cattr_acodes%7Clatest_logs%7Ctrackables_count%7Ctrackables%7Calt_wpts%7Ccountry%7Cstate%7Cprotection_areas%7Clast_found%7Clast_modified%7Cdate_created%7Cdate_hidden&"
 				+ "cache_code=OC1294E";
 
