@@ -2,9 +2,9 @@ package thegeocacher.oc.services.caches.search.nearest;
 
 import org.junit.Test;
 
-import thegeocacher.domain.GeocacheCodes;
-import thegeocacher.domain.Wgs84Coordinates;
 import thegeocacher.domain.attribute.DistanceInMeter;
+import thegeocacher.domain.attribute.GeocacheCodes;
+import thegeocacher.domain.attribute.Wgs84Coordinates;
 import thegeocacher.domain.attribute.Wgs84Latitude;
 import thegeocacher.domain.attribute.Wgs84Longitude;
 import thegeocacher.oc.services.caches.search.nearest.OcGeocacheCodes;

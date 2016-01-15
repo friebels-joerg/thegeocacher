@@ -1,7 +1,7 @@
 package thegeocacher.oc.services.caches.search.nearest;
 
-import thegeocacher.domain.Wgs84Coordinates;
 import thegeocacher.domain.attribute.DistanceInMeter;
+import thegeocacher.domain.attribute.Wgs84Coordinates;
 import thegeocacher.oc.services.QueryParameters;
 
 /**

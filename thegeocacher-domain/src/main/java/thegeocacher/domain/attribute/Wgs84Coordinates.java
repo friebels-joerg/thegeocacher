@@ -1,9 +1,6 @@
-package thegeocacher.domain;
+package thegeocacher.domain.attribute;
 
 import java.io.Serializable;
-
-import thegeocacher.domain.attribute.Wgs84Latitude;
-import thegeocacher.domain.attribute.Wgs84Longitude;
 
 /**
  *

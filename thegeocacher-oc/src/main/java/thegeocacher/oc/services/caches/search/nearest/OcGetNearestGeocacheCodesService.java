@@ -2,10 +2,10 @@ package thegeocacher.oc.services.caches.search.nearest;
 
 import java.io.IOException;
 
-import thegeocacher.domain.GeocacheCodes;
-import thegeocacher.domain.Wgs84Coordinates;
 import thegeocacher.domain.attribute.DistanceInMeter;
 import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.attribute.GeocacheCodes;
+import thegeocacher.domain.attribute.Wgs84Coordinates;
 import thegeocacher.oc.services.OcMethod;
 import thegeocacher.oc.services.OcService;
 

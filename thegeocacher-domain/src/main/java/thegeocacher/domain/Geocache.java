@@ -4,7 +4,11 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import thegeocacher.domain.attribute.GeocacheAvailability;
 import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.attribute.GeocacheName;
+import thegeocacher.domain.attribute.GeocacheType;
+import thegeocacher.domain.attribute.Wgs84Coordinates;
 
 /**
  * @author Jörg Friebel
@@ -12,47 +16,45 @@ import thegeocacher.domain.attribute.GeocacheCode;
  */
 public class Geocache implements Serializable
 {
-
-	public GeocacheCode code;
-
+	GeocacheCode code;
 	List<GeocacheName> names = new ArrayList<GeocacheName>();
+	Wgs84Coordinates location;
+	GeocacheType type;
+	GeocacheAvailability availability;
 
-	// public String location;
-	// public String type;
-	// public String status;
-	// public Object gcCode;
-	// public Integer founds;
-	// public Integer notfounds;
-	// public Integer willattends;
-	// public String size2;
-	// public Integer difficulty;
-	// public Integer terrain;
-	// public Object tripTime;
-	// public Object tripDistance;
-	// public Object rating;
-	// public Integer ratingVotes;
-	// public Integer recommendations;
-	// public Boolean reqPasswd;
-	// public Date lastFound;
-	// public Date lastModified;
-	// public Date dateCreated;
-	// public Date dateHidden;
-	// public OcOwner owner;
-	// public Boolean isFound;
-	// public Boolean isNotFound;
-	// public OcLanguageTexts shortDescriptions;
-	// public OcLanguageTexts descriptions;
-	// public OcLanguageTexts hints2;
-	// public List<OcImage> images = new ArrayList<OcImage>();
-	// public OcPreviewImage previewImage;
-	// public List<String> attrAcodes = new ArrayList<String>();
-	// public List<OcLog> latestLogs = new ArrayList<OcLog>();
-	// public List<OcTrackable> trackables = new ArrayList<OcTrackable>();
-	// public Integer trackablesCount;
-	// public List<OcAltWpt> altWpts = new ArrayList<OcAltWpt>();
-	// public String country;
-	// public String state;
-	// public List<OcProtectionArea> protectionAreas = new
+	// Object gcCode;
+	// Integer founds;
+	// Integer notfounds;
+	// Integer willattends;
+	// String size2;
+	// Integer difficulty;
+	// Integer terrain;
+	// Object tripTime;
+	// Object tripDistance;
+	// Object rating;
+	// Integer ratingVotes;
+	// Integer recommendations;
+	// Boolean reqPasswd;
+	// Date lastFound;
+	// Date lastModified;
+	// Date dateCreated;
+	// Date dateHidden;
+	// OcOwner owner;
+	// Boolean isFound;
+	// Boolean isNotFound;
+	// OcLanguageTexts shortDescriptions;
+	// OcLanguageTexts descriptions;
+	// OcLanguageTexts hints2;
+	// List<OcImage> images = new ArrayList<OcImage>();
+	// OcPreviewImage previewImage;
+	// List<String> attrAcodes = new ArrayList<String>();
+	// List<OcLog> latestLogs = new ArrayList<OcLog>();
+	// List<OcTrackable> trackables = new ArrayList<OcTrackable>();
+	// Integer trackablesCount;
+	// List<OcAltWpt> altWpts = new ArrayList<OcAltWpt>();
+	// String country;
+	// String state;
+	// List<OcProtectionArea> protectionAreas = new
 	// ArrayList<OcProtectionArea>();
 
 	public GeocacheCode getCode()
@@ -75,4 +77,23 @@ public class Geocache implements Serializable
 		names.add(aName);
 	}
 
+	public Wgs84Coordinates getLocation()
+	{
+		return location;
+	}
+
+	public void setLocation(Wgs84Coordinates aLocation)
+	{
+		location = aLocation;
+	}
+
+	public GeocacheType getType()
+	{
+		return type;
+	}
+
+	public void setType(GeocacheType aType)
+	{
+		type = aType;
+	}
 }

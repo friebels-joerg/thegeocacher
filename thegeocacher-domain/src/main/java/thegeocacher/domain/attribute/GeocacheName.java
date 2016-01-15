@@ -1,4 +1,4 @@
-package thegeocacher.domain;
+package thegeocacher.domain.attribute;
 
 import thegeocacher.domain.attribute.base.LanguageIsoCode;
 import thegeocacher.domain.attribute.base.TranslateableStringAttribute;

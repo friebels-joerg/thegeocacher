@@ -1,9 +1,7 @@
-package thegeocacher.domain;
+package thegeocacher.domain.attribute;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import thegeocacher.domain.attribute.GeocacheCode;
 
 /**
  *
