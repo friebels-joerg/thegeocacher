@@ -3,8 +3,8 @@ package thegeocacher.oc.services.logs.userlogs;
 import java.io.IOException;
 import java.util.List;
 
-import thegeocacher.domain.UserLog;
-import thegeocacher.domain.UserLogs;
+import thegeocacher.domain.LogEntry;
+import thegeocacher.domain.LogEntries;
 import thegeocacher.domain.attribute.GeocacheCode;
 import thegeocacher.domain.attribute.LogText;
 import thegeocacher.domain.attribute.LogTimestamp;
@@ -46,7 +46,7 @@ public class OcGetUserLogsService extends OcService
 	 *            start wit 1 for the first call (aCallNumber-1)*limit will be
 	 *            the offset
 	 */
-	public UserLogs getLogs(UuidAttribute aUserUuid, int aCallNumer)
+	public LogEntries getLogs(UuidAttribute aUserUuid, int aCallNumer)
 	{
 		if (aCallNumer < 1)
 		{
@@ -89,9 +89,9 @@ public class OcGetUserLogsService extends OcService
 		}
 	}
 
-	UserLogs getResultObject(List<OcUserLog> someJsonObject)
+	LogEntries getResultObject(List<OcUserLog> someJsonObject)
 	{
-		UserLogs logs = new UserLogs();
+		LogEntries logs = new LogEntries();
 		for (OcUserLog log : someJsonObject)
 		{
 			logs.add(getLog(log));
@@ -105,9 +105,9 @@ public class OcGetUserLogsService extends OcService
 		return logs;
 	}
 
-	private UserLog getLog(OcUserLog aLog)
+	private LogEntry getLog(OcUserLog aLog)
 	{
-		UserLog log = new UserLog();
+		LogEntry log = new LogEntry();
 		log.setGeocacheCode(new GeocacheCode(aLog.getCacheCode()));
 		log.setText(new LogText(aLog.getComment()));
 		log.setTimestamp(new LogTimestamp(aLog.getDate()));

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import thegeocacher.domain.UserLogs;
+import thegeocacher.domain.LogEntries;
 import thegeocacher.domain.attribute.base.UuidAttribute;
 import static org.junit.Assert.*;
 
@@ -37,7 +37,7 @@ public class OcGetUserLogsServiceTest
 
 		List<OcUserLog> jsonObjects = serviceUnderTest.getJsonObject(jsonString);
 
-		UserLogs result = serviceUnderTest.getResultObject(jsonObjects);
+		LogEntries result = serviceUnderTest.getResultObject(jsonObjects);
 	}
 
 	@Test

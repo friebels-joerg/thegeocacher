@@ -92,6 +92,7 @@ public class OcGeocacheFull
 	public String state;
 	@JsonProperty("protection_areas")
 	public List<OcProtectionArea> protectionAreas = new ArrayList<OcProtectionArea>();
+
 	@JsonIgnore
 	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 

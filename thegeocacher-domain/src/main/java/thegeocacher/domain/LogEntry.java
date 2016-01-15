@@ -11,7 +11,7 @@ import thegeocacher.domain.attribute.LogUuid;
  * @author Jörg Friebel
  * @since 12.01.2016
  */
-public class UserLog
+public class LogEntry
 {
 	LogUuid uuid;
 	GeocacheCode geocacheCode;

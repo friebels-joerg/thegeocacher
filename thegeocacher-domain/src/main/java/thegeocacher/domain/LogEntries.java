@@ -8,13 +8,13 @@ import java.util.List;
  * @author Jörg Friebel
  * @since 12.01.2016
  */
-public class UserLogs
+public class LogEntries
 {
 	Boolean moreLogsAvailable = Boolean.FALSE;
 
-	List<UserLog> values = new ArrayList<UserLog>();
+	List<LogEntry> values = new ArrayList<LogEntry>();
 
-	public void add(UserLog aLog)
+	public void add(LogEntry aLog)
 	{
 		values.add(aLog);
 	}
