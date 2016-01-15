@@ -1,12 +1,11 @@
 package thegeocacher.domain;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import thegeocacher.domain.attribute.GeocacheAvailability;
 import thegeocacher.domain.attribute.GeocacheCode;
 import thegeocacher.domain.attribute.GeocacheName;
+import thegeocacher.domain.attribute.GeocacheNames;
 import thegeocacher.domain.attribute.GeocacheType;
 import thegeocacher.domain.attribute.Wgs84Coordinates;
 
@@ -17,12 +16,12 @@ import thegeocacher.domain.attribute.Wgs84Coordinates;
 public class Geocache implements Serializable
 {
 	GeocacheCode code;
-	List<GeocacheName> names = new ArrayList<GeocacheName>();
+	GeocacheNames names;
 	Wgs84Coordinates location;
 	GeocacheType type;
 	GeocacheAvailability availability;
+	Links links;
 
-	// Object gcCode;
 	// Integer founds;
 	// Integer notfounds;
 	// Integer willattends;
@@ -67,14 +66,14 @@ public class Geocache implements Serializable
 		code = aCode;
 	}
 
-	public List<GeocacheName> getNames()
+	public GeocacheNames getNames()
 	{
 		return names;
 	}
 
 	public void addName(GeocacheName aName)
 	{
-		names.add(aName);
+		getNames().add(aName);
 	}
 
 	public Wgs84Coordinates getLocation()
