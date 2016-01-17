@@ -21,9 +21,15 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>thegeocacher</groupId>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>thegeocacher-ejb</artifactId>
+			<version>${project.version}</version>
+                        <type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>thegeocacher-common</artifactId>
-			<version>1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 
 		<!-- JSF -->
