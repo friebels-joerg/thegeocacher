@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	<div id="menu">
+		<f:facet name="header">
+			<h:outputText value="#{msgs.menu_title}" />
+		</f:facet>
+		<h:panelGrid columns="1">
+			<h:link
+				outcome="index"
+				value="#{msgs.menu_home}" />
+			<h:link
+				outcome="importer"
+				value="#{msgs.menu_importer}" />
+		</h:panelGrid>
+	</div>
+</ui:composition>

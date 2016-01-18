@@ -3,7 +3,7 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 <head>
-<title>${msg.ttl_application}</title>
+<title>${msgs.ttl_application}</title>
 <link
 	rel="stylesheet"
 	type="text/css"
@@ -12,15 +12,22 @@
 <body>
 	<div id="header">
 		<ui:insert name="header">
-			<h1>TheGeocacher</h1>
+			<h1>${msgs.ttl_application}</h1>
 		</ui:insert>
 	</div>
-	<div id="content">
-		<ui:insert name="content" />
-	</div>
+
+	<h:panelGrid columns="2">
+		<div>
+			<ui:include src="leftSideBar.xhtml" />
+		</div>
+		<div>
+			<ui:insert name="content" />
+		</div>
+	</h:panelGrid>
+
 	<div id="footer">
 		<ui:insert name="footer">
-			<h:outputText>${msg.msg_copyright}</h:outputText>
+			<h:outputText value="${msgs.msg_copyright}"></h:outputText>
 		</ui:insert>
 	</div>
 </body>

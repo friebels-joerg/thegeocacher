@@ -1,5 +1,7 @@
 package thegeocacher.web;
 
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -10,7 +12,7 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean
 @SessionScoped
-public class HelloWorldPageBean
+public class HelloWorldPageBean implements Serializable
 {
 	private String helloProperty = "Hello World !";
 
