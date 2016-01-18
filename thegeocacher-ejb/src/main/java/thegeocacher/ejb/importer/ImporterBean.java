@@ -1,23 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package thegeocacher.ejb.importer;
+
+import java.util.logging.Logger;
 
 import javax.ejb.Stateless;
 
 /**
  *
- * @author joerg
+ * @author Jörg Friebel
+ * @since 17.01.2015
  */
 @Stateless
-public class ImporterBean implements ImporterBeanLocal
+public class ImporterBean
 {
 
-   @Override
-   public void start()
-   {
-      throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-   }
+	public void start()
+	{
+		Logger.getLogger(getClass().getSimpleName()).info("start Importer");
+	}
 }

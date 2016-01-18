@@ -10,7 +10,7 @@ import javax.faces.bean.SessionScoped;
  */
 @ManagedBean
 @SessionScoped
-public class HelloWorldBackingBean
+public class HelloWorldPageBean
 {
 	private String helloProperty = "Hello World !";
 
