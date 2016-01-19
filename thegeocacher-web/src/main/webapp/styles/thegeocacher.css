@@ -24,6 +24,10 @@ body {
 	width: 1%;
 }
 
+#menubar a.active {
+	background-color: grey;
+}
+
 #menubar a:hover {
 	font-size: 18px;
 }
