@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui:composition
-   template="/templates/template.xhtml"
-   xmlns="http://www.w3.org/1999/xhtml"
-   xmlns:f="http://xmlns.jcp.org/jsf/core"
-   xmlns:h="http://xmlns.jcp.org/jsf/html"
-   xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	template="/templates/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
-   <ui:param name="pageTitle" value="#{msgs.title_map}"/>
+	<ui:param
+		name="pageTitle"
+		value="#{msgs.title_map}" />
 
-   <ui:define name="content">
-   </ui:define>
+	<ui:define name="css">
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="leaflet/leaflet.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="css/map.css" />
+
+	</ui:define>
+
+	<ui:define name="content">
+		<h:messages />
+		<!-- 		<script src="/leafet/leaflet.js"></script>
+ -->
+		<div id="map"></div>
+	</ui:define>
 </ui:composition>
