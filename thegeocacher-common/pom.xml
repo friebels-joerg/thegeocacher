@@ -34,4 +34,34 @@
          </plugin>
       </plugins>
    </build>
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>thegeocacher</groupId>
+		<artifactId>thegeocacher</artifactId>
+		<version>1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>thegeocacher-common</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${android.java.version}</source>
+					<target>${android.java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

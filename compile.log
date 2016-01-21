@@ -1,0 +1,1080 @@
+Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T17:41:47+01:00)
+Maven home: /opt/apache-maven-3.3.9
+Java version: 1.8.0_66, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: de_DE, platform encoding: UTF-8
+OS name: "linux", version: "4.2.0-23-generic", arch: "amd64", family: "unix"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.util.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from /opt/apache-maven-3.3.9/conf/settings.xml
+[DEBUG] Reading user settings from /home/joerg/.m2/settings.xml
+[DEBUG] Reading global toolchains from /opt/apache-maven-3.3.9/conf/toolchains.xml
+[DEBUG] Reading user toolchains from /home/joerg/.m2/toolchains.xml
+[DEBUG] Using local repository at /home/joerg/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/joerg/.m2/repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project thegeocacher:thegeocacher:pom:1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project thegeocacher:thegeocacher-domain:jar:1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project thegeocacher:thegeocacher-common:jar:1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project thegeocacher:thegeocacher-oc:jar:1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project thegeocacher:thegeocacher-oc-integrationtest:jar:1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project thegeocacher:thegeocacher-fx:jar:1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=2, ConflictMarker.markTime=2, ConflictMarker.nodeCount=252, ConflictIdSorter.graphTime=2, ConflictIdSorter.topsortTime=1, ConflictIdSorter.conflictIdCount=84, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=16, ConflictResolver.conflictItemCount=165, DefaultDependencyCollector.collectTime=472, DefaultDependencyCollector.transformTime=26}
+[DEBUG] com.jayway.maven.plugins.android.generation2:android-maven-plugin:jar:3.8.2:
+[DEBUG]    com.android.tools:common:jar:22.4.2:compile
+[DEBUG]       com.google.guava:guava:jar:13.0.1:compile
+[DEBUG]    com.android.tools:dvlib:jar:22.4.2:compile
+[DEBUG]    com.android.tools:sdk-common:jar:22.4.2:compile
+[DEBUG]    com.android.tools:sdklib:jar:22.4.2:compile
+[DEBUG]       org.apache.httpcomponents:httpclient:jar:4.1.1:compile
+[DEBUG]          org.apache.httpcomponents:httpcore:jar:4.1:compile
+[DEBUG]          commons-logging:commons-logging:jar:1.1.1:compile
+[DEBUG]          commons-codec:commons-codec:jar:1.4:compile
+[DEBUG]       org.apache.httpcomponents:httpmime:jar:4.1:compile
+[DEBUG]       org.apache.commons:commons-compress:jar:1.0:compile
+[DEBUG]    com.android.tools.build:builder:jar:0.7.3:compile
+[DEBUG]       com.android.tools.build:builder-model:jar:0.7.3:compile
+[DEBUG]       com.squareup:javawriter:jar:2.2.1:compile
+[DEBUG]       com.android.tools.build:builder-test-api:jar:0.7.3:compile
+[DEBUG]       org.bouncycastle:bcpkix-jdk15on:jar:1.48:compile
+[DEBUG]          org.bouncycastle:bcprov-jdk15on:jar:1.48:compile
+[DEBUG]    com.android.tools.build:manifest-merger:jar:22.4.2:compile
+[DEBUG]       net.sf.kxml:kxml2:jar:2.3.0:compile
+[DEBUG]    com.android.tools.ddms:ddmlib:jar:22.4.2:compile
+[DEBUG]    com.android.tools.layoutlib:layoutlib-api:jar:22.4.2:compile
+[DEBUG]    com.android.tools.lint:lint:jar:22.4.2:compile
+[DEBUG]    com.android.tools.lint:lint-api:jar:22.4.2:compile
+[DEBUG]       com.android.tools.external.lombok:lombok-ast:jar:0.2.1:compile
+[DEBUG]       org.ow2.asm:asm-tree:jar:4.0:compile
+[DEBUG]    com.android.tools.lint:lint-checks:jar:22.4.2:compile
+[DEBUG]       org.ow2.asm:asm-analysis:jar:4.0:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:3.1.1:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.1.1:compile
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.1.1:compile
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M5:compile
+[DEBUG]          javax.enterprise:cdi-api:jar:1.0:compile
+[DEBUG]             javax.annotation:jsr250-api:jar:1.0:compile
+[DEBUG]             javax.inject:javax.inject:jar:1:compile
+[DEBUG]          org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0:compile
+[DEBUG]             aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]          org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M5:compile
+[DEBUG]    org.apache.maven:maven-compat:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:3.1.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.19:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]       org.apache.maven.wagon:wagon-provider-api:jar:2.4:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.1.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.5.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.5:compile
+[DEBUG]    emma:emma:jar:2.0.5312:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:2.3:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.15:compile
+[DEBUG]    commons-jxpath:commons-jxpath:jar:1.3:compile
+[DEBUG]    commons-io:commons-io:jar:2.4:compile
+[DEBUG]    org.ow2.asm:asm:jar:4.1:compile
+[DEBUG]    commons-lang:commons-lang:jar:2.6:compile
+[DEBUG]    org.eclipse.aether:aether-api:jar:0.9.0.M2:compile
+[DEBUG]    org.eclipse.aether:aether-util:jar:0.9.0.M2:compile
+[DEBUG]    org.eclipse.aether:aether-spi:jar:0.9.0.M2:compile
+[DEBUG]    org.eclipse.aether:aether-impl:jar:0.9.0.M2:compile
+[DEBUG]    org.eclipse.aether:aether-connector-wagon:jar:0.9.0.M2:compile
+[DEBUG]    com.github.rtyley:android-screenshot-paparazzo:jar:1.9:compile
+[DEBUG]       com.madgag:animated-gif-lib:jar:1.0:compile
+[DEBUG]    com.github.rtyley:android-screenshot-celebrity:jar:1.9:compile
+[DEBUG] Created new class realm extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.2
+[DEBUG] Importing foreign packages into class realm extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.2
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.2
+[DEBUG]   Included: com.jayway.maven.plugins.android.generation2:android-maven-plugin:jar:3.8.2
+[DEBUG]   Included: com.android.tools:common:jar:22.4.2
+[DEBUG]   Included: com.google.guava:guava:jar:13.0.1
+[DEBUG]   Included: com.android.tools:dvlib:jar:22.4.2
+[DEBUG]   Included: com.android.tools:sdk-common:jar:22.4.2
+[DEBUG]   Included: com.android.tools:sdklib:jar:22.4.2
+[DEBUG]   Included: org.apache.httpcomponents:httpclient:jar:4.1.1
+[DEBUG]   Included: org.apache.httpcomponents:httpcore:jar:4.1
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.1.1
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.4
+[DEBUG]   Included: org.apache.httpcomponents:httpmime:jar:4.1
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.0
+[DEBUG]   Included: com.android.tools.build:builder:jar:0.7.3
+[DEBUG]   Included: com.android.tools.build:builder-model:jar:0.7.3
+[DEBUG]   Included: com.squareup:javawriter:jar:2.2.1
+[DEBUG]   Included: com.android.tools.build:builder-test-api:jar:0.7.3
+[DEBUG]   Included: org.bouncycastle:bcpkix-jdk15on:jar:1.48
+[DEBUG]   Included: org.bouncycastle:bcprov-jdk15on:jar:1.48
+[DEBUG]   Included: com.android.tools.build:manifest-merger:jar:22.4.2
+[DEBUG]   Included: net.sf.kxml:kxml2:jar:2.3.0
+[DEBUG]   Included: com.android.tools.ddms:ddmlib:jar:22.4.2
+[DEBUG]   Included: com.android.tools.layoutlib:layoutlib-api:jar:22.4.2
+[DEBUG]   Included: com.android.tools.lint:lint:jar:22.4.2
+[DEBUG]   Included: com.android.tools.lint:lint-api:jar:22.4.2
+[DEBUG]   Included: com.android.tools.external.lombok:lombok-ast:jar:0.2.1
+[DEBUG]   Included: org.ow2.asm:asm-tree:jar:4.0
+[DEBUG]   Included: com.android.tools.lint:lint-checks:jar:22.4.2
+[DEBUG]   Included: org.ow2.asm:asm-analysis:jar:4.0
+[DEBUG]   Included: javax.enterprise:cdi-api:jar:1.0
+[DEBUG]   Included: javax.annotation:jsr250-api:jar:1.0
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M5
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.19
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.5
+[DEBUG]   Included: emma:emma:jar:2.0.5312
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:2.3
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.0.6
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.15
+[DEBUG]   Included: commons-jxpath:commons-jxpath:jar:1.3
+[DEBUG]   Included: commons-io:commons-io:jar:2.4
+[DEBUG]   Included: org.ow2.asm:asm:jar:4.1
+[DEBUG]   Included: commons-lang:commons-lang:jar:2.6
+[DEBUG]   Included: org.eclipse.aether:aether-util:jar:0.9.0.M2
+[DEBUG]   Included: org.eclipse.aether:aether-connector-wagon:jar:0.9.0.M2
+[DEBUG]   Included: com.github.rtyley:android-screenshot-paparazzo:jar:1.9
+[DEBUG]   Included: com.madgag:animated-gif-lib:jar:1.0
+[DEBUG]   Included: com.github.rtyley:android-screenshot-celebrity:jar:1.9
+[DEBUG] Extension realms for project thegeocacher:thegeocacher-apk:apk:1-SNAPSHOT: [ClassRealm[extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.2, parent: sun.misc.Launcher$AppClassLoader@70dea4e]]
+[DEBUG] Created new class realm project>thegeocacher:thegeocacher-apk:1-SNAPSHOT
+[DEBUG] Populating class realm project>thegeocacher:thegeocacher-apk:1-SNAPSHOT
+[DEBUG] Looking up lifecyle mappings for packaging apk from ClassRealm[project>thegeocacher:thegeocacher-apk:1-SNAPSHOT, parent: ClassRealm[maven.api, parent: null]]
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] thegeocacher
+[INFO] thegeocacher-domain
+[INFO] thegeocacher-common
+[INFO] thegeocacher-oc
+[INFO] thegeocacher-oc-integrationtest
+[INFO] thegeocacher-fx
+[INFO] thegeocacher-apk
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: thegeocacher:thegeocacher:pom:1-SNAPSHOT
+[DEBUG] Tasks:   [clean, install]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: thegeocacher:thegeocacher-domain:jar:1-SNAPSHOT
+[DEBUG] Tasks:   [clean, install]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: thegeocacher:thegeocacher-common:jar:1-SNAPSHOT
+[DEBUG] Tasks:   [clean, install]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: thegeocacher:thegeocacher-oc:jar:1-SNAPSHOT
+[DEBUG] Tasks:   [clean, install]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: thegeocacher:thegeocacher-oc-integrationtest:jar:1-SNAPSHOT
+[DEBUG] Tasks:   [clean, install]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: thegeocacher:thegeocacher-fx:jar:1-SNAPSHOT
+[DEBUG] Tasks:   [clean, install]
+[DEBUG] Style:   Regular
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Project: thegeocacher:thegeocacher-apk:apk:1-SNAPSHOT
+[DEBUG] Tasks:   [clean, install]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building thegeocacher 1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       thegeocacher:thegeocacher:1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.5:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-install-plugin:2.4:install (default-install)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <artifact default-value="${project.artifact}"/>
+  <attachedArtifacts default-value="${project.attachedArtifacts}"/>
+  <createChecksum default-value="false">${createChecksum}</createChecksum>
+  <localRepository>${localRepository}</localRepository>
+  <packaging default-value="${project.packaging}"/>
+  <pomFile default-value="${project.file}"/>
+  <skip default-value="false">${maven.install.skip}</skip>
+  <updateReleaseInfo default-value="false">${updateReleaseInfo}</updateReleaseInfo>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ thegeocacher ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=3, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=3, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=0, ConflictResolver.conflictItemCount=3, DefaultDependencyCollector.collectTime=4, DefaultDependencyCollector.transformTime=1}
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:2.5:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.5:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.5, parent: sun.misc.Launcher$AppClassLoader@70dea4e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.5:clean' with basic configurator -->
+[DEBUG]   (f) directory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/target/classes
+[DEBUG]   (f) reportDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/target/site
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/target/test-classes
+[DEBUG] -- end configuration --
+[DEBUG] Skipping non-existing directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/target
+[DEBUG] Skipping non-existing directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/target/classes
+[DEBUG] Skipping non-existing directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/target/test-classes
+[DEBUG] Skipping non-existing directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/target/site
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ thegeocacher ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=38, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=15, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1, ConflictResolver.conflictItemCount=35, DefaultDependencyCollector.collectTime=19, DefaultDependencyCollector.transformTime=1}
+[DEBUG] org.apache.maven.plugins:maven-install-plugin:jar:2.4:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]          classworlds:classworlds:jar:1.1-alpha-2:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-digest:jar:1.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.4
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.4
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-install-plugin:2.4
+[DEBUG]   Included: org.apache.maven.plugins:maven-install-plugin:jar:2.4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-digest:jar:1.0
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-install-plugin:2.4:install from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-install-plugin:2.4, parent: sun.misc.Launcher$AppClassLoader@70dea4e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-install-plugin:2.4:install' with basic configurator -->
+[DEBUG]   (f) artifact = thegeocacher:thegeocacher:pom:1-SNAPSHOT
+[DEBUG]   (f) attachedArtifacts = []
+[DEBUG]   (f) createChecksum = false
+[DEBUG]   (f) localRepository =       id: local
+      url: file:///home/joerg/.m2/repository/
+   layout: default
+snapshots: [enabled => true, update => always]
+ releases: [enabled => true, update => always]
+
+[DEBUG]   (f) packaging = pom
+[DEBUG]   (f) pomFile = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/pom.xml
+[DEBUG]   (s) skip = false
+[DEBUG]   (f) updateReleaseInfo = false
+[DEBUG] -- end configuration --
+[INFO] Installing /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/pom.xml to /home/joerg/.m2/repository/thegeocacher/thegeocacher/1-SNAPSHOT/thegeocacher-1-SNAPSHOT.pom
+[DEBUG] Writing tracking file /home/joerg/.m2/repository/thegeocacher/thegeocacher/1-SNAPSHOT/_remote.repositories
+[DEBUG] Installing thegeocacher:thegeocacher:1-SNAPSHOT/maven-metadata.xml to /home/joerg/.m2/repository/thegeocacher/thegeocacher/1-SNAPSHOT/maven-metadata-local.xml
+[DEBUG] Installing thegeocacher:thegeocacher/maven-metadata.xml to /home/joerg/.m2/repository/thegeocacher/thegeocacher/maven-metadata-local.xml
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building thegeocacher-domain 1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       thegeocacher:thegeocacher-domain:1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile, runtime, test]
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.5:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.3:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <project default-value="${project}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">1.7</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">1.7</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip>${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.testClasspathElements}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">1.7</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">1.7</target>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-surefire-plugin:2.19:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <additionalClasspathElements>${maven.test.additionalClasspath}</additionalClasspathElements>
+  <argLine>${argLine}</argLine>
+  <basedir default-value="${basedir}"/>
+  <childDelegation default-value="false">${childDelegation}</childDelegation>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <classpathDependencyExcludes>${maven.test.dependency.excludes}</classpathDependencyExcludes>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <dependenciesToScan>${dependenciesToScan}</dependenciesToScan>
+  <disableXmlReport default-value="false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions default-value="true">${enableAssertions}</enableAssertions>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+  <excludesFile>${surefire.excludesFile}</excludesFile>
+  <failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifiedTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkCount default-value="1">${forkCount}</forkCount>
+  <forkMode default-value="once">${forkMode}</forkMode>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <groups>${groups}</groups>
+  <includesFile>${surefire.includesFile}</includesFile>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value="${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value="${session.parallel}"/>
+  <parallelOptimized default-value="true">${parallelOptimized}</parallelOptimized>
+  <parallelTestsTimeoutForcedInSeconds>${surefire.parallel.forcedTimeout}</parallelTestsTimeoutForcedInSeconds>
+  <parallelTestsTimeoutInSeconds>${surefire.parallel.timeout}</parallelTestsTimeoutInSeconds>
+  <perCoreThreadCount default-value="true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value="${plugin}"/>
+  <printSummary default-value="true">${surefire.printSummary}</printSummary>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <remoteRepositories default-value="${project.pluginArtifactRepositories}"/>
+  <reportFormat default-value="brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix default-value="">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <rerunFailingTestsCount default-value="0">${surefire.rerunFailingTestsCount}</rerunFailingTestsCount>
+  <reuseForks default-value="true">${reuseForks}</reuseForks>
+  <runOrder default-value="filesystem">${surefire.runOrder}</runOrder>
+  <shutdown default-value="testset">${surefire.shutdown}</shutdown>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipAfterFailureCount default-value="0">${surefire.skipAfterFailureCount}</skipAfterFailureCount>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <suiteXmlFiles>${surefire.suiteXmlFiles}</suiteXmlFiles>
+  <test>${test}</test>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName default-value="org.testng:testng">${testNGArtifactName}</testNGArtifactName>
+  <testSourceDirectory default-value="${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <threadCountClasses default-value="0">${threadCountClasses}</threadCountClasses>
+  <threadCountMethods default-value="0">${threadCountMethods}</threadCountMethods>
+  <threadCountSuites default-value="0">${threadCountSuites}</threadCountSuites>
+  <trimStackTrace default-value="true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value="true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar default-value="true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useSystemClassLoader default-value="true">${surefire.useSystemClassLoader}</useSystemClassLoader>
+  <useUnlimitedThreads default-value="false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-jar-plugin:2.4:jar (default-jar)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <defaultManifestFile default-value="${project.build.outputDirectory}/META-INF/MANIFEST.MF"/>
+  <finalName default-value="${project.build.finalName}">${jar.finalName}</finalName>
+  <forceCreation default-value="false">${jar.forceCreation}</forceCreation>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+  <skipIfEmpty default-value="false">${jar.skipIfEmpty}</skipIfEmpty>
+  <useDefaultManifestFile default-value="false">${jar.useDefaultManifestFile}</useDefaultManifestFile>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-install-plugin:2.4:install (default-install)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <artifact default-value="${project.artifact}"/>
+  <attachedArtifacts default-value="${project.attachedArtifacts}"/>
+  <createChecksum default-value="false">${createChecksum}</createChecksum>
+  <localRepository>${localRepository}</localRepository>
+  <packaging default-value="${project.packaging}"/>
+  <pomFile default-value="${project.file}"/>
+  <skip default-value="false">${maven.install.skip}</skip>
+  <updateReleaseInfo default-value="false">${updateReleaseInfo}</updateReleaseInfo>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=0, ConflictMarker.markTime=0, ConflictMarker.nodeCount=2, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=1, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=0, ConflictResolver.conflictItemCount=1, DefaultDependencyCollector.collectTime=9, DefaultDependencyCollector.transformTime=0}
+[DEBUG] thegeocacher:thegeocacher-domain:jar:1-SNAPSHOT
+[DEBUG]    org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ thegeocacher-domain ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.5:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.5, parent: sun.misc.Launcher$AppClassLoader@70dea4e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.5:clean' with basic configurator -->
+[DEBUG]   (f) directory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+[DEBUG]   (f) reportDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/site
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/maven-status/maven-compiler-plugin/compile/default-compile
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/maven-status/maven-compiler-plugin/compile
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/maven-status/maven-compiler-plugin
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/maven-status
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-sources/annotations
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-sources
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/Distance.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/ContainerSize.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/Difficulty.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/GeocacheId.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/GeocacheCode.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/Wgs84Latitude.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/GeocacheType.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/WaypointId.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/Terrain.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/GeocacheAvailability.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/GeocacheProvider.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/UpdateTimestamp.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/base/TimestampAttribute.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/base/UuidAttribute.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/base/StringAttribute.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/base/DoubleAttribute.class
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/base
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute/Wgs84Longitude.class
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/attribute
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/Geocaches.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/Waypoint.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/exception/WrappedException.class
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/exception
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/Waypoints.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/Geocache.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/Wgs84Coordinates.class
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain/GeocacheStatus.class
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher/domain
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/thegeocacher
+[INFO] Deleting file /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/META-INF/beans.xml
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/META-INF
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+[INFO] Deleting directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target
+[DEBUG] Skipping non-existing directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+[DEBUG] Skipping non-existing directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/test-classes
+[DEBUG] Skipping non-existing directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/site
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ thegeocacher-domain ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=77, ConflictIdSorter.graphTime=0, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=26, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=1, ConflictResolver.conflictItemCount=74, DefaultDependencyCollector.collectTime=24, DefaultDependencyCollector.transformTime=3}
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:2.6:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]       junit:junit:jar:3.8.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:1.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.13:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:1.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.13
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: sun.misc.Launcher$AppClassLoader@70dea4e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:resources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: thegeocacher:thegeocacher-domain:1-SNAPSHOT @ /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@47b2e9e1
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {java.vendor=Oracle Corporation, env.SESSION_MANAGER=local/joergs-lappy:@/tmp/.ICE-unix/3103,unix/joergs-lappy:/tmp/.ICE-unix/3103, env.IM_CONFIG_PHASE=1, env.LESSOPEN=| /usr/bin/lesspipe %s, android-maven-plugin.version=3.8.2, sun.java.launcher=SUN_STANDARD, env.QT_IM_MODULE=ibus, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, env.GTK2_MODULES=overlay-scrollbar, os.name=Linux, env.UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/2889, sun.boot.class.path=/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes, env.PWD=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, sun.desktop=gnome, env.LANG=de_DE.UTF-8, java.vm.specification.vendor=Oracle Corporation, env.XDG_MENU_PREFIX=gnome-, java.runtime.version=1.8.0_66-b17, env.GTK_IM_MODULE=ibus, env.DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path, env.XDG_VTNR=7, project.build.sourceEncoding=UTF-8, env.DISPLAY=:0, user.name=joerg, env.QT4_IM_MODULE=xim, env._=/opt/apache-maven-3.3.9//bin/mvn, maven.build.version=Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T17:41:47+01:00), env.USER=joerg, env.SHELL=/bin/bash, env.DESKTOP_SESSION=ubuntu, env.XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/, env.NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, env.PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/opt/apache-maven-3.3.9//bin, env.XDG_CURRENT_DESKTOP=Unity, user.language=de, env.XDG_SESSION_DESKTOP=ubuntu, sun.boot.library.path=/usr/lib/jvm/java-8-oracle/jre/lib/amd64, classworlds.conf=/opt/apache-maven-3.3.9/bin/m2.conf, maven-javadoc-plugin.version=, java.version=1.8.0_66, user.timezone=Europe/Berlin, env.DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-oi3IVnKbQ4, sun.arch.data.model=64, env.COMPIZ_CONFIG_PROFILE=ubuntu, java.endorsed.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=1, file.separator=/, java.specification.name=Java Platform API Specification, env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated, java.class.version=52.0, env.GDMSESSION=ubuntu, org.slf4j.simpleLogger.defaultLogLevel=debug, user.country=DE, env.GNOME_KEYRING_PID=, java.home=/usr/lib/jvm/java-8-oracle/jre, java.vm.info=mixed mode, env.LOGNAME=joerg, os.version=4.2.0-23-generic, path.separator=:, java.vm.version=25.66-b17, env.LANGUAGE=de_DE, env.XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session1, env.QT_QPA_PLATFORMTHEME=appmenu-qt5, env.SESSIONTYPE=gnome-session, env.XDG_SESSION_TYPE=x11, env.JAVA_HOME=/usr/lib/jvm/java-8-oracle, java.awt.printerjob=sun.print.PSPrinterJob, env.TERM=xterm-256color, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, env.XMODIFIERS=@im=ibus, env.GDM_LANG=de_DE, user.home=/home/joerg, env.JOB=dbus, env.OLDPWD=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, java.specification.vendor=Oracle Corporation, env.VTE_VERSION=4002, env.WINDOWID=56623114, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS= -X clean install, env.XDG_SEAT=seat0, java.vm.vendor=Oracle Corporation, maven.home=/opt/apache-maven-3.3.9, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X clean install, java.class.path=/opt/apache-maven-3.3.9/boot/plexus-classworlds-2.5.2.jar, env.XDG_SESSION_ID=c4, maven.version=3.3.9, env.XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.8, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/home/joerg, java.io.tmpdir=/tmp, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:, env.XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, maven.multiModuleProjectDirectory=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, env.SSH_AUTH_SOCK=/run/user/1000/keyring/ssh, env.CLUTTER_IM_MODULE=xim, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, env.INSTANCE=, java.ext.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext, env.XDG_RUNTIME_DIR=/run/user/1000, user.dir=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, env.SESSION=ubuntu, env.XAUTHORITY=/home/joerg/.Xauthority, env.MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path, env.GTK_MODULES=unity-gtk-module, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/joerg, file.encoding=UTF-8, android.java.version=1.7, java.specification.version=1.8, env.GNOME_KEYRING_CONTROL=, env.XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg, env.MAVEN_PROJECTBASEDIR=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, env.LESSCLOSE=/usr/bin/lesspipe %s %s}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/resources
+excludes []
+includes []
+[DEBUG] ignoreDelta true
+[INFO] Copying 1 resource
+[DEBUG] file beans.xml has a filtered file extension
+[DEBUG] copy /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/resources/META-INF/beans.xml to /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes/META-INF/beans.xml
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:compile (default-compile) @ thegeocacher-domain ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=1, ConflictMarker.markTime=0, ConflictMarker.nodeCount=143, ConflictIdSorter.graphTime=1, ConflictIdSorter.topsortTime=0, ConflictIdSorter.conflictIdCount=44, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=3, ConflictResolver.conflictItemCount=73, DefaultDependencyCollector.collectTime=157, DefaultDependencyCollector.transformTime=5}
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.3:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.2.1:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.2.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.5.15:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.2.1:compile
+[DEBUG]          org.codehaus.plexus:plexus-interpolation:jar:1.11:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.2.1:compile
+[DEBUG]       org.slf4j:slf4j-jdk14:jar:1.5.6:runtime
+[DEBUG]          org.slf4j:slf4j-api:jar:1.5.6:runtime
+[DEBUG]       org.slf4j:jcl-over-slf4j:jar:1.5.6:runtime
+[DEBUG]       org.apache.maven:maven-profile:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.2.1:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.2.1:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.2.1:compile
+[DEBUG]          backport-util-concurrent:backport-util-concurrent:jar:3.1:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.2.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:2.2.1:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:0.7:compile
+[DEBUG]       com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.5:runtime
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.5.5:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.2:compile
+[DEBUG]       org.apache.xbean:xbean-reflect:jar:3.4:compile
+[DEBUG]          log4j:log4j:jar:1.2.12:compile
+[DEBUG]          commons-logging:commons-logging-api:jar:1.1:compile
+[DEBUG]       com.google.collections:google-collections:jar:1.0:compile
+[DEBUG]       junit:junit:jar:3.8.2:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.3
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.3
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.3
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.3
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.15
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.11
+[DEBUG]   Included: org.slf4j:slf4j-jdk14:jar:1.5.6
+[DEBUG]   Included: org.slf4j:jcl-over-slf4j:jar:1.5.6
+[DEBUG]   Included: backport-util-concurrent:backport-util-concurrent:jar:3.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:0.7
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.5
+[DEBUG]   Included: org.apache.xbean:xbean-reflect:jar:3.4
+[DEBUG]   Included: log4j:log4j:jar:1.2.12
+[DEBUG]   Included: commons-logging:commons-logging-api:jar:1.1
+[DEBUG]   Included: com.google.collections:google-collections:jar:1.0
+[DEBUG]   Included: junit:junit:jar:3.8.2
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.3:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.3, parent: sun.misc.Launcher$AppClassLoader@70dea4e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.3:compile' with basic configurator -->
+[DEBUG]   (f) basedir = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain
+[DEBUG]   (f) buildDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target
+[DEBUG]   (f) classpathElements = [/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes, /home/joerg/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar]
+[DEBUG]   (f) compileSourceRoots = [/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-sources/annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.3:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+[DEBUG]   (f) project = MavenProject: thegeocacher:thegeocacher-domain:1-SNAPSHOT @ /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/pom.xml
+[DEBUG]   (f) projectArtifact = thegeocacher:thegeocacher-domain:jar:1-SNAPSHOT
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@47b2e9e1
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.7
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.7
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java]
+[DEBUG] Classpath: [/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+ /home/joerg/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar]
+[DEBUG] Output directory: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+[DEBUG] Adding /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-sources/annotations to compile source roots:
+  /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java
+[DEBUG] New compile source roots:
+  /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java
+  /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-sources/annotations
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/Geocache.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/base/UuidAttribute.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/GeocacheId.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/Wgs84Longitude.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/Geocaches.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/GeocacheType.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/GeocacheProvider.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/Wgs84Coordinates.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/GeocacheStatus.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/Difficulty.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/WaypointId.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/Waypoints.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/Distance.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/Terrain.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/base/DoubleAttribute.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/Wgs84Latitude.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/GeocacheAvailability.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/GeocacheCode.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/base/TimestampAttribute.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/Waypoint.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/UpdateTimestamp.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/exception/WrappedException.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/ContainerSize.java
+[DEBUG] Stale source detected: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java/thegeocacher/domain/attribute/base/StringAttribute.java
+[INFO] Changes detected - recompiling the module!
+[DEBUG] Classpath:
+[DEBUG]  /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+[DEBUG]  /home/joerg/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar
+[DEBUG] Source roots:
+[DEBUG]  /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java
+[DEBUG]  /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-sources/annotations
+[DEBUG] Command line options:
+[DEBUG] -d /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes -classpath /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes:/home/joerg/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar: -sourcepath /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/main/java:/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-sources/annotations: -s /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-sources/annotations -g -nowarn -target 1.7 -source 1.7 -encoding UTF-8
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 24 source files to /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ thegeocacher-domain ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: sun.misc.Launcher$AppClassLoader@70dea4e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:testResources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: thegeocacher:thegeocacher-domain:1-SNAPSHOT @ /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/test/resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@47b2e9e1
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {java.vendor=Oracle Corporation, env.SESSION_MANAGER=local/joergs-lappy:@/tmp/.ICE-unix/3103,unix/joergs-lappy:/tmp/.ICE-unix/3103, env.IM_CONFIG_PHASE=1, env.LESSOPEN=| /usr/bin/lesspipe %s, android-maven-plugin.version=3.8.2, sun.java.launcher=SUN_STANDARD, env.QT_IM_MODULE=ibus, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, env.GTK2_MODULES=overlay-scrollbar, os.name=Linux, env.UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/2889, sun.boot.class.path=/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes, env.PWD=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, sun.desktop=gnome, env.LANG=de_DE.UTF-8, java.vm.specification.vendor=Oracle Corporation, env.XDG_MENU_PREFIX=gnome-, java.runtime.version=1.8.0_66-b17, env.GTK_IM_MODULE=ibus, env.DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path, env.XDG_VTNR=7, project.build.sourceEncoding=UTF-8, env.DISPLAY=:0, user.name=joerg, env.QT4_IM_MODULE=xim, env._=/opt/apache-maven-3.3.9//bin/mvn, maven.build.version=Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T17:41:47+01:00), env.USER=joerg, env.SHELL=/bin/bash, env.DESKTOP_SESSION=ubuntu, env.XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/, env.NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat, env.PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/opt/apache-maven-3.3.9//bin, env.XDG_CURRENT_DESKTOP=Unity, user.language=de, env.XDG_SESSION_DESKTOP=ubuntu, sun.boot.library.path=/usr/lib/jvm/java-8-oracle/jre/lib/amd64, classworlds.conf=/opt/apache-maven-3.3.9/bin/m2.conf, maven-javadoc-plugin.version=, java.version=1.8.0_66, user.timezone=Europe/Berlin, env.DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-oi3IVnKbQ4, sun.arch.data.model=64, env.COMPIZ_CONFIG_PROFILE=ubuntu, java.endorsed.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, env.SHLVL=1, file.separator=/, java.specification.name=Java Platform API Specification, env.GNOME_DESKTOP_SESSION_ID=this-is-deprecated, java.class.version=52.0, env.GDMSESSION=ubuntu, org.slf4j.simpleLogger.defaultLogLevel=debug, user.country=DE, env.GNOME_KEYRING_PID=, java.home=/usr/lib/jvm/java-8-oracle/jre, java.vm.info=mixed mode, env.LOGNAME=joerg, os.version=4.2.0-23-generic, path.separator=:, java.vm.version=25.66-b17, env.LANGUAGE=de_DE, env.XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session1, env.QT_QPA_PLATFORMTHEME=appmenu-qt5, env.SESSIONTYPE=gnome-session, env.XDG_SESSION_TYPE=x11, env.JAVA_HOME=/usr/lib/jvm/java-8-oracle, java.awt.printerjob=sun.print.PSPrinterJob, env.TERM=xterm-256color, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, env.XMODIFIERS=@im=ibus, env.GDM_LANG=de_DE, user.home=/home/joerg, env.JOB=dbus, env.OLDPWD=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, java.specification.vendor=Oracle Corporation, env.VTE_VERSION=4002, env.WINDOWID=56623114, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://java.oracle.com/, env.MAVEN_CMD_LINE_ARGS= -X clean install, env.XDG_SEAT=seat0, java.vm.vendor=Oracle Corporation, maven.home=/opt/apache-maven-3.3.9, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X clean install, java.class.path=/opt/apache-maven-3.3.9/boot/plexus-classworlds-2.5.2.jar, env.XDG_SESSION_ID=c4, maven.version=3.3.9, env.XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.8, sun.cpu.endian=little, sun.os.patch.level=unknown, env.HOME=/home/joerg, java.io.tmpdir=/tmp, env.LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:, env.XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, maven.multiModuleProjectDirectory=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, env.SSH_AUTH_SOCK=/run/user/1000/keyring/ssh, env.CLUTTER_IM_MODULE=xim, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, env.INSTANCE=, java.ext.dirs=/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext, env.XDG_RUNTIME_DIR=/run/user/1000, user.dir=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, env.SESSION=ubuntu, env.XAUTHORITY=/home/joerg/.Xauthority, env.MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path, env.GTK_MODULES=unity-gtk-module, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, env.XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/joerg, file.encoding=UTF-8, android.java.version=1.7, java.specification.version=1.8, env.GNOME_KEYRING_CONTROL=, env.XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg, env.MAVEN_PROJECTBASEDIR=/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher, env.LESSCLOSE=/usr/bin/lesspipe %s %s}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/test/resources
+excludes []
+includes []
+[INFO] skip non existing resourceDirectory /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/test/resources
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.3:testCompile (default-testCompile) @ thegeocacher-domain ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.3, parent: sun.misc.Launcher$AppClassLoader@70dea4e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile' with basic configurator -->
+[DEBUG]   (f) basedir = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain
+[DEBUG]   (f) buildDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target
+[DEBUG]   (f) classpathElements = [/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/test-classes, /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/classes, /home/joerg/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar]
+[DEBUG]   (f) compileSourceRoots = [/home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/src/test/java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/generated-test-sources/test-annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.3:testCompile {execution: default-testCompile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/target/test-classes
+[DEBUG]   (f) project = MavenProject: thegeocacher:thegeocacher-domain:1-SNAPSHOT @ /home/joerg/NetBeansProjects/thegeocacher/thegeocacher/thegeocacher/thegeocacher-domain/pom.xml
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@47b2e9e1
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.7
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.7
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19:test (default-test) @ thegeocacher-domain ---
+[DEBUG] Using connector WagonRepositoryConnector from ClassRealm[extension>com.jayway.maven.plugins.android.generation2:android-maven-plugin:3.8.2, parent: sun.misc.Launcher$AppClassLoader@70dea4e] with priority 0.0 for https://repo.maven.apache.org/maven2
+Exception in thread "pool-1-thread-1" java.lang.NoClassDefFoundError: org/eclipse/aether/spi/connector/Transfer$State
+	at org.eclipse.aether.connector.wagon.WagonRepositoryConnector$GetTask.run(WagonRepositoryConnector.java:608)
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.aether.spi.connector.Transfer$State
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	... 5 more
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] thegeocacher ....................................... SUCCESS [  0.183 s]
+[INFO] thegeocacher-domain ................................ FAILURE [  1.845 s]
+[INFO] thegeocacher-common ................................ SKIPPED
+[INFO] thegeocacher-oc .................................... SKIPPED
+[INFO] thegeocacher-oc-integrationtest .................... SKIPPED
+[INFO] thegeocacher-fx .................................... SKIPPED
+[INFO] thegeocacher-apk ................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.023 s
+[INFO] Finished at: 2016-01-11T21:08:40+01:00
+[INFO] Final Memory: 21M/256M
+[INFO] ------------------------------------------------------------------------
+---------------------------------------------------
+constituent[0]: file:/opt/apache-maven-3.3.9/lib/aether-transport-wagon-1.0.2.v20150114.jar
+constituent[1]: file:/opt/apache-maven-3.3.9/lib/plexus-utils-3.0.22.jar
+constituent[2]: file:/opt/apache-maven-3.3.9/lib/wagon-provider-api-2.10.jar
+constituent[3]: file:/opt/apache-maven-3.3.9/lib/commons-cli-1.2.jar
+constituent[4]: file:/opt/apache-maven-3.3.9/lib/slf4j-simple-1.7.5.jar
+constituent[5]: file:/opt/apache-maven-3.3.9/lib/cdi-api-1.0.jar
+constituent[6]: file:/opt/apache-maven-3.3.9/lib/org.eclipse.sisu.plexus-0.3.2.jar
+constituent[7]: file:/opt/apache-maven-3.3.9/lib/maven-plugin-api-3.3.9.jar
+constituent[8]: file:/opt/apache-maven-3.3.9/lib/aopalliance-1.0.jar
+constituent[9]: file:/opt/apache-maven-3.3.9/lib/wagon-http-2.10-shaded.jar
+constituent[10]: file:/opt/apache-maven-3.3.9/lib/maven-model-3.3.9.jar
+constituent[11]: file:/opt/apache-maven-3.3.9/lib/jsoup-1.7.2.jar
+constituent[12]: file:/opt/apache-maven-3.3.9/lib/aether-impl-1.0.2.v20150114.jar
+constituent[13]: file:/opt/apache-maven-3.3.9/lib/guava-18.0.jar
+constituent[14]: file:/opt/apache-maven-3.3.9/lib/jsr250-api-1.0.jar
+constituent[15]: file:/opt/apache-maven-3.3.9/lib/plexus-sec-dispatcher-1.3.jar
+constituent[16]: file:/opt/apache-maven-3.3.9/lib/commons-io-2.2.jar
+constituent[17]: file:/opt/apache-maven-3.3.9/lib/maven-settings-builder-3.3.9.jar
+constituent[18]: file:/opt/apache-maven-3.3.9/lib/aether-util-1.0.2.v20150114.jar
+constituent[19]: file:/opt/apache-maven-3.3.9/lib/aether-spi-1.0.2.v20150114.jar
+constituent[20]: file:/opt/apache-maven-3.3.9/lib/maven-builder-support-3.3.9.jar
+constituent[21]: file:/opt/apache-maven-3.3.9/lib/maven-compat-3.3.9.jar
+constituent[22]: file:/opt/apache-maven-3.3.9/lib/plexus-cipher-1.7.jar
+constituent[23]: file:/opt/apache-maven-3.3.9/lib/maven-settings-3.3.9.jar
+constituent[24]: file:/opt/apache-maven-3.3.9/lib/aether-connector-basic-1.0.2.v20150114.jar
+constituent[25]: file:/opt/apache-maven-3.3.9/lib/aether-api-1.0.2.v20150114.jar
+constituent[26]: file:/opt/apache-maven-3.3.9/lib/maven-artifact-3.3.9.jar
+constituent[27]: file:/opt/apache-maven-3.3.9/lib/plexus-component-annotations-1.6.jar
+constituent[28]: file:/opt/apache-maven-3.3.9/lib/maven-embedder-3.3.9.jar
+constituent[29]: file:/opt/apache-maven-3.3.9/lib/commons-lang3-3.4.jar
+constituent[30]: file:/opt/apache-maven-3.3.9/lib/maven-repository-metadata-3.3.9.jar
+constituent[31]: file:/opt/apache-maven-3.3.9/lib/org.eclipse.sisu.inject-0.3.2.jar
+constituent[32]: file:/opt/apache-maven-3.3.9/lib/guice-4.0-no_aop.jar
+constituent[33]: file:/opt/apache-maven-3.3.9/lib/maven-core-3.3.9.jar
+constituent[34]: file:/opt/apache-maven-3.3.9/lib/commons-lang-2.6.jar
+constituent[35]: file:/opt/apache-maven-3.3.9/lib/wagon-file-2.10.jar
+constituent[36]: file:/opt/apache-maven-3.3.9/lib/maven-aether-provider-3.3.9.jar
+constituent[37]: file:/opt/apache-maven-3.3.9/lib/javax.inject-1.jar
+constituent[38]: file:/opt/apache-maven-3.3.9/lib/slf4j-api-1.7.5.jar
+constituent[39]: file:/opt/apache-maven-3.3.9/lib/wagon-http-shared-2.10.jar
+constituent[40]: file:/opt/apache-maven-3.3.9/lib/maven-model-builder-3.3.9.jar
+constituent[41]: file:/opt/apache-maven-3.3.9/lib/plexus-interpolation-1.21.jar
+constituent[42]: file:/opt/apache-maven-3.3.9/conf/logging/
+---------------------------------------------------
+Exception in thread "main" java.lang.NoClassDefFoundError: org/eclipse/aether/spi/connector/Transfer$State
+	at org.eclipse.aether.connector.wagon.WagonRepositoryConnector$GetTask.run(WagonRepositoryConnector.java:608)
+	at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run(RunnableErrorForwarder.java:67)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.aether.spi.connector.Transfer$State
+	at org.codehaus.plexus.classworlds.strategy.SelfFirstStrategy.loadClass(SelfFirstStrategy.java:50)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.unsynchronizedLoadClass(ClassRealm.java:271)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:247)
+	at org.codehaus.plexus.classworlds.realm.ClassRealm.loadClass(ClassRealm.java:239)
+	... 5 more
