@@ -1,5 +1,7 @@
 package thegeocacher.web.map;
 
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -10,7 +12,7 @@ import javax.faces.bean.SessionScoped;
  */
 @SessionScoped
 @ManagedBean
-public class MapPageBean
+public class MapPageBean implements Serializable
 {
 	public Double getCenterLatitude()
 	{

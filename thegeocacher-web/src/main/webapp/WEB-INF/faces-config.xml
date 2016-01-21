@@ -16,15 +16,4 @@
 			<var>msgs</var>
 		</resource-bundle>
 	</application>
-
-	<!-- PhaseListener -->
-	<lifecycle>
-		<phase-listener>
-			thegeocacher.jsf.DebugPhaseListener
-		</phase-listener>
-		<phase-listener>
-			thegeocacher.jsf.ParameterPhaseListener
-		</phase-listener>
-	</lifecycle>
-
 </faces-config>

@@ -13,6 +13,10 @@
 	<artifactId>thegeocacher-ejb</artifactId>
 	<packaging>ejb</packaging>
 
+	<properties>
+		<mapsforge.version>0.6.0</mapsforge.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -28,8 +32,24 @@
 		<dependency>
 			<groupId>org.mapsforge</groupId>
 			<artifactId>mapsforge-map-awt</artifactId>
-			<version>0.6.0</version>
+			<version>${mapsforge.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.mapsforge</groupId>
+			<artifactId>mapsforge-map-reader</artifactId>
+			<version>${mapsforge.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapsforge</groupId>
+			<artifactId>mapsforge-map</artifactId>
+			<version>${mapsforge.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mapsforge</groupId>
+			<artifactId>mapsforge-core</artifactId>
+			<version>${mapsforge.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
