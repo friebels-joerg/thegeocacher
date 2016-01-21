@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition
+	template="/templates/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<ui:param
+		name="pageTitle"
+		value="#{msgs.title_map}" />
+
+	<ui:define name="css">
+		<link
+			rel="stylesheet"
+			href="css/map.css" />
+		<link
+			rel="stylesheet"
+			href="leaflet/leaflet.css" />
+		<script src="leaflet/leaflet.js" />
+			
+	</ui:define>
+
+	<ui:define name="content">
+		<h:messages />
+		<div id="map" />
+		<script type="text/javascript">
+		var map = L.map('map').setView([#{mapPageBean.getCenterLatitude()}, #{mapPageBean.getCenterLongitude()}], #{mapPageBean.getZoomLevel()});
+		L.tileLayer('map/tiles/{z}/{x}/{y}', {}).addTo(map);
+		</script>
+	</ui:define>
+</ui:composition>
