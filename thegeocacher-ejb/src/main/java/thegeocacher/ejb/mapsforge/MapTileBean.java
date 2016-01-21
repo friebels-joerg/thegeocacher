@@ -33,7 +33,8 @@ public class MapTileBean
 	private MapDataStore mapDataStore;
 	private DatabaseRenderer databaseRenderer;
 	private DisplayModel displayModel;
-	private RenderThemeFuture renderThemeFuture;
+	private static RenderThemeFuture renderThemeFuture;
+	private XmlRenderTheme xmlRenderTheme;
 
 	public MapTileBean()
 	{
@@ -45,9 +46,9 @@ public class MapTileBean
 		TileBasedLabelStore labelStore = new TileBasedLabelStore(100);
 		databaseRenderer = new DatabaseRenderer(mapDataStore, AwtGraphicFactory.INSTANCE, labelStore);
 		displayModel = new DisplayModel();
-		String renderThemeFilename = homePath + "renderthemes\\osmarender\\osmarender.xml";
+		String renderThemeFilename = homePath + "renderthemes\\openmaps\\openmaps.xml";
 		File renderThemeFile = new File(renderThemeFilename);
-		XmlRenderTheme xmlRenderTheme = null;
+		xmlRenderTheme = null;
 		try
 		{
 			xmlRenderTheme = new ExternalRenderTheme(renderThemeFile);
@@ -56,9 +57,6 @@ public class MapTileBean
 		{
 			LOGGER.log(Level.WARNING, "unexpected", e);
 		}
-		renderThemeFuture = new RenderThemeFuture(AwtGraphicFactory.INSTANCE, xmlRenderTheme, displayModel);
-		LOGGER.info("renderThemeFuture created");
-		LOGGER.info("renderThemeFuture started");
 	}
 
 	public BufferedImage getMapTile(Byte aZoom, Integer aX, Integer aY)
@@ -75,7 +73,18 @@ public class MapTileBean
 		float textScale = 1.5f;
 		boolean isTransparent = false;
 		boolean labelsOnly = false;
-		return new RendererJob(aTile, mapDataStore, renderThemeFuture, displayModel, textScale, isTransparent,
+		return new RendererJob(aTile, mapDataStore, getRenderThemeFuture(), displayModel, textScale, isTransparent,
 				labelsOnly);
+	}
+
+	private RenderThemeFuture getRenderThemeFuture()
+	{
+		if (renderThemeFuture == null)
+		{
+			renderThemeFuture = new RenderThemeFuture(AwtGraphicFactory.INSTANCE, xmlRenderTheme, displayModel);
+			new Thread(renderThemeFuture).run();
+		}
+
+		return renderThemeFuture;
 	}
 }
