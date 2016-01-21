@@ -36,7 +36,9 @@ public class TheGeocacherProperties
       properties = new Properties();
       try
       {
-         properties.load(new FileInputStream(getFilename()));
+         String filename = getFilename();
+         LOGGER.info("Loading properties file " + filename);
+         properties.load(new FileInputStream(filename));
       } catch (IOException ex)
       {
          LOGGER.log(Level.SEVERE, null, ex);
@@ -52,4 +54,18 @@ public class TheGeocacherProperties
       return instance;
    }
 
+   public String getBaseDir()
+   {
+      return getStringValue("basedir");
+   }
+
+   String getStringValue(String aKey)
+   {
+      final Object value = properties.get(aKey);
+      if (value == null)
+      {
+         return null;
+      }
+      return "" + value;
+   }
 }
