@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.ejb.Singleton;
+import javax.ejb.Stateless;
 
 import org.mapsforge.core.graphics.TileBitmap;
 import org.mapsforge.core.model.Tile;
@@ -26,7 +26,7 @@ import org.mapsforge.map.rendertheme.rule.RenderThemeFuture;
  * @author Jörg Friebel
  * @since 20.01.2015
  */
-@Singleton
+@Stateless
 public class MapTileBean
 {
 	private static final Logger LOGGER = Logger.getLogger(MapTileBean.class.getSimpleName());
