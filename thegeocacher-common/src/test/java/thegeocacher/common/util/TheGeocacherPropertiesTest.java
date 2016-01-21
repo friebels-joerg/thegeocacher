@@ -13,7 +13,6 @@ public class TheGeocacherPropertiesTest
    @Test
    public void testGetUserHome()
    {
-      System.out.println("getUserHome");
       TheGeocacherProperties serviceUnderTest = TheGeocacherProperties.getInstance();
       String result = serviceUnderTest.getUserHome();
       Assert.assertNotNull(result);
