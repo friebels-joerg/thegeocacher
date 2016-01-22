@@ -1,9 +1,13 @@
 package thegeocacher.ejb.mapsforge;
 
 import java.awt.image.BufferedImage;
+
 import static org.junit.Assert.assertNotNull;
+
 import org.junit.Ignore;
 import org.junit.Test;
+
+import thegeocacher.ejb.map.MapTileBean;
 
 /**
  *

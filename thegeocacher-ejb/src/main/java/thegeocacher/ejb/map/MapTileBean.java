@@ -1,4 +1,4 @@
-package thegeocacher.ejb.mapsforge;
+package thegeocacher.ejb.map;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -119,11 +119,11 @@ public class MapTileBean
 
 	public String getLatestRenderThemeFilename()
 	{
-		return MapsforgeProperties.getInstance().getLatestRenderThemeFilename();
+		return MapProperties.getInstance().getLatestRenderThemeFilename();
 	}
 
 	public String getLatestMapFilename()
 	{
-		return MapsforgeProperties.getInstance().getLatestMapFilename();
+		return MapProperties.getInstance().getLatestMapFilename();
 	}
 }

@@ -1,4 +1,4 @@
-package thegeocacher.ejb.mapsforge;
+package thegeocacher.ejb.map;
 
 import java.io.File;
 
@@ -9,20 +9,20 @@ import thegeocacher.common.util.TheGeocacherProperties;
  * @author Jörg Friebel
  * @since 19.01.2016
  */
-public class MapsforgeProperties
+public class MapProperties
 {
-	private static final String PROPERTY_PREFIX = "mapsforge";
+	private static final String PROPERTY_PREFIX = "map";
 
 	private static final String DEFAULT_RENDER_THEME_FILENAME = "hiking" + File.separator + "hiking.xml";
 	private static final String DEFAULT_MAP_FILENAME = "nordrhein-westfalen.map";
 
-	private static MapsforgeProperties instance;
+	private static MapProperties instance;
 
-	public static MapsforgeProperties getInstance()
+	public static MapProperties getInstance()
 	{
 		if (instance == null)
 		{
-			instance = new MapsforgeProperties();
+			instance = new MapProperties();
 		}
 		return instance;
 	}
