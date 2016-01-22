@@ -14,6 +14,7 @@ public class MapsforgeProperties
 	private static final String PROPERTY_PREFIX = "mapsforge";
 
 	private static final String DEFAULT_RENDER_THEME_FILENAME = "hiking" + File.separator + "hiking.xml";
+	private static final String DEFAULT_MAP_FILENAME = "nordrhein-westfalen.map";
 
 	private static MapsforgeProperties instance;
 
@@ -34,5 +35,10 @@ public class MapsforgeProperties
 	private String getStringValue(String aKey, String aDefault)
 	{
 		return TheGeocacherProperties.getInstance().getStringValue(PROPERTY_PREFIX, aKey, aDefault);
+	}
+
+	public String getLatestMapFilename()
+	{
+		return getStringValue("latestMapFileName", DEFAULT_MAP_FILENAME);
 	}
 }

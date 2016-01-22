@@ -34,12 +34,11 @@ public class MapTileBean
 	private static final Logger LOGGER = Logger.getLogger(MapTileBean.class.getSimpleName());
 
 	private DatabaseRenderer databaseRenderer;
-	private DisplayModel displayModel = new DisplayModel();;
+	private DisplayModel displayModel = new DisplayModel();
 
 	private static RenderThemeFuture renderThemeFuture;
 	private static Thread renderThemeThread;
 
-	private String mapFilename = "nordrhein-westfalen.map";
 	private MapDataStore mapDataStore;
 
 	public BufferedImage getMapTile(Byte aZoom, Integer aX, Integer aY)
@@ -78,7 +77,7 @@ public class MapTileBean
 	{
 		if (renderThemeFuture == null)
 		{
-			String absoluteRenderThemeFilename = getAbsoluteRenderThemeFilename(getRenderThemeFilename());
+			String absoluteRenderThemeFilename = getAbsoluteRenderThemeFilename(getLatestRenderThemeFilename());
 			File renderThemeFile = new File(absoluteRenderThemeFilename);
 			XmlRenderTheme xmlRenderTheme = null;
 			try
@@ -101,7 +100,7 @@ public class MapTileBean
 	{
 		if (mapDataStore == null)
 		{
-			String absoluteMapFilename = getAbsoluteMapFilename(mapFilename);
+			String absoluteMapFilename = getAbsoluteMapFilename(getLatestMapFilename());
 			File mapFile = new File(absoluteMapFilename);
 			mapDataStore = new MapFile(mapFile);
 		}
@@ -118,9 +117,13 @@ public class MapTileBean
 		return databaseRenderer;
 	}
 
-	public String getRenderThemeFilename()
+	public String getLatestRenderThemeFilename()
 	{
 		return MapsforgeProperties.getInstance().getLatestRenderThemeFilename();
 	}
 
+	public String getLatestMapFilename()
+	{
+		return MapsforgeProperties.getInstance().getLatestMapFilename();
+	}
 }
