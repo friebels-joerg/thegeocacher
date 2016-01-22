@@ -36,7 +36,6 @@ public class MapTileBean
 	private DatabaseRenderer databaseRenderer;
 	private DisplayModel displayModel = new DisplayModel();;
 
-	private String renderThemFilename = "hiking" + File.separator + "hiking.xml";
 	private static RenderThemeFuture renderThemeFuture;
 	private static Thread renderThemeThread;
 
@@ -79,8 +78,8 @@ public class MapTileBean
 	{
 		if (renderThemeFuture == null)
 		{
-			String renderThemeFilename = getAbsoluteRenderThemeFilename(renderThemFilename);
-			File renderThemeFile = new File(renderThemeFilename);
+			String absoluteRenderThemeFilename = getAbsoluteRenderThemeFilename(getRenderThemeFilename());
+			File renderThemeFile = new File(absoluteRenderThemeFilename);
 			XmlRenderTheme xmlRenderTheme = null;
 			try
 			{
@@ -118,4 +117,10 @@ public class MapTileBean
 		}
 		return databaseRenderer;
 	}
+
+	public String getRenderThemeFilename()
+	{
+		return MapsforgeProperties.getInstance().getRenderThemeFilename();
+	}
+
 }

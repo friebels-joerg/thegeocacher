@@ -15,7 +15,7 @@ public class TheGeocacherPropertiesTest
    public void testFileExists()
    {
       TheGeocacherProperties serviceUnderTest = TheGeocacherProperties.getInstance();
-      final String filename = serviceUnderTest.getFilename();
+      final String filename = serviceUnderTest.getAbsolutePropertiesFilename();
       Assert.assertTrue("test will only run when file " + filename + " exists", new File(filename).exists());
    }
 
