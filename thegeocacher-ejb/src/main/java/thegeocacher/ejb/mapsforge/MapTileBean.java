@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
 import javax.ejb.Stateless;
+
 import org.mapsforge.core.graphics.TileBitmap;
 import org.mapsforge.core.model.Tile;
 import org.mapsforge.map.awt.graphics.AwtGraphicFactory;
@@ -18,6 +20,7 @@ import org.mapsforge.map.reader.MapFile;
 import org.mapsforge.map.rendertheme.ExternalRenderTheme;
 import org.mapsforge.map.rendertheme.XmlRenderTheme;
 import org.mapsforge.map.rendertheme.rule.RenderThemeFuture;
+
 import thegeocacher.common.util.TheGeocacherProperties;
 
 /**
@@ -28,60 +31,91 @@ import thegeocacher.common.util.TheGeocacherProperties;
 @Stateless
 public class MapTileBean
 {
-   private static final Logger LOGGER = Logger.getLogger(MapTileBean.class.getSimpleName());
-   private MapDataStore mapDataStore;
-   private DatabaseRenderer databaseRenderer;
-   private DisplayModel displayModel;
-   private static RenderThemeFuture renderThemeFuture;
-   private XmlRenderTheme xmlRenderTheme;
+	private static final Logger LOGGER = Logger.getLogger(MapTileBean.class.getSimpleName());
 
-   public MapTileBean()
-   {
-      super();
-      String homePath = TheGeocacherProperties.getInstance().getBaseDir();
-      String mapFilename = homePath + File.separator + "maps" + File.separator + "nordrhein-westfalen.map";
-      File mapFile = new File(mapFilename);
-      mapDataStore = new MapFile(mapFile);
-      TileBasedLabelStore labelStore = new TileBasedLabelStore(100);
-      databaseRenderer = new DatabaseRenderer(mapDataStore, AwtGraphicFactory.INSTANCE, labelStore);
-      displayModel = new DisplayModel();
-      String renderThemeFilename = homePath + File.separator + "renderthemes" + File.separator + "hiking" + File.separator + "hiking.xml";
-      File renderThemeFile = new File(renderThemeFilename);
-      xmlRenderTheme = null;
-      try
-      {
-         xmlRenderTheme = new ExternalRenderTheme(renderThemeFile);
-      } catch (FileNotFoundException e)
-      {
-         LOGGER.log(Level.WARNING, "unexpected", e);
-      }
-   }
+	private DatabaseRenderer databaseRenderer;
+	private DisplayModel displayModel = new DisplayModel();;
 
-   public BufferedImage getMapTile(Byte aZoom, Integer aX, Integer aY)
-   {
-      Tile tile = new Tile(aX, aY, aZoom, 256);
-      RendererJob rendererJob = createRendererJob(tile);
-      TileBitmap tileBitmap = databaseRenderer.executeJob(rendererJob);
-      return AwtGraphicFactory.getBitmap(tileBitmap);
-   }
+	private String renderThemFilename = "hiking" + File.separator + "hiking.xml";
+	private static RenderThemeFuture renderThemeFuture;
+	private static Thread renderThemeThread;
 
-   private RendererJob createRendererJob(Tile aTile)
-   {
-      float textScale = 1.5f;
-      boolean isTransparent = false;
-      boolean labelsOnly = false;
-      return new RendererJob(aTile, mapDataStore, getRenderThemeFuture(), displayModel, textScale, isTransparent,
-            labelsOnly);
-   }
+	private String mapFilename = "nordrhein-westfalen.map";
+	private MapDataStore mapDataStore;
 
-   private RenderThemeFuture getRenderThemeFuture()
-   {
-      if (renderThemeFuture == null)
-      {
-         renderThemeFuture = new RenderThemeFuture(AwtGraphicFactory.INSTANCE, xmlRenderTheme, displayModel);
-         new Thread(renderThemeFuture).run();
-      }
+	public BufferedImage getMapTile(Byte aZoom, Integer aX, Integer aY)
+	{
+		Tile tile = new Tile(aX, aY, aZoom, 256);
+		RendererJob rendererJob = getRendererJob(tile);
+		TileBitmap tileBitmap = getDatabaseRenderer().executeJob(rendererJob);
+		return AwtGraphicFactory.getBitmap(tileBitmap);
+	}
 
-      return renderThemeFuture;
-   }
+	private String getAbsoluteRenderThemeFilename(String aRenderThemFilename)
+	{
+		return getBaseDir() + File.separator + "renderthemes" + File.separator + aRenderThemFilename;
+	}
+
+	private String getBaseDir()
+	{
+		return TheGeocacherProperties.getInstance().getBaseDir();
+	}
+
+	private String getAbsoluteMapFilename(String aMapFilename)
+	{
+		return getBaseDir() + File.separator + "maps" + File.separator + aMapFilename;
+	}
+
+	private RendererJob getRendererJob(Tile aTile)
+	{
+		float textScale = 1.5f;
+		boolean isTransparent = false;
+		boolean labelsOnly = false;
+		return new RendererJob(aTile, getMapDataStore(), getRenderThemeFuture(), displayModel, textScale, isTransparent,
+		      labelsOnly);
+	}
+
+	private RenderThemeFuture getRenderThemeFuture()
+	{
+		if (renderThemeFuture == null)
+		{
+			String renderThemeFilename = getAbsoluteRenderThemeFilename(renderThemFilename);
+			File renderThemeFile = new File(renderThemeFilename);
+			XmlRenderTheme xmlRenderTheme = null;
+			try
+			{
+				xmlRenderTheme = new ExternalRenderTheme(renderThemeFile);
+			}
+			catch (FileNotFoundException e)
+			{
+				LOGGER.log(Level.WARNING, "unexpected", e);
+			}
+			renderThemeFuture = new RenderThemeFuture(AwtGraphicFactory.INSTANCE, xmlRenderTheme, displayModel);
+			renderThemeThread = new Thread(renderThemeFuture);
+			renderThemeThread.run();
+		}
+
+		return renderThemeFuture;
+	}
+
+	private MapDataStore getMapDataStore()
+	{
+		if (mapDataStore == null)
+		{
+			String absoluteMapFilename = getAbsoluteMapFilename(mapFilename);
+			File mapFile = new File(absoluteMapFilename);
+			mapDataStore = new MapFile(mapFile);
+		}
+		return mapDataStore;
+	}
+
+	private DatabaseRenderer getDatabaseRenderer()
+	{
+		if (databaseRenderer == null)
+		{
+			TileBasedLabelStore labelStore = new TileBasedLabelStore(100);
+			databaseRenderer = new DatabaseRenderer(mapDataStore, AwtGraphicFactory.INSTANCE, labelStore);
+		}
+		return databaseRenderer;
+	}
 }
