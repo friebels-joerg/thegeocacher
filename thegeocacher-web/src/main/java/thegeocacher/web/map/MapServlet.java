@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import thegeocacher.ejb.map.MapTileBean;
+import thegeocacher.ejb.map.MapTileProviderBean;
 
 /**
  *
@@ -26,7 +26,7 @@ public class MapServlet extends HttpServlet
    private static final Logger LOGGER = Logger.getLogger(MapServlet.class.getSimpleName());
 
    @EJB
-   MapTileBean mapTileBean;
+   MapTileProviderBean mapTileBean;
 
    @Override
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException

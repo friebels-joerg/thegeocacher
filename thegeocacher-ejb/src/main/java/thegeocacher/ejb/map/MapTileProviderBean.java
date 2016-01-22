@@ -29,9 +29,9 @@ import thegeocacher.common.util.TheGeocacherProperties;
  * @since 20.01.2015
  */
 @Stateless
-public class MapTileBean
+public class MapTileProviderBean
 {
-	private static final Logger LOGGER = Logger.getLogger(MapTileBean.class.getSimpleName());
+	private static final Logger LOGGER = Logger.getLogger(MapTileProviderBean.class.getSimpleName());
 
 	private DatabaseRenderer databaseRenderer;
 	private DisplayModel displayModel = new DisplayModel();
