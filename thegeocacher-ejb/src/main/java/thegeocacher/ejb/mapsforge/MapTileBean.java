@@ -120,7 +120,7 @@ public class MapTileBean
 
 	public String getRenderThemeFilename()
 	{
-		return MapsforgeProperties.getInstance().getRenderThemeFilename();
+		return MapsforgeProperties.getInstance().getLatestRenderThemeFilename();
 	}
 
 }

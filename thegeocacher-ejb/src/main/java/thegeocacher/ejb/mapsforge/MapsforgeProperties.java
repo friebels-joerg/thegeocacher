@@ -11,10 +11,9 @@ import thegeocacher.common.util.TheGeocacherProperties;
  */
 public class MapsforgeProperties
 {
-	public final static String DOWNLOAD_PATH = "http://download.mapsforge.org/maps/";
-	public final static String OFFLINE_PATH = "maps/";
+	private static final String PROPERTY_PREFIX = "mapsforge";
 
-	private String DEFAULT_RENDER_THEME_FILENAME = "hiking" + File.separator + "hiking.xml";
+	private static final String DEFAULT_RENDER_THEME_FILENAME = "hiking" + File.separator + "hiking.xml";
 
 	private static MapsforgeProperties instance;
 
@@ -27,9 +26,13 @@ public class MapsforgeProperties
 		return instance;
 	}
 
-	public String getRenderThemeFilename()
+	public String getLatestRenderThemeFilename()
 	{
-		return TheGeocacherProperties.getInstance().getStringValue("mapsforge.latestRenderThemeFileName",
-		      DEFAULT_RENDER_THEME_FILENAME);
+		return getStringValue("latestRenderThemeFileName", DEFAULT_RENDER_THEME_FILENAME);
+	}
+
+	private String getStringValue(String aKey, String aDefault)
+	{
+		return TheGeocacherProperties.getInstance().getStringValue(PROPERTY_PREFIX, aKey, aDefault);
 	}
 }

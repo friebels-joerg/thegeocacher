@@ -98,4 +98,10 @@ public class TheGeocacherProperties
 			LOGGER.log(Level.SEVERE, null, e);
 		}
 	}
+
+	public String getStringValue(String aPropertyPrefix, String aKey, String aDefault)
+	{
+		String key = aPropertyPrefix + "." + aKey;
+		return getStringValue(key, aDefault);
+	}
 }
