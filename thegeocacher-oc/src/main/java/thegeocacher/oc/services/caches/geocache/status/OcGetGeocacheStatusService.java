@@ -1,17 +1,15 @@
 package thegeocacher.oc.services.caches.geocache.status;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
-
 import thegeocacher.domain.GeocacheStatus;
 import thegeocacher.domain.attribute.GeocacheAvailability;
 import thegeocacher.domain.attribute.GeocacheCode;
 import thegeocacher.domain.attribute.UpdateTimestamp;
 import thegeocacher.oc.services.OcMethod;
 import thegeocacher.oc.services.OcService;
-
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  *
@@ -76,15 +74,15 @@ public class OcGetGeocacheStatusService extends OcService
 	{
 		if ("Available".equals(aStatus))
 		{
-			return GeocacheAvailability.available;
+			return GeocacheAvailability.AVAILABLE;
 		}
 		if ("Temporarily unavailable".equals(aStatus))
 		{
-			return GeocacheAvailability.temporarilyUnavailable;
+			return GeocacheAvailability.TEMPORARILY_UNAVAILABLE;
 		}
 		if ("Archived".equals(aStatus))
 		{
-			return GeocacheAvailability.archived;
+			return GeocacheAvailability.ARCHIVED;
 		}
 
 		throw new IllegalArgumentException("Cannot convert " + aStatus + " to a GeocacheAvailability");

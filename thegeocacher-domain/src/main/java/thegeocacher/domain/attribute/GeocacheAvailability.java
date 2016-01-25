@@ -7,7 +7,8 @@ package thegeocacher.domain.attribute;
  */
 public enum GeocacheAvailability
 {
-   available, // - Cache is available and ready for search,
-   temporarilyUnavailable, // - Cache is probably unavailable (i.e. in need of maintenance)
-   archived;               // - Cache is permanently unavailable (moved to the archives).
+	AVAILABLE, // - Cache is available and ready for search,
+	TEMPORARILY_UNAVAILABLE, // - Cache is probably unavailable (i.e. in need of
+	                         // maintenance)
+	ARCHIVED; // - Cache is permanently unavailable (moved to the archives).
 }

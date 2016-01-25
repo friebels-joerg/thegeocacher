@@ -1,15 +1,11 @@
 package thegeocacher.oc.services.caches.geocache.status;
 
+import static org.junit.Assert.*;
+
 import java.util.Date;
-
 import org.junit.Test;
-
 import thegeocacher.domain.GeocacheStatus;
 import thegeocacher.domain.attribute.GeocacheAvailability;
-import thegeocacher.oc.services.caches.geocache.status.OcGeocacheStatus;
-import thegeocacher.oc.services.caches.geocache.status.OcGetGeocacheStatusParameters;
-import thegeocacher.oc.services.caches.geocache.status.OcGetGeocacheStatusService;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -43,7 +39,7 @@ public class OcGetGeocacheStatusServiceTest
 		GeocacheStatus result = serviceUnderTest.getResultObject(pojo);
 
 		assertEquals("OC1234", result.getCode().getValue());
-		assertEquals(GeocacheAvailability.available, result.getAvailability());
+		assertEquals(GeocacheAvailability.AVAILABLE, result.getAvailability());
 		assertEquals(pojo.last_modified, result.getLatestModificationTimestamp().getValue());
 	}
 
@@ -52,10 +48,10 @@ public class OcGetGeocacheStatusServiceTest
 	{
 		OcGetGeocacheStatusService serviceUnderTest = new OcGetGeocacheStatusService();
 
-		assertEquals(GeocacheAvailability.available, serviceUnderTest.getAvailabality("Available"));
-		assertEquals(GeocacheAvailability.archived, serviceUnderTest.getAvailabality("Archived"));
-		assertEquals(GeocacheAvailability.temporarilyUnavailable,
-				serviceUnderTest.getAvailabality("Temporarily unavailable"));
+		assertEquals(GeocacheAvailability.AVAILABLE, serviceUnderTest.getAvailabality("Available"));
+		assertEquals(GeocacheAvailability.ARCHIVED, serviceUnderTest.getAvailabality("Archived"));
+		assertEquals(GeocacheAvailability.TEMPORARILY_UNAVAILABLE,
+		         serviceUnderTest.getAvailabality("Temporarily unavailable"));
 
 		serviceUnderTest.getAvailabality("Invalid String");
 	}

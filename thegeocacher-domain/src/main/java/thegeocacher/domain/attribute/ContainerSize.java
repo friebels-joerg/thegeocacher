@@ -7,5 +7,12 @@ package thegeocacher.domain.attribute;
  */
 public enum ContainerSize
 {
-	Nano, Micro, Small, Regular, Large, extra_large, other, none;
+	NANO,
+	MICRO,
+	SMALL,
+	REGULAR,
+	LARGE,
+	EXTRA_LARGE,
+	OTHER,
+	NONE;
 }
