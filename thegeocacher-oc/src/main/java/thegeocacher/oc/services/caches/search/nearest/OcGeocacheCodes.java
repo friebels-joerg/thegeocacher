@@ -1,11 +1,15 @@
 package thegeocacher.oc.services.caches.search.nearest;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
+/**
+ *
+ * @author Jörg Friebel
+ * @since 09.01.2016
+ */
 public class OcGeocacheCodes implements Iterable<String>
 {
 	@JsonProperty("results")

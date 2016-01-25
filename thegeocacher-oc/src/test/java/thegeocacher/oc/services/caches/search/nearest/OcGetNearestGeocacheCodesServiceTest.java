@@ -1,18 +1,16 @@
 package thegeocacher.oc.services.caches.search.nearest;
 
-import org.junit.Test;
+import static org.junit.Assert.*;
 
+import org.junit.Test;
 import thegeocacher.domain.attribute.DistanceInMeter;
 import thegeocacher.domain.attribute.GeocacheCodes;
 import thegeocacher.domain.attribute.Wgs84Coordinates;
 import thegeocacher.domain.attribute.Wgs84Latitude;
 import thegeocacher.domain.attribute.Wgs84Longitude;
-import thegeocacher.oc.services.caches.search.nearest.OcGeocacheCodes;
-import thegeocacher.oc.services.caches.search.nearest.OcGetNearestGeocacheCodesParameters;
-import thegeocacher.oc.services.caches.search.nearest.OcGetNearestGeocacheCodesService;
-import static org.junit.Assert.*;
 
 /**
+ *
  * @author Jörg Friebel
  * @since 12.01.2016
  */

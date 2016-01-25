@@ -1,5 +1,8 @@
 package thegeocacher.oc.services.caches.geocache.full;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -7,10 +10,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ *
+ * @author Jörg Friebel
+ * @since 09.01.2016
+ */
 public class OcLanguageTexts
 {
 

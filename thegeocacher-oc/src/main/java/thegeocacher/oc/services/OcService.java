@@ -2,6 +2,11 @@ package thegeocacher.oc.services;
 
 import thegeocacher.common.web.SimpleHttpRequestExecuter;
 
+/**
+ *
+ * @author Jörg Friebel
+ * @since 09.01.2016
+ */
 abstract public class OcService
 {
 	OcSite ocSite = OcSite.DE;

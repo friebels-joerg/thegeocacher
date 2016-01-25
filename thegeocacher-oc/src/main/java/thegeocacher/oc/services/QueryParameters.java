@@ -6,6 +6,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+/**
+ *
+ * @author Jörg Friebel
+ * @since 09.01.2016
+ */
 public class QueryParameters
 {
 

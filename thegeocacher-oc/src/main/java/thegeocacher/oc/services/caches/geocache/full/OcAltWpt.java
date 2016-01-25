@@ -1,13 +1,17 @@
 package thegeocacher.oc.services.caches.geocache.full;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.HashMap;
+import java.util.Map;
 
+/**
+ *
+ * @author Jörg Friebel
+ * @since 09.01.2016
+ */
 public class OcAltWpt
 {
 
