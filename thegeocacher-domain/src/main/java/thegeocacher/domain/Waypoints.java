@@ -4,13 +4,18 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ * @author Jörg Friebel
+ * @since 25.01.2016
+ */
 public class Waypoints implements Serializable
 {
 
-	List<Waypoint> waypoints = new ArrayList<Waypoint>();
+	List<Waypoint> values = new ArrayList<Waypoint>();
 
-	public void addWaypoint(Waypoint waypoint)
+	public void addWaypoint(Waypoint aWaypoint)
 	{
-		waypoints.add(waypoint);
+		values.add(aWaypoint);
 	}
 }

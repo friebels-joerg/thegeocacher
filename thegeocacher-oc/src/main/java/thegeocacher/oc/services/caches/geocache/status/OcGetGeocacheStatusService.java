@@ -68,7 +68,7 @@ public class OcGetGeocacheStatusService extends OcService
 		GeocacheStatus geocacheStatus = new GeocacheStatus();
 		geocacheStatus.setAvailability(getAvailabality(aJsonObject.getStatus()));
 		geocacheStatus.setCode(new GeocacheCode(aJsonObject.getCode()));
-		geocacheStatus.setLastModified(new UpdateTimestamp(aJsonObject.getLastModified()));
+		geocacheStatus.setLatestModificationTimestamp(new UpdateTimestamp(aJsonObject.getLastModified()));
 		return geocacheStatus;
 	}
 

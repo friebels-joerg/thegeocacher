@@ -7,6 +7,7 @@ import thegeocacher.domain.attribute.LinkName;
 import thegeocacher.domain.attribute.LinkType;
 
 /**
+ *
  * @author Jörg Friebel
  * @since 15.01.2015
  */

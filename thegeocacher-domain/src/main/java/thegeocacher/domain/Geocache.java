@@ -10,6 +10,7 @@ import thegeocacher.domain.attribute.GeocacheType;
 import thegeocacher.domain.attribute.Wgs84Coordinates;
 
 /**
+ *
  * @author Jörg Friebel
  * @since 29.12.2015
  */

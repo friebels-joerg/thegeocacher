@@ -44,7 +44,7 @@ public class OcGetGeocacheStatusServiceTest
 
 		assertEquals("OC1234", result.getCode().getValue());
 		assertEquals(GeocacheAvailability.available, result.getAvailability());
-		assertEquals(pojo.last_modified, result.getLastModified().getValue());
+		assertEquals(pojo.last_modified, result.getLatestModificationTimestamp().getValue());
 	}
 
 	@Test(expected = IllegalArgumentException.class)

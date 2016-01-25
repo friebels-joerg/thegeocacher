@@ -11,14 +11,8 @@ import thegeocacher.domain.attribute.base.TimestampAttribute;
  */
 public class LogTimestamp extends TimestampAttribute
 {
-
-	/**
-	 *
-	 */
 	public LogTimestamp(Date aValue)
 	{
 		super(aValue);
-
 	}
-
 }

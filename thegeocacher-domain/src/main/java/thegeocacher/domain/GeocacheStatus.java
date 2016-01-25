@@ -17,16 +17,16 @@ public class GeocacheStatus
 
    GeocacheAvailability availability;
 
-   UpdateTimestamp lastModified;
+   UpdateTimestamp latestModificationTimestamp;
 
    public GeocacheAvailability getAvailability()
    {
       return availability;
    }
 
-   public void setAvailability(GeocacheAvailability aAvailability)
+   public void setAvailability(GeocacheAvailability anAvailability)
    {
-      availability = aAvailability;
+      availability = anAvailability;
    }
 
    public GeocacheCode getCode()
@@ -39,14 +39,14 @@ public class GeocacheStatus
       code = aCode;
    }
 
-   public UpdateTimestamp getLastModified()
+   public UpdateTimestamp getLatestModificationTimestamp()
    {
-      return lastModified;
+      return latestModificationTimestamp;
    }
 
-   public void setLastModified(UpdateTimestamp aLastModified)
+   public void setLatestModificationTimestamp(UpdateTimestamp aLastModified)
    {
-      lastModified = aLastModified;
+      latestModificationTimestamp = aLastModified;
    }
 
    @Override

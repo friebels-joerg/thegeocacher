@@ -35,7 +35,7 @@ public enum GeocacheAttribute
 	ACCESS_OR_PARKING_FEE("Access or parking fee"),
 	BIKES_ALLOWED("Bikes allowed"),
 	HIDDEN_IN_NATURAL_SURROUNDINGS__FORESTS__MOUNTAINS__ETC__(
-			"Hidden in natural surroundings (forests, mountains, etc.)"),
+	      "Hidden in natural surroundings (forests, mountains, etc.)"),
 	HISTORIC_SITE("Historic site"),
 	POINT_OF_INTEREST("Point of interest"),
 	HIDDEN_WIHIN_ENCLOSED_ROOMS__CAVES__BUILDINGS_ETC__("Hidden wihin enclosed rooms (caves, buildings etc.)"),
@@ -88,5 +88,10 @@ public enum GeocacheAttribute
 	GeocacheAttribute(String aDescription)
 	{
 		description = aDescription;
+	}
+
+	public String getDescription()
+	{
+		return description;
 	}
 }
