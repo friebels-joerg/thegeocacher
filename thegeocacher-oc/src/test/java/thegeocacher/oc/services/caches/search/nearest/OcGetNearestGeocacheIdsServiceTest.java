@@ -4,22 +4,22 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 import thegeocacher.domain.attribute.DistanceInMeter;
-import thegeocacher.domain.attribute.GeocacheCodes;
 import thegeocacher.domain.attribute.Wgs84Coordinates;
 import thegeocacher.domain.attribute.Wgs84Latitude;
 import thegeocacher.domain.attribute.Wgs84Longitude;
+import thegeocacher.domain.provider.api.GeocacheIds;
 
 /**
  *
  * @author Jörg Friebel
  * @since 12.01.2016
  */
-public class OcGetNearestGeocacheCodesServiceTest
+public class OcGetNearestGeocacheIdsServiceTest
 {
 	@Test
 	public void testGetJsonObject()
 	{
-		OcGetNearestGeocacheCodesService serviceUnderTest = new OcGetNearestGeocacheCodesService();
+		OcGetNearestGeocacheIdsService serviceUnderTest = new OcGetNearestGeocacheIdsService();
 		String jsonString = "{\"results\":[\"OC1294E\",\"OC110EE\",\"OC217F\",\"OC120B1\",\"OC10C06\",\"OC9F2D\",\"OCC2CC\",\"OCF33C\",\"OC10245\",\"OC1125C\",\"OC10640\",\"OC3441\",\"OC11518\",\"OC11AAB\",\"OC12373\",\"OC127E9\",\"OC116EF\",\"OC127E6\",\"OC1102E\",\"OC127E7\",\"OC11031\",\"OC1102F\",\"OC111B1\"],\"more\":false}";
 
 		OcGeocacheCodes result = serviceUnderTest.getJsonObject(jsonString);
@@ -31,19 +31,19 @@ public class OcGetNearestGeocacheCodesServiceTest
 	@Test
 	public void testGetResultObject()
 	{
-		OcGetNearestGeocacheCodesService serviceUnderTest = new OcGetNearestGeocacheCodesService();
+		OcGetNearestGeocacheIdsService serviceUnderTest = new OcGetNearestGeocacheIdsService();
 		String jsonString = "{\"results\":[\"OC1294E\",\"OC110EE\",\"OC217F\",\"OC120B1\",\"OC10C06\",\"OC9F2D\",\"OCC2CC\",\"OCF33C\",\"OC10245\",\"OC1125C\",\"OC10640\",\"OC3441\",\"OC11518\",\"OC11AAB\",\"OC12373\",\"OC127E9\",\"OC116EF\",\"OC127E6\",\"OC1102E\",\"OC127E7\",\"OC11031\",\"OC1102F\",\"OC111B1\"],\"more\":false}";
 
 		OcGeocacheCodes jsonObject = serviceUnderTest.getJsonObject(jsonString);
 
-		GeocacheCodes result = serviceUnderTest.getResultObject(jsonObject);
+		GeocacheIds result = serviceUnderTest.getResultObject(jsonObject);
 	}
 
 	@Test
 	public void testGetUrl()
 	{
-		OcGetNearestGeocacheCodesService serviceUnderTest = new OcGetNearestGeocacheCodesService();
-		OcGetNearestGeocacheCodesParameters parameters = new OcGetNearestGeocacheCodesParameters();
+		OcGetNearestGeocacheIdsService serviceUnderTest = new OcGetNearestGeocacheIdsService();
+		OcGetNearestGeocacheIdsParameters parameters = new OcGetNearestGeocacheIdsParameters();
 		Wgs84Coordinates center = new Wgs84Coordinates();
 		center.setLatitude(new Wgs84Latitude(51.22666790215265));
 		center.setLongitude(new Wgs84Longitude(6.773414611816406));

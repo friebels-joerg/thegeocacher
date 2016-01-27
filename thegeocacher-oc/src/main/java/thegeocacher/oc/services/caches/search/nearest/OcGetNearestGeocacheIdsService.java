@@ -1,17 +1,15 @@
 package thegeocacher.oc.services.caches.search.nearest;
 
-import java.io.IOException;
-
-import thegeocacher.domain.attribute.DistanceInMeter;
-import thegeocacher.domain.attribute.GeocacheCode;
-import thegeocacher.domain.attribute.GeocacheCodes;
-import thegeocacher.domain.attribute.Wgs84Coordinates;
-import thegeocacher.oc.services.OcMethod;
-import thegeocacher.oc.services.OcService;
-
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import thegeocacher.domain.attribute.DistanceInMeter;
+import thegeocacher.domain.attribute.Wgs84Coordinates;
+import thegeocacher.domain.provider.api.GeocacheIds;
+import thegeocacher.domain.provider.api.GetNearestGeocacheIdsService;
+import thegeocacher.oc.services.OcMethod;
+import thegeocacher.oc.services.OcService;
 
 /**
  * http://www.opencaching.de/okapi/services/caches/search/nearest?center=
@@ -27,16 +25,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author Jörg Friebel
  * @since 12.01.2016
  */
-public class OcGetNearestGeocacheCodesService extends OcService
+public class OcGetNearestGeocacheIdsService extends OcService implements GetNearestGeocacheIdsService
 {
-	public OcGetNearestGeocacheCodesService()
-	{
-		super();
-	}
 
-	public GeocacheCodes getGeocacheCodes(Wgs84Coordinates aCenter, DistanceInMeter aDistance)
+	public GeocacheIds getGeocacheIds(Wgs84Coordinates aCenter, DistanceInMeter aDistance)
 	{
-		OcGetNearestGeocacheCodesParameters parameters = new OcGetNearestGeocacheCodesParameters();
+		OcGetNearestGeocacheIdsParameters parameters = new OcGetNearestGeocacheIdsParameters();
 		parameters.setRadius(aDistance);
 		parameters.setCenter(aCenter);
 
@@ -56,8 +50,7 @@ public class OcGetNearestGeocacheCodesService extends OcService
 		ObjectMapper mapper = new ObjectMapper();
 		try
 		{
-			OcGeocacheCodes result = mapper.readValue(aJsonString,
-					OcGeocacheCodes.class);
+			OcGeocacheCodes result = mapper.readValue(aJsonString, OcGeocacheCodes.class);
 			return result;
 		}
 		catch (JsonParseException e)
@@ -74,13 +67,13 @@ public class OcGetNearestGeocacheCodesService extends OcService
 		}
 	}
 
-	GeocacheCodes getResultObject(OcGeocacheCodes aJsonObject)
+	GeocacheIds getResultObject(OcGeocacheCodes aJsonObject)
 	{
-		GeocacheCodes geocacheCodes = new GeocacheCodes();
+		GeocacheIds geocacheIds = new GeocacheIds();
 		for (String geocacheCode : aJsonObject)
 		{
-			geocacheCodes.add(new GeocacheCode(geocacheCode));
+			geocacheIds.add(getGeocacheId(geocacheCode));
 		}
-		return geocacheCodes;
+		return geocacheIds;
 	}
 }

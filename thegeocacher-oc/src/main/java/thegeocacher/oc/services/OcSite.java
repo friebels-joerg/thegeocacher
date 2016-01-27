@@ -1,5 +1,7 @@
 package thegeocacher.oc.services;
 
+import thegeocacher.domain.attribute.GeocacheProvider;
+
 /**
  *
  * @author Jörg Friebel
@@ -7,23 +9,28 @@ package thegeocacher.oc.services;
  */
 public enum OcSite
 {
-   PL("Opencaching.PL", "http://opencaching.pl/okapi/"),
-   DE("Opencaching.DE", "http://www.opencaching.de/okapi/"),
-   US("Opencaching.US", "http://www.opencaching.us/okapi/"),
-   NL("Opencaching.NL", "http://www.opencaching.nl/okapi/"),
-   RO("Opencaching.RO", "http://www.opencaching.ro/okapi/");
+	// PL("Opencaching.PL", "http://opencaching.pl/okapi/"),
+	// US("Opencaching.US", "http://www.opencaching.us/okapi/"),
+	// NL("Opencaching.NL", "http://www.opencaching.nl/okapi/"),
+	// RO("Opencaching.RO", "http://www.opencaching.ro/okapi/");
+	DE("http://www.opencaching.de/okapi/", GeocacheProvider.OC_DE);
 
-   String siteName;
-   String okapiUrl;
+	String okapiUrl;
+	GeocacheProvider provider;
 
-   OcSite(String aSiteName, String anOkapiUrl)
-   {
-      siteName = aSiteName;
-      okapiUrl = anOkapiUrl;
-   }
+	OcSite(String anOkapiUrl, GeocacheProvider aProvider)
+	{
+		okapiUrl = anOkapiUrl;
+		provider = aProvider;
+	}
 
-   public String getOkapiUrl()
-   {
-      return okapiUrl;
-   }
+	public String getOkapiUrl()
+	{
+		return okapiUrl;
+	}
+
+	public GeocacheProvider getProvider()
+	{
+		return provider;
+	}
 }

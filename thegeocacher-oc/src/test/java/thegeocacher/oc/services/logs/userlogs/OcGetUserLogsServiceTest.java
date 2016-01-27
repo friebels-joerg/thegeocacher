@@ -1,9 +1,9 @@
 package thegeocacher.oc.services.logs.userlogs;
 
+import thegeocacher.oc.services.OcService;
+
 import java.util.List;
-
 import org.junit.Test;
-
 import thegeocacher.domain.LogEntries;
 import thegeocacher.domain.attribute.base.UuidAttribute;
 import static org.junit.Assert.*;
@@ -43,7 +43,7 @@ public class OcGetUserLogsServiceTest
 	@Test
 	public void testGetUrl()
 	{
-		OcGetUserLogsService serviceUnderTest = new OcGetUserLogsService();
+		OcService serviceUnderTest = new OcGetUserLogsService();
 		OcGetUserLogsParameters parameters = new OcGetUserLogsParameters();
 		parameters.setUserUuid(new UuidAttribute("A266282E-3EA9-6FDC-9451-27BD5C67AC65"));
 

@@ -1,5 +1,8 @@
 package thegeocacher.oc.services;
 
+import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.attribute.GeocacheId;
+
 import thegeocacher.common.web.SimpleHttpRequestExecuter;
 
 /**
@@ -9,7 +12,7 @@ import thegeocacher.common.web.SimpleHttpRequestExecuter;
  */
 abstract public class OcService
 {
-	OcSite ocSite = OcSite.DE;
+	OcSite site = OcSite.DE;
 
 	abstract protected OcMethod getOcMethod();
 
@@ -18,10 +21,10 @@ abstract public class OcService
 		super();
 	}
 
-	protected OcService(OcSite anOcSite)
+	protected OcService(OcSite aSite)
 	{
 		super();
-		ocSite = anOcSite;
+		site = aSite;
 	}
 
 	public String getUrl(QueryParameters someParameters)
@@ -29,13 +32,13 @@ abstract public class OcService
 		QueryParameters queryParameters = new QueryParameters(someParameters);
 		if (getOcMethod().getAuthenticationLevel() == AuthenticationLevel.Level1)
 		{
-			queryParameters.put("consumer_key", OcProperties.getInstance().getConsumerKey(ocSite));
+			queryParameters.put("consumer_key", OcProperties.getInstance().getConsumerKey(site));
 		}
 		if (someParameters instanceof UserUuidSetable)
 		{
-			queryParameters.setUserUuid(ocSite);
+			queryParameters.setUserUuid(site);
 		}
-		return ocSite.getOkapiUrl() + getOcMethod().getMethodName() + queryParameters.toString();
+		return site.getOkapiUrl() + getOcMethod().getMethodName() + queryParameters.toString();
 	}
 
 	protected String callOcService(QueryParameters someParameters)
@@ -43,4 +46,14 @@ abstract public class OcService
 		String url = getUrl(someParameters);
 		return new SimpleHttpRequestExecuter().getResponse(url);
 	}
+
+	public OcSite getSite()
+	{
+		return site;
+	}
+
+	protected GeocacheId getGeocacheId(String code)
+   {
+   	return new GeocacheId(new GeocacheCode(code), getSite().getProvider());
+   }
 }

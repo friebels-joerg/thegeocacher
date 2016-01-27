@@ -1,11 +1,13 @@
 package thegeocacher.oc.services.logs.userlogs;
 
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.List;
-
-import thegeocacher.domain.LogEntry;
 import thegeocacher.domain.LogEntries;
-import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.LogEntry;
 import thegeocacher.domain.attribute.LogText;
 import thegeocacher.domain.attribute.LogTimestamp;
 import thegeocacher.domain.attribute.LogType;
@@ -13,11 +15,6 @@ import thegeocacher.domain.attribute.LogUuid;
 import thegeocacher.domain.attribute.base.UuidAttribute;
 import thegeocacher.oc.services.OcMethod;
 import thegeocacher.oc.services.OcService;
-
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * http://www.opencaching.de/okapi/services/logs/userlogs?user_uuid=A266282E-
@@ -43,8 +40,8 @@ public class OcGetUserLogsService extends OcService
 
 	/**
 	 * @param aCallNumer
-	 *            start wit 1 for the first call (aCallNumber-1)*limit will be
-	 *            the offset
+	 *           start wit 1 for the first call (aCallNumber-1)*limit will be the
+	 *           offset
 	 */
 	public LogEntries getLogs(UuidAttribute aUserUuid, int aCallNumer)
 	{
@@ -108,7 +105,7 @@ public class OcGetUserLogsService extends OcService
 	private LogEntry getLog(OcUserLog aLog)
 	{
 		LogEntry log = new LogEntry();
-		log.setGeocacheCode(new GeocacheCode(aLog.getCacheCode()));
+		log.setGeocacheId(getGeocacheId(aLog.getCacheCode()));
 		log.setText(new LogText(aLog.getComment()));
 		log.setTimestamp(new LogTimestamp(aLog.getDate()));
 		log.setType(getLogType(aLog.getType()));

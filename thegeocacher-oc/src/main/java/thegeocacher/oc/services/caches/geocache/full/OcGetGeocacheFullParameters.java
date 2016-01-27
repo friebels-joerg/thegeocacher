@@ -1,7 +1,9 @@
 package thegeocacher.oc.services.caches.geocache.full;
 
-import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.attribute.GeocacheId;
 import thegeocacher.oc.services.QueryParameters;
+import thegeocacher.oc.services.UserUuidSetable;
+
 import thegeocacher.oc.services.UserUuidSetable;
 
 /**
@@ -23,8 +25,8 @@ public class OcGetGeocacheFullParameters extends QueryParameters implements User
 		put("log_fields", "uuid|date|user|type|comment|oc_team_entry|was_recommended|cache_code|images");
 	}
 
-	public void setCacheCode(GeocacheCode aCode)
+	public void setCacheCode(GeocacheId aId)
 	{
-		put(CACHE_CODE, aCode.getValue());
+		put(CACHE_CODE, aId.getCode().getValue());
 	}
 }

@@ -1,9 +1,8 @@
 package thegeocacher.domain;
 
 import java.io.Serializable;
-
 import thegeocacher.domain.attribute.GeocacheAvailability;
-import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.attribute.GeocacheId;
 import thegeocacher.domain.attribute.GeocacheName;
 import thegeocacher.domain.attribute.GeocacheNames;
 import thegeocacher.domain.attribute.GeocacheType;
@@ -16,7 +15,7 @@ import thegeocacher.domain.attribute.Wgs84Coordinates;
  */
 public class Geocache implements Serializable
 {
-	GeocacheCode code;
+	GeocacheId id;
 	GeocacheNames names;
 	Wgs84Coordinates location;
 	GeocacheType type;
@@ -57,14 +56,14 @@ public class Geocache implements Serializable
 	// List<OcProtectionArea> protectionAreas = new
 	// ArrayList<OcProtectionArea>();
 
-	public GeocacheCode getCode()
+	public GeocacheId getId()
 	{
-		return code;
+		return id;
 	}
 
-	public void setCode(GeocacheCode aCode)
+	public void setId(GeocacheId aId)
 	{
-		code = aCode;
+		id = aId;
 	}
 
 	public GeocacheNames getNames()

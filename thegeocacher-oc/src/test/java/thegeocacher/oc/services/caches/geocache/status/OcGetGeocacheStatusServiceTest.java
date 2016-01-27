@@ -4,8 +4,8 @@ import static org.junit.Assert.*;
 
 import java.util.Date;
 import org.junit.Test;
-import thegeocacher.domain.GeocacheStatus;
 import thegeocacher.domain.attribute.GeocacheAvailability;
+import thegeocacher.domain.provider.api.GeocacheStatus;
 
 /**
  *
@@ -38,7 +38,7 @@ public class OcGetGeocacheStatusServiceTest
 
 		GeocacheStatus result = serviceUnderTest.getResultObject(pojo);
 
-		assertEquals("OC1234", result.getCode().getValue());
+		assertEquals("OC1234", result.getId().getCode().getValue());
 		assertEquals(GeocacheAvailability.AVAILABLE, result.getAvailability());
 		assertEquals(pojo.last_modified, result.getLatestModificationTimestamp().getValue());
 	}

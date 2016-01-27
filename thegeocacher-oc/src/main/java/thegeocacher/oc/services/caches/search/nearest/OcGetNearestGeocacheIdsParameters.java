@@ -9,7 +9,7 @@ import thegeocacher.oc.services.QueryParameters;
  * @author Jörg Friebel
  * @since 12.01.2016
  */
-public class OcGetNearestGeocacheCodesParameters extends QueryParameters
+public class OcGetNearestGeocacheIdsParameters extends QueryParameters
 {
 
 	public void setRadius(DistanceInMeter aDistance)

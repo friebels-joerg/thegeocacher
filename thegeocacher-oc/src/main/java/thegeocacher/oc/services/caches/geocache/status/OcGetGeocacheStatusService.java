@@ -4,10 +4,11 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
-import thegeocacher.domain.GeocacheStatus;
 import thegeocacher.domain.attribute.GeocacheAvailability;
-import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.attribute.GeocacheId;
 import thegeocacher.domain.attribute.UpdateTimestamp;
+import thegeocacher.domain.provider.api.GetGeocacheStatusService;
+import thegeocacher.domain.provider.api.GeocacheStatus;
 import thegeocacher.oc.services.OcMethod;
 import thegeocacher.oc.services.OcService;
 
@@ -16,17 +17,17 @@ import thegeocacher.oc.services.OcService;
  * @author Jörg Friebel
  * @since 08.01.2016
  */
-public class OcGetGeocacheStatusService extends OcService
+public class OcGetGeocacheStatusService extends OcService implements GetGeocacheStatusService
 {
 	public OcGetGeocacheStatusService()
 	{
 		super();
 	}
 
-	public GeocacheStatus getGeocacheStatus(GeocacheCode aGeocacheCode)
+	public GeocacheStatus getProvidersGeocacheStatus(GeocacheId aGeocacheId)
 	{
 		OcGetGeocacheStatusParameters parameters = new OcGetGeocacheStatusParameters();
-		parameters.setGeocacheCode(aGeocacheCode);
+		parameters.setGeocacheId(aGeocacheId);
 
 		String jsonString = callOcService(parameters);
 		OcGeocacheStatus jsonObject = getJsonObject(jsonString);
@@ -63,11 +64,11 @@ public class OcGetGeocacheStatusService extends OcService
 
 	GeocacheStatus getResultObject(OcGeocacheStatus aJsonObject)
 	{
-		GeocacheStatus geocacheStatus = new GeocacheStatus();
-		geocacheStatus.setAvailability(getAvailabality(aJsonObject.getStatus()));
-		geocacheStatus.setCode(new GeocacheCode(aJsonObject.getCode()));
-		geocacheStatus.setLatestModificationTimestamp(new UpdateTimestamp(aJsonObject.getLastModified()));
-		return geocacheStatus;
+		GeocacheStatus status = new GeocacheStatus();
+		status.setAvailability(getAvailabality(aJsonObject.getStatus()));
+		status.setId(getGeocacheId(aJsonObject.getCode()));
+		status.setLatestModificationTimestamp(new UpdateTimestamp(aJsonObject.getLastModified()));
+		return status;
 	}
 
 	GeocacheAvailability getAvailabality(String aStatus)

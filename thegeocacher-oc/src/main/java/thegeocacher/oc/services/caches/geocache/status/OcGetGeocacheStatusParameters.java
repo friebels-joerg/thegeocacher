@@ -1,6 +1,6 @@
 package thegeocacher.oc.services.caches.geocache.status;
 
-import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.attribute.GeocacheId;
 import thegeocacher.oc.services.QueryParameters;
 
 /**
@@ -11,15 +11,15 @@ import thegeocacher.oc.services.QueryParameters;
 public class OcGetGeocacheStatusParameters extends QueryParameters
 {
 
-   public OcGetGeocacheStatusParameters()
-   {
-      super();
-      put("fields", "code|status|last_modified");
-   }
+	public OcGetGeocacheStatusParameters()
+	{
+		super();
+		put("fields", "code|status|last_modified");
+	}
 
-   public void setGeocacheCode(GeocacheCode aGeocacheCode)
-   {
-      put("cache_code", aGeocacheCode.getValue());
-   }
+	public void setGeocacheId(GeocacheId anId)
+	{
+		put("cache_code", anId.getCode().getValue());
+	}
 
 }

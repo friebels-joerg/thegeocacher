@@ -1,6 +1,6 @@
 package thegeocacher.domain;
 
-import thegeocacher.domain.attribute.GeocacheCode;
+import thegeocacher.domain.attribute.GeocacheId;
 import thegeocacher.domain.attribute.LogText;
 import thegeocacher.domain.attribute.LogTimestamp;
 import thegeocacher.domain.attribute.LogType;
@@ -14,7 +14,7 @@ import thegeocacher.domain.attribute.LogUuid;
 public class LogEntry
 {
 	LogUuid uuid;
-	GeocacheCode geocacheCode;
+	GeocacheId geocacheId;
 	LogText text;
 	LogTimestamp timestamp;
 	LogType type;
@@ -29,14 +29,14 @@ public class LogEntry
 		uuid = anUuid;
 	}
 
-	public GeocacheCode getGeocacheCode()
+	public GeocacheId getGeocacheId()
 	{
-		return geocacheCode;
+		return geocacheId;
 	}
 
-	public void setGeocacheCode(GeocacheCode aGeocacheCode)
+	public void setGeocacheId(GeocacheId aGeocacheId)
 	{
-		geocacheCode = aGeocacheCode;
+		geocacheId = aGeocacheId;
 	}
 
 	public LogText getText()
