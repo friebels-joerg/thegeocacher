@@ -11,9 +11,13 @@
       <img src="images/home_icon.png" />
    </h:link>
    <h:link
-      outcome="map"
-      value="#{msgs.title_map}"
-      styleClass="#{view.viewId eq '/map.xhtml' ? 'active' : 'inactive'}" />
+      outcome="geocachesMap"
+      value="#{msgs.title_geocachesMap}"
+      styleClass="#{view.viewId eq '/geocachesMap.xhtml' ? 'active' : 'inactive'}" />
+   <h:link
+      outcome="geocachesList"
+      value="#{msgs.title_geocachesList}"
+      styleClass="#{view.viewId eq '/geocachesList.xhtml' ? 'active' : 'inactive'}" />
    <h:link
       outcome="importer"
       value="#{msgs.title_importer}"

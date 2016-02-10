@@ -1,4 +1,4 @@
-package thegeocacher.web.map;
+package thegeocacher.web.geocaches.map;
 
 import java.io.Serializable;
 

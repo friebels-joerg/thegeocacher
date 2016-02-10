@@ -16,4 +16,9 @@ public class GeocacheId
 	{
 		return code;
 	}
+
+	public GeocacheProvider getProvider()
+	{
+		return provider;
+	}
 }
