@@ -18,15 +18,16 @@
 			rel="stylesheet"
 			href="leaflet/leaflet.css" />
 		<script src="leaflet/leaflet.js" />
-			
 	</ui:define>
 
 	<ui:define name="content">
-		<h:messages />
-		<div id="map" />
+		<div id="content">
+			<h:messages />
+			<div id="map" />
+		</div>
 		<script type="text/javascript">
-		var map = L.map('map').setView([#{mapPageBean.getCenterLatitude()}, #{mapPageBean.getCenterLongitude()}], #{mapPageBean.getZoomLevel()});
-		L.tileLayer('map/tiles/{z}/{x}/{y}', {}).addTo(map);
+			var map = L.map('map').setView([#{mapPageBean.getCenterLatitude()}, #{mapPageBean.getCenterLongitude()}], #{mapPageBean.getZoomLevel()});
+			L.tileLayer('map/tiles/{z}/{x}/{y}', {}).addTo(map);
 		</script>
 	</ui:define>
 </ui:composition>

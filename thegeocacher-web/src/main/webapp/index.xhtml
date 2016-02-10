@@ -10,29 +10,29 @@
 		value="#{msgs.title_home}" />
 
 	<ui:define name="content">
-		<h:messages />
+		<div id="content">
+			<h:messages />
+			<h3>Used Libraries</h3>
+			<ul>
+				<li><h:graphicImage
+						width="100"
+						value="/leaflet/images/leaflet.png" /> <a href="http://leafletjs.com"> Version <b>1.0.0-beta.2</b>
+				</a></li>
+				<li><b style="font-size: 20;">Mapsforge</b> <a
+					href="https://github.com/mapsforge/mapsforge/blob/master/README.md">Version <b>0.6.0</b>
+				</a></li>
+			</ul>
 
-		<h3>Used Libraries</h3>
-		<ul>
-			<li><h:graphicImage
-					width="100"
-					value="/leaflet/images/leaflet.png" /> <a href="http://leafletjs.com"> Version <b>1.0.0-beta.2</b>
-			</a></li>
-			<li><b style="font-size: 20;">Mapsforge</b> <a
-				href="https://github.com/mapsforge/mapsforge/blob/master/README.md">Version <b>0.6.0</b>
-			</a></li>
-		</ul>
+			<h3>Themes</h3>
+			<ul>
+				<li><a href="http://www.openandromaps.org/kartenlegende/elevation-hike-theme"> Version <b>Elevate 3 L</b>
+				</a></li>
+			</ul>
 
-		<h3>Themes</h3>
-		<ul>
-			<li><a href="http://www.openandromaps.org/kartenlegende/elevation-hike-theme"> Version <b>Elevate 3 L</b>
-			</a></li>
-		</ul>
-
-		<h3>Development</h3>
-		<ul>
-			<li><a href="https://github.com/TheGeocacher/thegeocacher">Git Repository</a></li>
-		</ul>
+			<h3>Development</h3>
+			<ul>
+				<li><a href="https://github.com/TheGeocacher/thegeocacher">Git Repository</a></li>
+			</ul>
+		</div>
 	</ui:define>
-
 </ui:composition>

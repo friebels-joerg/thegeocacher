@@ -1,53 +1,55 @@
 html {
-	background-color: #9ff;
-}
-
-html, body {
-	height: 100%;
+	background-color: Lime;
+	padding: 0px;
+	margin: 0px;
+	height: calc(100% - 2rem);
 }
 
 body {
-	margin: 0;
+	background-color: Fuchsia;
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
 }
 
-#head {
-	background-image: url("images/breadcrumb_background.png");
+#headerSection {
+	background-color: Cyan;
+	background-image: linear-gradient(to bottom, Gainsboro, DarkGray);
 	position: fixed;
+	z-index: 30000;
 	top: 0px;
 	width: 100%;
 	height: 2rem;
 }
 
-#head a {
+#headerSection a {
 	color: white;
 	font-weight: bold;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	text-decoration: none;
-	height: 2rem;
-	padding-top: 5px;
-	padding-left: 5px;
-	padding-right: 5px;
+	height: 1.5rem;
+	padding: 0.5rem;
+	padding-bottom: 0rem;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-#head a.active {
-	background-color: grey;
-	font-size: 18px;
-}
-
-#head a:hover {
-	font-size: 18px;
+#headerSection a.active {
+	border-bottom: medium solid Orange;
 }
 
 #precontent {
 	margin-top: 2rem;
 }
 
-#content {
-	background-color: LightGreen;
-	min-height: calc(100% - 2rem);
+#contentSection {
+	background-color: Blue;
+	min-height: calc(100% - 1.2rem);
 	position: relative;
-	width: 100%;
-	padding: 5px;
+	width: calc(100% - 1.2rem);
+	padding: 10px;
+}
+
+#content {
+	background-color: Red;
 }
