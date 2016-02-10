@@ -10,22 +10,23 @@ import java.util.Date;
  */
 public class TimestampAttribute implements Serializable
 {
-   Date value;
+	Date value;
 
-   public TimestampAttribute(Date aValue)
-   {
-      super();
-      value = aValue;
-   }
+	public TimestampAttribute(Date aValue)
+	{
+		super();
+		value = aValue;
+	}
 
-   public Date getValue()
-   {
-      return value;
-   }
+	public Date getValue()
+	{
+		return value;
+	}
 
-   @Override
-   public String toString()
-   {
-      return getClass().getSimpleName() + ": " + getValue();
-   }
+	@Override
+	public String toString()
+	{
+		String toString = getClass().getSimpleName() + ": " + getValue();
+		return toString;
+	}
 }

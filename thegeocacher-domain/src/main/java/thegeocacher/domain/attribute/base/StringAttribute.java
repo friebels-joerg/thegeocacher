@@ -25,7 +25,8 @@ public class StringAttribute implements Serializable
 	@Override
 	public String toString()
 	{
-		return getClass().getSimpleName() + ": " + getValue();
+		String toString = getClass().getSimpleName() + ": " + getValue();
+		return toString;
 	}
 
 }

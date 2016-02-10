@@ -55,7 +55,8 @@ public class OcGetUserLogsService extends OcService
 
 		String jsonString = callOcService(parameters);
 		List<OcUserLog> jsonObjects = getJsonObject(jsonString);
-		return getResultObject(jsonObjects);
+		LogEntries logEntries = getResultObject(jsonObjects);
+		return logEntries;
 	}
 
 	@Override
@@ -69,8 +70,9 @@ public class OcGetUserLogsService extends OcService
 		ObjectMapper mapper = new ObjectMapper();
 		try
 		{
-			return mapper.readValue(aJsonString, new TypeReference<List<OcUserLog>>()
+			List<OcUserLog> ocUserLogs = mapper.readValue(aJsonString, new TypeReference<List<OcUserLog>>()
 			{});
+			return ocUserLogs;
 		}
 		catch (JsonParseException e)
 		{

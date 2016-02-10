@@ -36,7 +36,8 @@ public class OcGetNearestGeocacheIdsService extends OcService implements GetNear
 
 		String jsonString = callOcService(parameters);
 		OcGeocacheCodes jsonObject = getJsonObject(jsonString);
-		return getResultObject(jsonObject);
+		GeocacheIds geocacheIds = getResultObject(jsonObject);
+		return geocacheIds;
 	}
 
 	@Override

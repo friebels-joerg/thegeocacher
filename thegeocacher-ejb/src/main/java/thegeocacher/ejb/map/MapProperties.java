@@ -1,7 +1,6 @@
 package thegeocacher.ejb.map;
 
 import java.io.File;
-
 import thegeocacher.common.util.TheGeocacherProperties;
 
 /**
@@ -29,16 +28,19 @@ public class MapProperties
 
 	public String getLatestRenderThemeFilename()
 	{
-		return getStringValue("latestRenderThemeFileName", DEFAULT_RENDER_THEME_FILENAME);
+		String latestRenderThemeFileName = getStringValue("latestRenderThemeFileName", DEFAULT_RENDER_THEME_FILENAME);
+		return latestRenderThemeFileName;
 	}
 
 	private String getStringValue(String aKey, String aDefault)
 	{
-		return TheGeocacherProperties.getInstance().getStringValue(PROPERTY_PREFIX, aKey, aDefault);
+		String value = TheGeocacherProperties.getInstance().getStringValue(PROPERTY_PREFIX, aKey, aDefault);
+		return value;
 	}
 
 	public String getLatestMapFilename()
 	{
-		return getStringValue("latestMapFileName", DEFAULT_MAP_FILENAME);
+		String latestMapFileName = getStringValue("latestMapFileName", DEFAULT_MAP_FILENAME);
+		return latestMapFileName;
 	}
 }

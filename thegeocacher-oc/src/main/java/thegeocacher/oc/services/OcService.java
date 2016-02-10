@@ -1,9 +1,8 @@
 package thegeocacher.oc.services;
 
+import thegeocacher.common.web.SimpleHttpRequestExecuter;
 import thegeocacher.domain.attribute.GeocacheCode;
 import thegeocacher.domain.attribute.GeocacheId;
-
-import thegeocacher.common.web.SimpleHttpRequestExecuter;
 
 /**
  *
@@ -38,13 +37,15 @@ abstract public class OcService
 		{
 			queryParameters.setUserUuid(site);
 		}
-		return site.getOkapiUrl() + getOcMethod().getMethodName() + queryParameters.toString();
+		String url = site.getOkapiUrl() + getOcMethod().getMethodName() + queryParameters.toString();
+		return url;
 	}
 
 	protected String callOcService(QueryParameters someParameters)
 	{
 		String url = getUrl(someParameters);
-		return new SimpleHttpRequestExecuter().getResponse(url);
+		String response = new SimpleHttpRequestExecuter().getResponse(url);
+		return response;
 	}
 
 	public OcSite getSite()
@@ -53,7 +54,8 @@ abstract public class OcService
 	}
 
 	protected GeocacheId getGeocacheId(String code)
-   {
-   	return new GeocacheId(new GeocacheCode(code), getSite().getProvider());
-   }
+	{
+		GeocacheId geocacheId = new GeocacheId(new GeocacheCode(code), getSite().getProvider());
+		return geocacheId;
+	}
 }

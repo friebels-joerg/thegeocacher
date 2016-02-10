@@ -37,7 +37,8 @@ public class QueryParameters
 
 	public String get(String aKey)
 	{
-		return parameters.get(aKey);
+		String value = parameters.get(aKey);
+		return value;
 	}
 
 	public void setUserUuid(OcSite aSite)

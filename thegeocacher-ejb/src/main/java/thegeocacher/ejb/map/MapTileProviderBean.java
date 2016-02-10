@@ -5,9 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.ejb.Stateless;
-
 import org.mapsforge.core.graphics.TileBitmap;
 import org.mapsforge.core.model.Tile;
 import org.mapsforge.map.awt.graphics.AwtGraphicFactory;
@@ -20,7 +18,6 @@ import org.mapsforge.map.reader.MapFile;
 import org.mapsforge.map.rendertheme.ExternalRenderTheme;
 import org.mapsforge.map.rendertheme.XmlRenderTheme;
 import org.mapsforge.map.rendertheme.rule.RenderThemeFuture;
-
 import thegeocacher.common.util.TheGeocacherProperties;
 
 /**
@@ -46,22 +43,27 @@ public class MapTileProviderBean
 		Tile tile = new Tile(aX, aY, aZoom, 256);
 		RendererJob rendererJob = getRendererJob(tile);
 		TileBitmap tileBitmap = getDatabaseRenderer().executeJob(rendererJob);
-		return AwtGraphicFactory.getBitmap(tileBitmap);
+		BufferedImage image = AwtGraphicFactory.getBitmap(tileBitmap);
+		return image;
 	}
 
 	private String getAbsoluteRenderThemeFilename(String aRenderThemFilename)
 	{
-		return getBaseDir() + File.separator + "renderthemes" + File.separator + aRenderThemFilename;
+		String absoluteRenderThemeFilename = getBaseDir() + File.separator + "renderthemes" + File.separator
+		         + aRenderThemFilename;
+		return absoluteRenderThemeFilename;
 	}
 
 	private String getBaseDir()
 	{
-		return TheGeocacherProperties.getInstance().getBaseDir();
+		String baseDir = TheGeocacherProperties.getInstance().getBaseDir();
+		return baseDir;
 	}
 
 	private String getAbsoluteMapFilename(String aMapFilename)
 	{
-		return getBaseDir() + File.separator + "maps" + File.separator + aMapFilename;
+		String absoluteMapFilename = getBaseDir() + File.separator + "maps" + File.separator + aMapFilename;
+		return absoluteMapFilename;
 	}
 
 	private RendererJob getRendererJob(Tile aTile)
@@ -69,8 +71,9 @@ public class MapTileProviderBean
 		float textScale = 1.5f;
 		boolean isTransparent = false;
 		boolean labelsOnly = false;
-		return new RendererJob(aTile, getMapDataStore(), getRenderThemeFuture(), displayModel, textScale, isTransparent,
-		      labelsOnly);
+		RendererJob rendererJob = new RendererJob(aTile, getMapDataStore(), getRenderThemeFuture(), displayModel,
+		         textScale, isTransparent, labelsOnly);
+		return rendererJob;
 	}
 
 	private RenderThemeFuture getRenderThemeFuture()
@@ -119,11 +122,13 @@ public class MapTileProviderBean
 
 	public String getLatestRenderThemeFilename()
 	{
-		return MapProperties.getInstance().getLatestRenderThemeFilename();
+		String latestRenderThemeFilename = MapProperties.getInstance().getLatestRenderThemeFilename();
+		return latestRenderThemeFilename;
 	}
 
 	public String getLatestMapFilename()
 	{
-		return MapProperties.getInstance().getLatestMapFilename();
+		String latestMapFilename = MapProperties.getInstance().getLatestMapFilename();
+		return latestMapFilename;
 	}
 }

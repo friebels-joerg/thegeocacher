@@ -1,13 +1,11 @@
 package thegeocacher.oc.services.caches.geocache.full;
 
-import java.io.IOException;
-
-import thegeocacher.oc.services.OcMethod;
-import thegeocacher.oc.services.OcService;
-
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import thegeocacher.oc.services.OcMethod;
+import thegeocacher.oc.services.OcService;
 
 /**
  *
@@ -27,7 +25,8 @@ public class OcGetGeocacheFullService extends OcService
 		try
 		{
 			ObjectMapper mapper = new ObjectMapper();
-			return mapper.readValue(aJsonString, OcGeocacheFull.class);
+			OcGeocacheFull fullGeocache = mapper.readValue(aJsonString, OcGeocacheFull.class);
+			return fullGeocache;
 		}
 		catch (JsonParseException e)
 		{

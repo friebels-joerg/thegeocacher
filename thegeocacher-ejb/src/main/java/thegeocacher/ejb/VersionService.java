@@ -12,7 +12,8 @@ public class VersionService
 {
 	public String getVersion()
 	{
-		return new ModuleProperties(getClass()).getModuleVersion();
+		String moduleVersion = new ModuleProperties(getClass()).getModuleVersion();
+		return moduleVersion;
 	}
 
 }

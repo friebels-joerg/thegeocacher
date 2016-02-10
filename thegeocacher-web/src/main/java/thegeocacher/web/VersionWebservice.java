@@ -3,7 +3,6 @@ package thegeocacher.web;
 import javax.ejb.Stateless;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-
 import thegeocacher.common.util.ModuleProperties;
 
 /**
@@ -18,6 +17,7 @@ public class VersionWebservice
 	@WebMethod
 	public String getVersion()
 	{
-		return new ModuleProperties(getClass()).getModuleVersion();
+		String moduleVersion = new ModuleProperties(getClass()).getModuleVersion();
+		return moduleVersion;
 	}
 }

@@ -2,7 +2,6 @@ package thegeocacher.oc.services.caches.geocache.full;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import thegeocacher.domain.attribute.GeocacheAttribute;
 
 /**
@@ -104,6 +103,7 @@ public class OcAttributeConverter
 
 	GeocacheAttribute getAttribute(String aAttributeString)
 	{
-		return getValues().get(aAttributeString);
+		GeocacheAttribute attribute = getValues().get(aAttributeString);
+		return attribute;
 	}
 }

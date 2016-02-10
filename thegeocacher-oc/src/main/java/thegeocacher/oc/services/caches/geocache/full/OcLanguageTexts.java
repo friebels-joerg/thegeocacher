@@ -38,12 +38,14 @@ public class OcLanguageTexts
 
 	public String getLangugage()
 	{
-		return getFirstEntry().getKey();
+		String language = getFirstEntry().getKey();
+		return language;
 	}
 
 	public String getText()
 	{
-		return getFirstEntry().getValue() + "";
+		String text = getFirstEntry().getValue() + "";
+		return text;
 	}
 
 	Entry<String, Object> getFirstEntry()
@@ -53,7 +55,8 @@ public class OcLanguageTexts
 			return null;
 		}
 
-		return additionalProperties.entrySet().iterator().next();
+		Entry<String, Object> firstEntry = additionalProperties.entrySet().iterator().next();
+		return firstEntry;
 	}
 
 	/**

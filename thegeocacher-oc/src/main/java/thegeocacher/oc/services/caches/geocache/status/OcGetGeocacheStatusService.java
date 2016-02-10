@@ -7,8 +7,8 @@ import java.io.IOException;
 import thegeocacher.domain.attribute.GeocacheAvailability;
 import thegeocacher.domain.attribute.GeocacheId;
 import thegeocacher.domain.attribute.UpdateTimestamp;
-import thegeocacher.domain.provider.api.GetGeocacheStatusService;
 import thegeocacher.domain.provider.api.GeocacheStatus;
+import thegeocacher.domain.provider.api.GetGeocacheStatusService;
 import thegeocacher.oc.services.OcMethod;
 import thegeocacher.oc.services.OcService;
 
@@ -31,7 +31,8 @@ public class OcGetGeocacheStatusService extends OcService implements GetGeocache
 
 		String jsonString = callOcService(parameters);
 		OcGeocacheStatus jsonObject = getJsonObject(jsonString);
-		return getResultObject(jsonObject);
+		GeocacheStatus geocacheStatus = getResultObject(jsonObject);
+		return geocacheStatus;
 	}
 
 	@Override

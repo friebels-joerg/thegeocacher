@@ -19,18 +19,18 @@ public class TheGeocacherProperties
 	private static final Logger LOGGER = Logger.getLogger(TheGeocacherProperties.class.getSimpleName());
 	private static final String PROPERTY_FILENAME = "thegeocacher.properties";
 
-	Properties properties;
 	private static TheGeocacherProperties instance;
 
-	String getUserHome()
+	public static TheGeocacherProperties getInstance()
 	{
-		return System.getProperty("user.home");
+		if (instance == null)
+		{
+			instance = new TheGeocacherProperties();
+		}
+		return instance;
 	}
 
-	final String getAbsolutePropertiesFilename()
-	{
-		return getUserHome() + File.separator + PROPERTY_FILENAME;
-	}
+	Properties properties;
 
 	private TheGeocacherProperties()
 	{
@@ -47,18 +47,22 @@ public class TheGeocacherProperties
 		}
 	}
 
-	public static TheGeocacherProperties getInstance()
+	String getUserHome()
 	{
-		if (instance == null)
-		{
-			instance = new TheGeocacherProperties();
-		}
-		return instance;
+		String userHome = System.getProperty("user.home");
+		return userHome;
+	}
+
+	final String getAbsolutePropertiesFilename()
+	{
+		String absolutePropertiesFilename = getUserHome() + File.separator + PROPERTY_FILENAME;
+		return absolutePropertiesFilename;
 	}
 
 	public String getBaseDir()
 	{
-		return getStringValue("basedir");
+		String baseDir = getStringValue("basedir");
+		return baseDir;
 	}
 
 	public String getStringValue(String aKey)
@@ -68,7 +72,8 @@ public class TheGeocacherProperties
 		{
 			return null;
 		}
-		return "" + value;
+		String stringValue = "" + value;
+		return stringValue;
 	}
 
 	public String getStringValue(String aKey, String aDefault)
@@ -102,6 +107,7 @@ public class TheGeocacherProperties
 	public String getStringValue(String aPropertyPrefix, String aKey, String aDefault)
 	{
 		String key = aPropertyPrefix + "." + aKey;
-		return getStringValue(key, aDefault);
+		String value = getStringValue(key, aDefault);
+		return value;
 	}
 }

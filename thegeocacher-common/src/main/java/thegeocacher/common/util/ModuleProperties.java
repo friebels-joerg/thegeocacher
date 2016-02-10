@@ -10,58 +10,62 @@ import java.util.Properties;
  */
 public class ModuleProperties
 {
-   private static final String MODULE_PROPERTIES = "/module.properties";
+	private static final String MODULE_PROPERTIES = "/module.properties";
 
-   private Class<?> classWithinModule;
+	private Class<?> classWithinModule;
 
-   private Properties moduleProperties;
+	private Properties moduleProperties;
 
-   public ModuleProperties(Class<?> anyClassWithinModule)
-   {
-      classWithinModule = anyClassWithinModule;
-   }
+	public ModuleProperties(Class<?> anyClassWithinModule)
+	{
+		classWithinModule = anyClassWithinModule;
+	}
 
-   private Properties getModuleProperties()
-   {
-      if (moduleProperties == null)
-      {
-         initModuleProperties();
-      }
-      return moduleProperties;
-   }
+	private Properties getModuleProperties()
+	{
+		if (moduleProperties == null)
+		{
+			initModuleProperties();
+		}
+		return moduleProperties;
+	}
 
-   private void initModuleProperties()
-   {
-      try
-      {
-         moduleProperties = new Properties();
-         InputStream inputStream = classWithinModule.getResourceAsStream(MODULE_PROPERTIES);
-         moduleProperties.load(inputStream);
-      } catch (IOException e)
-      {
-         throw new IllegalArgumentException("Resourcefile " + MODULE_PROPERTIES + " not found in "
-               + getModuleJarName());
-      }
-   }
+	private void initModuleProperties()
+	{
+		try
+		{
+			moduleProperties = new Properties();
+			InputStream inputStream = classWithinModule.getResourceAsStream(MODULE_PROPERTIES);
+			moduleProperties.load(inputStream);
+		}
+		catch (IOException e)
+		{
+			throw new IllegalArgumentException("Resourcefile " + MODULE_PROPERTIES + " not found in " + getModuleJarName());
+		}
+	}
 
-   private String getModuleJarName()
-   {
-      return "" + classWithinModule.getResource('/' + classWithinModule.getName().replace('.', '/') + ".class");
-   }
+	private String getModuleJarName()
+	{
+		String moduleJarName = ""
+		         + classWithinModule.getResource('/' + classWithinModule.getName().replace('.', '/') + ".class");
+		return moduleJarName;
+	}
 
-   public String getModuleVersion()
-   {
-      return getProperty("module.version");
-   }
+	public String getModuleVersion()
+	{
+		String moduleVersion = getProperty("module.version");
+		return moduleVersion;
+	}
 
-   public String getProperty(String aKey)
-   {
-      if (getModuleProperties().containsKey(aKey))
-      {
-         return getModuleProperties().getProperty(aKey);
-      }
-      throw new IllegalArgumentException("Key " + aKey + " not found in resourcefile " + MODULE_PROPERTIES
-            + " within " + getModuleJarName());
-   }
+	public String getProperty(String aKey)
+	{
+		if (getModuleProperties().containsKey(aKey))
+		{
+			String value = getModuleProperties().getProperty(aKey);
+			return value;
+		}
+		throw new IllegalArgumentException("Key " + aKey + " not found in resourcefile " + MODULE_PROPERTIES + " within "
+		         + getModuleJarName());
+	}
 
 }

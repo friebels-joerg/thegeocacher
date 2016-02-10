@@ -22,75 +22,83 @@ import org.apache.http.util.EntityUtils;
  */
 public class SimpleHttpRequestExecuter
 {
-   public String getResponse(String anUrl)
-   {
-      if (WebProperties.getInstance().isProxyRequiered())
-      {
-         return getResponseViaProxy(anUrl);
-      } else
-      {
-         return getResponseWithoutProxy(anUrl);
-      }
-   }
+	public String getResponse(String anUrl)
+	{
+		if (WebProperties.getInstance().isProxyRequiered())
+		{
+			String response = getResponseViaProxy(anUrl);
+			return response;
+		}
+		else
+		{
+			String response = getResponseWithoutProxy(anUrl);
+			return response;
+		}
+	}
 
-   String getResponseViaProxy(String anUrl)
-   {
-      CloseableHttpClient httpclient = null;
-      try
-      {
-         RequestConfig config = null;
-         CredentialsProvider credsProvider = new BasicCredentialsProvider();
-         credsProvider.setCredentials(new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT),
-               new UsernamePasswordCredentials(WebProperties.getInstance().getProxyUser(),
-                     WebProperties.getInstance().getProxyPassword()));
+	String getResponseViaProxy(String anUrl)
+	{
+		CloseableHttpClient httpclient = null;
+		try
+		{
+			RequestConfig config = null;
+			CredentialsProvider credsProvider = new BasicCredentialsProvider();
+			credsProvider.setCredentials(new AuthScope(AuthScope.ANY_HOST, AuthScope.ANY_PORT),
+			         new UsernamePasswordCredentials(WebProperties.getInstance().getProxyUser(), WebProperties
+			                  .getInstance().getProxyPassword()));
 
-         httpclient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
+			httpclient = HttpClients.custom().setDefaultCredentialsProvider(credsProvider).build();
 
-         HttpHost proxy = new HttpHost(WebProperties.getInstance().getProxyHost(),
-               WebProperties.getInstance().getProxyPort(),
-               WebProperties.getInstance().getProxyScheme());
+			HttpHost proxy = new HttpHost(WebProperties.getInstance().getProxyHost(), WebProperties.getInstance()
+			         .getProxyPort(), WebProperties.getInstance().getProxyScheme());
 
-         config = RequestConfig.custom().setProxy(proxy).build();
+			config = RequestConfig.custom().setProxy(proxy).build();
 
-         HttpGet request = new HttpGet(anUrl);
-         request.setConfig(config);
+			HttpGet request = new HttpGet(anUrl);
+			request.setConfig(config);
 
-         CloseableHttpResponse response = httpclient.execute(request);
-         return EntityUtils.toString(response.getEntity());
-      } catch (IOException ex)
-      {
-         Logger.getLogger(SimpleHttpRequestExecuter.class.getName()).log(Level.SEVERE, null, ex);
-         throw new RuntimeException(ex);
-      } finally
-      {
-         if (httpclient != null)
-         {
-            try
-            {
-               httpclient.close();
-            } catch (IOException ex)
-            {
-               Logger.getLogger(SimpleHttpRequestExecuter.class.getName()).log(Level.SEVERE, null, ex);
-               throw new RuntimeException(ex);
-            }
-         }
-      }
-   }
+			CloseableHttpResponse response = httpclient.execute(request);
+			String responseString = EntityUtils.toString(response.getEntity());
+			return responseString;
+		}
+		catch (IOException ex)
+		{
+			Logger.getLogger(SimpleHttpRequestExecuter.class.getName()).log(Level.SEVERE, null, ex);
+			throw new RuntimeException(ex);
+		}
+		finally
+		{
+			if (httpclient != null)
+			{
+				try
+				{
+					httpclient.close();
+				}
+				catch (IOException ex)
+				{
+					Logger.getLogger(SimpleHttpRequestExecuter.class.getName()).log(Level.SEVERE, null, ex);
+					throw new RuntimeException(ex);
+				}
+			}
+		}
+	}
 
-   String getResponseWithoutProxy(String anUrl)
-   {
-      try
-      {
-         CloseableHttpClient httpclient = HttpClients.createDefault();
-         HttpGet request = new HttpGet(anUrl);
-         CloseableHttpResponse response = httpclient.execute(request);
-         return EntityUtils.toString(response.getEntity());
-      } catch (IOException ex)
-      {
-         Logger.getLogger(SimpleHttpRequestExecuter.class.getName()).log(Level.SEVERE, null, ex);
-         throw new RuntimeException(ex);
-      }
+	String getResponseWithoutProxy(String anUrl)
+	{
+		try
+		{
+			CloseableHttpClient httpclient = HttpClients.createDefault();
+			HttpGet request = new HttpGet(anUrl);
+			CloseableHttpResponse response = httpclient.execute(request);
+			String responseString = EntityUtils.toString(response.getEntity());
+			return responseString;
+		}
+		catch (IOException ex)
+		{
+			Logger.getLogger(SimpleHttpRequestExecuter.class.getName()).log(Level.SEVERE, null, ex);
+			throw new RuntimeException(ex);
+		}
 
-   }
+	}
 
 }
