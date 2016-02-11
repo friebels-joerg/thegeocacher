@@ -1,19 +1,16 @@
 html {
-	background-color: Lime;
 	padding: 0px;
 	margin: 0px;
 	height: calc(100% - 2rem);
 }
 
 body {
-	background-color: Fuchsia;
 	padding: 0px;
 	margin: 0px;
 	height: 100%;
 }
 
 #headerSection {
-	background-color: Cyan;
 	background-image: linear-gradient(to bottom, Gainsboro, DarkGray);
 	position: fixed;
 	z-index: 30000;
@@ -46,7 +43,6 @@ body {
 }
 
 #contentSection {
-	background-color: Blue;
 	min-height: calc(100% - 1.2rem);
 	position: relative;
 	width: calc(100% - 1.2rem);
@@ -54,7 +50,6 @@ body {
 }
 
 #content {
-	background-color: Red;
 }
 
 #rightMenu {
@@ -62,4 +57,24 @@ body {
 	z-index: 30000;
 	top: 0px;
 	right: 0px;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+	background-color: Gainsboro;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    font-family: sans-serif;
+}
+
+th {
+    background-color: DarkGray;
+    color: white;
 }
