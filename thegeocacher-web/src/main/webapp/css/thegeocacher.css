@@ -25,13 +25,16 @@ body {
 #headerSection a {
 	color: white;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	text-decoration: none;
-	height: 1.5rem;
-	padding: 0.5rem;
+	height: 1.65rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	padding-top: 0.1rem;
 	padding-bottom: 0rem;
 	display: inline-block;
 	vertical-align: middle;
+	border-bottom: medium hidden Orange;
 }
 
 #headerSection a.active {
@@ -52,4 +55,11 @@ body {
 
 #content {
 	background-color: Red;
+}
+
+#rightMenu {
+	position: fixed;
+	z-index: 30000;
+	top: 0px;
+	right: 0px;
 }
